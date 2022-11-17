@@ -78,12 +78,12 @@
                 Leistungen
               </a>
               <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="#">Baubegelitung</a></li>
-                <li><a class="dropdown-item" href="#">Bauschaden</a></li>
-                <li><a class="dropdown-item" href="#">Energieberatung</a></li>
-                <li><a class="dropdown-item" href="#">Hauskaufberatung</a></li>
-                <li><a class="dropdown-item" href="#">Immobilienbewertung</a></li>
-                <li><a class="dropdown-item" href="#">Schimmelpilz</a></li>
+                <li><a class="dropdown-item" href="/baubegleitung">Baubegelitung</a></li>
+                <li><a class="dropdown-item" href="/bauschaden">Bauschaden</a></li>
+                <li><a class="dropdown-item" href="/energieberatung">Energieberatung</a></li>
+                <li><a class="dropdown-item" href="/hauskaufberatung">Hauskaufberatung</a></li>
+                <li><a class="dropdown-item" href="/immobilienbewertung">Immobilienbewertung</a></li>
+                <li><a class="dropdown-item" href="/schimmelpilz">Schimmelpilz</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -91,7 +91,7 @@
                 Über Uns
               </a>
               <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="#">Baubegelitung</a></li>
+                <li><a class="dropdown-item" href="/team"> Das Team</a></li>
                 <li><a class="dropdown-item" href="#">Bauschaden</a></li>
               </ul>
             </li>

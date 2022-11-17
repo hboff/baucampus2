@@ -20,3 +20,22 @@ Route::get('/', function () {
 Route::get('/baubegleitung', function() {
     return view('unterseiten/baubegleitung');
 });
+Route::get('/bauschaden', function() {
+    return view('unterseiten/bauschaden');
+});
+Route::get('/energieberatung', function() {
+    return view('unterseiten/energieberatung');
+});
+Route::get('/hauskaufberatung', function() {
+    return view('unterseiten/hauskaufberatung');
+});
+Route::get('/immobilienbewertung', function() {
+    return view('unterseiten/immobilienbewertung');
+});
+Route::get('/schimmelpilz', function() {
+    return view('unterseiten/schimmelpilz');
+});
+Route::get('/team', function() {
+    return view('unterseiten/team');
+});
+
