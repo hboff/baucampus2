@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OrteController;
+use App\Models\Ort;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,4 +40,18 @@ Route::get('/schimmelpilz', function() {
 Route::get('/team', function() {
     return view('unterseiten/team');
 });
+Route::get('/show', function(){
+    return view('orte/show', [
+    'ort'=> Ort::all()
+    ]);
+});
 
+//Route::get('/{{$orte->ort}}', function() {
+//    return view('orte/index');
+//});
+
+Route::get('/{ort}', [OrteController::class, 'show']);
+
+Route::get('/test', function(){
+    return view('unterseiten/test');
+});
