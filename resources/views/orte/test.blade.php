@@ -1,4 +1,3 @@
-<!--  
 @extends('layout')
 @section('content')
 @include('partials._sidebar')
@@ -156,4 +155,3 @@
 @section('ortsname')
 
 @endsection
--->

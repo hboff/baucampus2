@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ort extends Model
 {
-    // protected $table = 'orts';
+     protected $table = 'orts';
 
 }
