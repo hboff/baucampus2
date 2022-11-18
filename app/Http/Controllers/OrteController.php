@@ -9,10 +9,10 @@ use Illuminate\Validation\Rule;
 
 class OrteController extends Controller
 {
-    // Show single lisitng
-    public function show($ort) {
-        return view('orte.test', [
-        'ortsname'=> $ort,
-        ]);
-    }            
+   // // Show single lisitng
+   // public function show($ort) {
+   //     return view('orte.test', [
+   //     'ortsname'=> $ort,
+   //     ]);
+   // }            
 }

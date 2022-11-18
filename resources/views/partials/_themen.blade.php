@@ -1,3 +1,4 @@
+<!--  
 @section('ortsname')
 @php
 $i=0;
@@ -9,3 +10,4 @@ $i=0;
 @endif
 @endforeach
 @endsection
+-->

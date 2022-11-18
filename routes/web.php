@@ -44,7 +44,7 @@ Route::get('/show', function(){
     return view('orte/show');
 });
 
-Route::get('/{ort}', [OrteController::class, 'show']);
+//Route::get('/{ort}', [OrteController::class, 'show']);
 
 
 Route::get('/orte/index', function(){
