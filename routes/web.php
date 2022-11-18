@@ -41,17 +41,12 @@ Route::get('/team', function() {
     return view('unterseiten/team');
 });
 Route::get('/show', function(){
-    return view('orte/show', [
-    'ort'=> Ort::all()
-    ]);
+    return view('orte/show');
 });
-
-//Route::get('/{{$orte->ort}}', function() {
-//    return view('orte/index');
-//});
 
 Route::get('/{ort}', [OrteController::class, 'show']);
 
-Route::get('/test', function(){
-    return view('unterseiten/test');
+
+Route::get('/orte/index', function(){
+    return view('orte/index');
 });

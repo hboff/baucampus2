@@ -124,9 +124,8 @@ object-position: center;" class="description">
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
             <h4 class="title"><a href="">Themen</a></h4>
-            <p class="description">
-<a href="/{{$orte->ort}}">Baugutachter {{$orte['ort']}}</a><br>
-
+            <p class="description">@yield('ortsname')</p>
+        </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
             <h4 class="title"><a href="">Allgemeines</a></h4>
             <a class="description link-dark" href="#"><u>Datenschutzerklärung</u></a>

@@ -199,3 +199,4 @@
     </section><!-- End Services Section -->
     @include('partials._contact')
  @endsection
+ @include('partials._themen')
