@@ -14,7 +14,7 @@ use App\Models\Ort;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::group(['domain' => 'baucampus.be'], function () {
 Route::get('/', function () {
     return view('index');
 });
@@ -49,4 +49,25 @@ Route::get('/{ort}', [OrteController::class, 'show']);
 
 Route::get('/orte/index', function(){
     return view('orte/index');
+});
+});
+
+//Niederlande/////////////////////////////////////////////
+
+Route::group(['domain' => 'baucampus.nl'], function () {
+    Route::get('/', function () {
+        return 'Niederlande';
+
+    });
+});
+
+
+//gutgekauft/////////////////////////////////////////////
+
+
+Route::group(['domain' => 'gutgekauft.com'], function () {
+    Route::get('/', function () {
+       return view('index');
+
+    });
 });
