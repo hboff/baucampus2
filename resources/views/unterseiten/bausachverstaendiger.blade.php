@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
 @include('partials._sidebar')
-<title>Bausachverstädiger</title>
+<title>Bausachverstädiger {{$ortsname}}</title>
 <meta name="Description" content="Die Baubegleitung als Arbeitsbereich des Bausachverständigen kurz erklärt.">
 
 
@@ -11,7 +11,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Hauskaufberatung</h2>
+          <h2>Hauskaufberatung {{$ortsname}}</h2>
         </div>
 
         <div class="row">
@@ -39,7 +39,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Baubegleitung</h2>
+          <h2>Baubegleitung {{$ortsname}}</h2>
         </div>
 
         <div class="row">
@@ -68,7 +68,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Energieberatung</h2>
+          <h2>Energieberatung {{$ortsname}}</h2>
         </div>
 
         <div class="row">
@@ -96,7 +96,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Schimmelpilz</h2>
+          <h2>Schimmelpilz {{$ortsname}}</h2>
         </div>
 
         <div class="row">
@@ -121,7 +121,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Bauschaden</h2>
+          <h2>Bauschaden {{$ortsname}}</h2>
         </div>
 
         <div class="row">
@@ -153,7 +153,14 @@
 @include('partials._contact')
 @endsection
 @section('ortsname')
-
-<p>{{$ort->einwohner}}</p><br>
-
+@php
+$x=$ort[0];
+$breitemin = $x['breitengrad']-1;
+$breitemax = $x['breitengrad']+1
+@endphp
+@foreach($ort as $orte)
+@if($orte->breitengrad >= $breitemin && $orte->breitengrad <= $breitemax)
+<a href="/{{$orte->ortschweiz}}/bausachverstaendiger">Bausachverständiger {{$orte->ortschweiz}}</a><br>
+@endif
+@endforeach
 @endsection
