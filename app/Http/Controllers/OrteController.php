@@ -10,9 +10,8 @@ use Illuminate\Validation\Rule;
 class OrteController extends Controller
 {
     // Show single lisitng
-    public function show($ort) {
-        return view('orte.test', [
-        'ortsname'=> $ort,
-        ]);
-    }            
+    public function show() {
+        $users = DB::select('select * from users where active = ?', [1]);
+ 
+        return view('user.index', ['users' => $users]);    }            
 }
