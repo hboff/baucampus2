@@ -44,12 +44,17 @@ Route::get('/show', function(){
     return view('orte/show');
 });
 
-Route::get('/{ort}/bausachverstaendiger', [OrteController::class, 'show']);
+
 
 
 Route::get('/orte/index', function(){
     return view('orte/index');
 });
+
+Route::get('/{ort}/bausachverstaendiger', [OrteController::class, 'show'], function (Request $request){
+
+});
+
 //});
 
 //Niederlande/////////////////////////////////////////////
