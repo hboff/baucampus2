@@ -11,7 +11,15 @@ height: 180px;
 border-radius: 50%;
 object-fit: cover;
 object-position: center;">
-    <h1 class="text-light mb-3"><a href="index.html">Rainer Kößling</a></h1>
+@foreach ($gutachter as $gutachters)
+@php
+$id=$gutachters['ID']
+@endphp
+@if($id==8)
+    <h1 class="text-light mb-3"><a href="/gutachter/{{$gutachters->LastName}}">{{$gutachters['FirstName']}} {{$gutachters['LastName']}}</a></h1>
+@else
+@endif
+@endforeach
     <p class="text-light text-center mb-0">Telefon: 0176 56908588</p>
     <p class="text-light text-center">koessling@baucampus.de</p>
   </div>

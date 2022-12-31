@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrteController;
+use App\Http\Controllers\GutachterController;
 use App\Models\Ort;
+use App\Models\Gutachter;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,15 +45,21 @@ Route::get('/team', function() {
 Route::get('/show', function(){
     return view('orte/show');
 });
+Route::get('/gutachter', function(){
+    return view('unterseiten/gutachter');
+});
 
 
-
+Route::get('/gutachter', [GutachterController::class, 'index']);
 
 Route::get('/orte/index', function(){
     return view('orte/index');
 });
 
 Route::get('/{ort}/bausachverstaendiger', [OrteController::class, 'show'], function (Request $request){
+
+});
+Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){
 
 });
 
