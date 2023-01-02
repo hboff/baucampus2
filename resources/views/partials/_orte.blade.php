@@ -1,13 +1,11 @@
-
-@section('ortsname')
 @php
 $i=0;
 @endphp
 @foreach($ort as $orte)
-@if ($i++ > 50)
+@if ($i++ < 50)
+<a href="/{{$orte->ortschweiz}}/bausachverstaendiger">Baugutachter {{$orte['ortschweiz']}}</a>
 @else
-<a href="/{{$orte->ort}}/bausachverstaendiger">Baugutachter {{$orte['ort']}}</a><br>
 @endif
 @endforeach
-@endsection
+
 
