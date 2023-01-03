@@ -14,10 +14,45 @@ class OrteatController extends Controller
     public function show($ortat) {
         return view('unterseiten.bausachverstaendiger', [
             'ortsname'=> $ortat,
-            ]);    }     
-            
+            ]);    }         
     public function index() {
         $status='at';
+        return view ('index', compact('status'));
+    }
+    public function startseite() {
+        $status='at';
         return view ('startseite', compact('status'));
+    }
+    public function schimmelpilz() {
+        $status='at';
+        return view ('unterseiten.schimmelpilz', compact('status'));
+    }
+    public function hauskaufberatung() {
+        $status='at';
+        return view ('unterseiten.hauskaufberatung', compact('status'));
+    }
+    public function baubegleitung() {
+        $status='at';
+        return view ('unterseiten.baubegleitung', compact('status'));
+    }
+    public function bauschaden() {
+        $status='at';
+        return view ('unterseiten.bauschaden', compact('status'));
+    }
+    public function energieberatung() {
+        $status='at';
+        return view ('unterseiten.energieberatung', compact('status'));
+    }
+    public function immobilienbewertung() {
+        $status='at';
+        return view ('unterseiten.hauskaufberatung', compact('status'));
+    }
+    public function team() {
+        $status='at';
+        return view ('unterseiten.team', compact('status'));
+    }
+    public function gutachter() {
+        $status='at';
+        return view ('unterseiten.gutachter', compact('status'));
     }
 }
