@@ -258,7 +258,7 @@ function toggleFunction() {
   <div class="w3-third w3-container">
 		<h3 style="color:#26292c;">Themen</h3>
 
-@include('partials._orteat')
+@include('partials._orte')
 	  </div>
 </div>
 

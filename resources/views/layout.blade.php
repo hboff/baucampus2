@@ -32,7 +32,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>iPortfolio Bootstrap Template - Index</title>
+  <title>Baucampus</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -124,7 +124,7 @@ object-position: center;" class="description">
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
             <h4 class="title"><a href="">Themen</a></h4>
-            <p class="description">@yield('ortsname')</p>
+            <p class="description">@include('partials._orte')</p>
         </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
             <h4 class="title"><a href="">Allgemeines</a></h4>

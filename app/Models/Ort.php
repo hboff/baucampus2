@@ -9,5 +9,4 @@ class Ort extends Model
 
 
      protected $fillable = ['ort'];
-
 }

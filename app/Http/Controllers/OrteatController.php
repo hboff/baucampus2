@@ -14,5 +14,10 @@ class OrteatController extends Controller
     public function show($ortat) {
         return view('unterseiten.bausachverstaendiger', [
             'ortsname'=> $ortat,
-            ]);    }            
+            ]);    }     
+            
+    public function index() {
+        $status='at';
+        return view ('startseite', compact('status'));
+    }
 }

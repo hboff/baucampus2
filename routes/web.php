@@ -18,68 +18,34 @@ use App\Models\Gutachter;
 |
 */
 //Route::group(['domain' => 'baucampus.ch'], function () {
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('/baubegleitung', function() {
-    return view('unterseiten/baubegleitung');
-});
-Route::get('/bauschaden', function() {
-    return view('unterseiten/bauschaden');
-});
-Route::get('/energieberatung', function() {
-    return view('unterseiten/energieberatung');
-});
-Route::get('/hauskaufberatung', function() {
-    return view('unterseiten/hauskaufberatung');
-});
-Route::get('/immobilienbewertung', function() {
-    return view('unterseiten/immobilienbewertung');
-});
-Route::get('/schimmelpilz', function() {
-    return view('unterseiten/schimmelpilz');
-});
-Route::get('/team', function() {
-    return view('unterseiten/team');
-});
-Route::get('/show', function(){
-    return view('orte/show');
-});
-Route::get('/gutachter', function(){
-    return view('unterseiten/gutachter');
-});
-
-Route::get('/impressum', function() {
-    return view('unterseiten/impressum');
-});
-
-Route::get('/gutachter', [GutachterController::class, 'index']);
-
-Route::get('/orte/index', function(){
-    return view('orte/index');
-});
-
-Route::get('/{ort}/bausachverstaendiger', [OrteController::class, 'show'], function (Request $request){
-
-});
-Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){
-
-});
-
-Route::get('/startseitech', function(){
-    return view('startseitech');
-});
+//Route::get('/startseite', [OrteController::class, 'index'], function (){
+//
+//    Route::get('/gutachter', [GutachterController::class, 'index']);
+//
+//Route::get('/{ort}/bausachverstaendiger', [OrteController::class, 'show'], function (Request $request){
+//});
+//Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){
+//});
 //});
 
 //Österreich//
 
-Route::group(['domain' => 'baucampus.at'], function () {
-    Route::get('/', function () {
-        return view('startseiteat');
-    });
-});
+//Route::group(['domain' => 'baucampus.at'], function () {
+Route::get('/startseite', [OrteController::class, 'index'], function (){
+ });
+Route::get('/gutachter', [GutachterController::class, 'index']);
 
+Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){
+});
+Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){
+});
+    
+//});
+
+ 
+Route::get ('/', function () {
+    return view('index');
+});
 Route::get('/baubegleitung', function() {
     return view('unterseiten/baubegleitung');
 });
@@ -112,22 +78,21 @@ Route::get('/impressum', function() {
     return view('unterseiten/impressum');
 });
 
-Route::get('/gutachter', [GutachterController::class, 'index']);
 
 Route::get('/orte/index', function(){
     return view('orte/index');
 });
 
-Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){
 
-});
-Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){
 
-});
+//Österreich//
 
-Route::get('/startseite', function(){
-    return view('startseite');
-});
+//Route::group(['domain' => 'baucampus.at'], function () {
+//    Route::get('/', function () {
+//        return view('startseiteat');
+//    });
+//});
+
 
 
 //gutgekauft/////////////////////////////////////////////
