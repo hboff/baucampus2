@@ -1,289 +1,202 @@
-<!DOCTYPE html>
-<html lang="de">
-<meta charset="UTF-8">
-<title>Baucampus</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://baucampus.ch/w3.css">
-<link rel="stylesheet" type="text/css" href="https://baucampus.ch/style.css">
-  <link rel="stylesheet" href="https://baucampus.ch/ideen-style.css">
-<link rel="stylesheet" type="text/css" href="https://baucampus.ch/kontakt-style.css">
-<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+@extends('layout')
+@section('content')
+@include('partials._sidebar')
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Rainer Kößling</h1>
+      <p>Ich bin <span class="typed" data-typed-items="Gutachter, Unternehmer, Bausachverständiger"></span>
+      </p>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Über mich</h2>
+          <p>Mein Name ist Rainer Kößling
+            Ich bin geprüfter und anerkannter Bausachverständiger, Energieberater sowie geprüfter Fachsanierer und Tüv
+            zertifizierter Schimmelsanierer
+
+            Ich bin 53 Jahre alt, verheiratet, habe 4 Kinder und verfüge über fast 33 Jahre Berufserfahrung in der
+            Baubranche.
+            Dieses Wissen wird durch ständige Weiterbildung und zahlreiche Schulungen noch weiter ausgebaut.
 
 
 
+          </p>
+        </div>
 
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="/img/profile.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>Unternehmer &amp; Bausachverständiger</h3>
+            <p class="fst-italic">
+              Telefon: 0176 56908588
 
-<style>
-.zooma {
-	overflow: hidden;
-}
-.zooma img {
-	width: 100%;
-	height: auto;
-	/* SCALE */
-	-webkit-transform: scale(1);
-	-moz-transform: scale(1);
-	-ms-transform: scale(1);
-	-o-transform: scale(1);
-	transform: scale(1);
-	/* VERZÖGERUNG */
-	-webkit-transition: all 0.3s linear;
-	-moz-transition: all 0.3s linear;
-	-ms-transition: all 0.3s linear;
-	-o-transition: all 0.3s linear;
-	transition: all 0.3s linear;
-}
-.zooma img:hover {
-	-webkit-transform: scale(1.2);
-	-moz-transform: scale(1.2);
-	-ms-transform: scale(1.2);
-	-o-transform: scale(1.2);
-	transform: scale(1.2);
-}
+              Email: koessling@baucampus.de
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Geburtstag:</strong> <span>1 April 1969</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong>
+                    <span>www.baugutachter-kiel.eu</span>
+                  </li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Telefon:</strong> <span>0176 56908588</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Stadt:</strong> <span> Neuenrade 4, 23823
+                      Seedorf</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Alter:</strong> <span>53</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>koessling@baucampus.de</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
-
-.heading-separator {
-    position: relative;
-    margin: 0;
-    padding-bottom: 70px;
-color: #26292c;
-
-}
-
-.heading-separator:after {
-    content: "";
-    position: absolute;
-    bottom: 25px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    width: 50px;
-    margin: 0 auto;
-    background-color: #267df4;
-}
-/* Section: Features */
-.section-features h2 {
-    padding-bottom: 40px;
-    font-size: 30px;
-}
-
-.section-features img {
-    position: absolute;
-    right: 15px;
-    height: 380px;
-}
-.subheading-text {
-    font-size: 20px;
-    font-style: italic;
-}
-
-/* Section: Services */
-.section-services .subheading-text {
-    margin-bottom: 90px;
-}
-p + p {
-    margin-top: 1vh;
-}
-
-</style>
-
-<body>
-<div class="w3-top w3-text-white w3-osk-customs" >
-
-  <div class="w3-bar w3-text-white" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-left" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      Baucampus
-    </a>
-
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      Nav<i class="fa fa-bars"></i>
-    </a>
-
-    <a href="/startseite" class="w3-hide-small w3-left hover-underline-animation oskkk"style="padding-left:100px;">Baucampus</a>
-   <a href="/kontakt" class=" w3-hide-small w3-hide-medium w3-right hover-underline-animation oskkk" style="padding-right:100px;">Kontakt</a>
-   <a href="/kosten-preise" class=" w3-hide-small w3-hide-medium w3-right hover-underline-animation oskkk">Preise</a>
-
- <div class="w3-dropdown-hover w3-hide-small w3-hide-medium w3-right ">
-      <a class=" hover-underline-animation oskkk">Über uns &#9207;</a>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4" style="position:fixed;">
-        <a href="/baugutachter" class="w3-bar-item w3-button" title="Gutachter Baucampus">Gutachter</a>
-        <a href="/research" class="w3-bar-item w3-button" title="Marktberichte Baucampus">Marktberichte</a>
       </div>
-</div>
+    </section><!-- End About Section -->
 
 
- <div class="w3-dropdown-hover w3-hide-small w3-hide-medium w3-right ">
-      <a class=" hover-underline-animation oskkk">Leistungen &#9207;</a>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4" style="position:fixed;">
-        <a href="/baubegleitung" class="w3-bar-item w3-button" title="Baubegleitung">Baubegleitung</a>
-        <a href="/bauschaden" class="w3-bar-item w3-button" title="Bauschaden">Bauschaden</a>
-        <a href="/energieberatung" class="w3-bar-item w3-button" title="Energieberatung">Energieberatung</a>
-        <a href="/hauskaufberatung" class="w3-bar-item w3-button" title="Hauskaufberatung">Hauskaufberatung</a>
-        <a href="/immobilienbewertung" class="w3-bar-item w3-button" title="Immobilienbewertung">Immobilienbewertung</a>
-        <a href="/schimmelpilz" class="w3-bar-item w3-button" title="Schimmelpilz">Schimmelpilz</a>
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Lebenslauf</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Sumary</h3>
+            <div class="resume-item pb-0">
+              <h4>Rainer Kößling</h4>
+              <p><em>Bausachverständiger bei Baucampus</em></p>
+              <ul>
+                <li>Neuenrade 4, 23823 Seedorf</li>
+                <li>0176 56908588</li>
+                <li>koessling@baucampus.de</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Master of Fine Arts &amp; Graphic Design</h4>
+              <h5>2015 - 2016</h5>
+              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui
+                ut dignissimos deleniti nerada porti sand markend</p>
+            </div>
+            <div class="resume-item">
+              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
+              <h5>2010 - 2014</h5>
+              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius
+                unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart
+                dila</p>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Senior graphic design specialist</h4>
+              <h5>2019 - Present</h5>
+              <p><em>Experion, New York, NY </em></p>
+              <ul>
+                <li>Lead in the design, development, and implementation of the graphic, layout, and production
+                  communication materials</li>
+                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the
+                  project. </li>
+                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the
+                  design</li>
+                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Graphic design specialist</h4>
+              <h5>2017 - 2018</h5>
+              <p><em>Stepping Stone Advertising, New York, NY</em></p>
+              <ul>
+                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and
+                  advertisements).</li>
+                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
+                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
+                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
       </div>
-</div>
+    </section><!-- End Resume Section -->
 
-  </div>
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="/startseite" class="w3-bar-item w3-button"  onclick="toggleFunction()">Baucampus</a>
-    <a href="/baubegleitung"  title="Baubegleitung" class="w3-bar-item w3-button"  onclick="toggleFunction()">Baubegleitung</a>
-    <a href="/bauschaden" title="Bauschaden" class="w3-bar-item w3-button"  onclick="toggleFunction()">Bauschaden</a>
-    <a href="/energieberatung"  title="Energieberatung" class="w3-bar-item w3-button"  onclick="toggleFunction()">Energieberatung</a>
-    <a href="/hauskaufberatung" title="Hauskaufberatung" class="w3-bar-item w3-button"  onclick="toggleFunction()">Hauskaufberatung</a>
-    <a href="/immobilienbewertung" title="Immobilienbewertung" class="w3-bar-item w3-button"  onclick="toggleFunction()">Immobilienbewertung</a>
-    <a href="/schimmelpilz" title="Schimmelpilz" class="w3-bar-item w3-button"  onclick="toggleFunction()">Schimmelpilz</a>
-    <a href="/baugutachter"  title="Gutachter Baucampus" class="w3-bar-item w3-button"  onclick="toggleFunction()">Gutachter</a>
-    <a href="/research"  title="Marktberichte Baucampus" class="w3-bar-item w3-button"  onclick="toggleFunction()">Marktberichte</a>
+        <div class="section-title">
+          <h2>Services</h2>
 
-  </div>
-</div>
-<script>
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-osk-custom";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-osk-custom", "");
-    }
-}
+        </div>
 
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="bi bi-briefcase"></i></div>
+            <h4 class="title"><a href="">Baubegleitung</a></h4>
+            <p class="description">Bei der Baubegleitung erfahren Sie Unterstützung bei der Durchführung ihres Neubaus,
+              aus unabhängiger und neutraler
+              Sicht eines Bausachverständigen.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-card-checklist"></i></div>
+            <h4 class="title"><a href="">Bauschaden</a></h4>
+            <p class="description">Ein Bauschaden, infolge eines Baumangels bedeutet eine Verschlechterung einer
+              Immobilie und muss zügig erkannt und
+              beseitigt werden.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bi bi-bar-chart"></i></div>
+            <h4 class="title"><a href="">Energieberatung</a></h4>
+            <p class="description">Bei der Energieberatung beraten wir Sie, wie Sie Energie einsparen und welche
+              Fördermittel beantragt werden können.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="bi bi-binoculars"></i></div>
+            <h4 class="title"><a href="">Hauskaufberatung</a></h4>
+            <p class="description">Die Hauskaufberatung hilft Ihnen bei der Suche nach einem Haus und gibt ihnen eine
+              professionelle und unabhängige
+              Expertise.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class="bi bi-brightness-high"></i></div>
+            <h4 class="title"><a href="">Immobilienbewertung</a></h4>
+            <p class="description">Auf Basis von Baujahr, Zustand der Bausubstanz und Ausstattung den Wert des Gebäudes
+              und addiert den Wert des Grundstücks hinzu.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+            <h4 class="title"><a href="">Schimmelpilz</a></h4>
+            <p class="description">Schimmelpilz befällt Stellen in einem Raum in ihrem Haus oder ihrer
+              Wohnung. Schimmelpilz
+              kann unschön bis gefährlich sein.</p>
+          </div>
+        </div>
 
-
-
-
-
-
-
-<div class="w3-display-container w3-animate-opacity w3-center">
-<img sizes="(max-width: 1400px) 100vw, 1400px"  src="https://baucampus.ch/bilder/baucampus-startseite.jpg" alt="Mein Haus" style="width:100%;min-height:350px;max-height:65vh; object-fit: cover; object-position:bottom;">
-  <div class="w3-container w3-display-middle w3-margin-bottom">  
-  	<div  ">  
-		<h1 style="color:white;">Baucampus<h1>
- 
- 	</div>
-  </div>
-</div>
-
-
-<div class="w3-row-padding" style="margin:10vh; background-color:#fff;"> 
-		<h2 class="heading-separator w3-center">Baucampus</h2>
-                <p class="subheading-text w3-center">Das Sachverständigennetzwerk</p>
-</div>
-
-
-<div class="w3-row-padding w3-text-black gr"> 
-
-<div class="w3-third">
-    <div class="w3-card-4 w3-display-container zooma" style="margin-bottom:16px;">
-    <a href="/baubegleitung"><img src="https://baucampus.ch/bilder/baubegleitung.jpg" alt="Baubegleitung" style="height:50vh; width: 100% !important; object-fit: cover; object-position:center;"></a>
-    <div class="w3-xlarge w3-display-bottomleft w3-padding" style="background: rgba(255, 255, 255, 0.65); width:100%;">Baubegleitung</div>
-</div>
-</div>
-
-<div class="w3-third">
-    <div class="w3-card-4 w3-display-container zooma" style="margin-bottom:16px;">
-    <a href="/bauschaden"><img src="https://baucampus.ch/bilder2/bauschaden.jpeg" alt="Kultur" style="height:50vh; width: 100% !important; object-fit: cover; object-position:center;"></a>
-    <div class="w3-xlarge w3-display-bottomleft w3-padding" style="background: rgba(255, 255, 255, 0.65); width:100%;">Bauschaden</div>
-  </div>
-</div>
-
-<div class="w3-third">
-  <div class="w3-display-container w3-text-black zooma" style="margin-bottom:16px;">
-    <a href="/energieberatung"><img src="https://baucampus.ch/bilder/energieberatung-baucampus-main.png" alt="Fassaden Design" style="height:50vh; width: 100% !important; object-fit: cover; object-position:center;"></a>
-    <div class="w3-xlarge w3-display-bottomleft w3-padding" style="background: rgba(255, 255, 255, 0.65); width:100%;">Energieberatung</div>
-  </div>
-</div>
-</div>
-
-
-<div class="w3-row-padding w3-text-black gr"> 
-
-<div class="w3-third">
-    <div class="w3-card-4 w3-display-container zooma" style="margin-bottom:16px;">
-    <a href="/hauskaufberatung"><img src="https://baucampus.ch//bilder2/hauskaufberatung.jpeg" alt="Öffentliche Verkehrsmittel" style="height:50vh; width: 100% !important; object-fit: cover; object-position:bottom;"></a>
-
-    <div class="w3-xlarge w3-display-bottomleft w3-padding" style="background: rgba(255, 255, 255, 0.65); width:100%;">Hauskaufberatung</div>
-  </div>
-</div>
-
-<div class="w3-third">
-    <div class="w3-card-4 w3-display-container zooma" style="margin-bottom:16px;">
-    <a href="/immobilienbewertung"><img src="https://baucampus.ch/bilder/immobilienbewertung.jpg" alt="Bürogebäude" style="height:50vh; width: 100% !important; object-fit: cover; object-position:center;"></a>
-    <div class="w3-xlarge w3-display-bottomleft w3-padding" style="background: rgba(255, 255, 255, 0.65); width:100%;">Immobilienbewertung</div>
-  </div>
-</div>
-
-<div class="w3-third">
-    <div class="w3-card-4 w3-display-container zooma" style="margin-bottom:16px;">
-    <a href="/schimmelpilz"><img src="https://baucampus.ch/bilder/schimmelpilz2.jpg" alt="Flughafen" style="height:50vh; width: 100% !important; object-fit: cover; object-position:center;"></a>
-    <div class="w3-xlarge w3-display-bottomleft w3-padding" style="background: rgba(255, 255, 255, 0.65); width:100%;">Schimmelpilz</div>
-  </div>
-</div>
-<br/>
-</div>
-
-
-<!-- Footer -->
-<footer style="padding-top:2vh; color:#9fa3a7; background-color:#F5F5F8; font-size:16px;">
-
-<div class="w3-row " style="margin-bottom:5vh;padding-left:10vh;"> 
-  <div class="w3-third w3-container" >
-		<h3 style="color:#26292c;">Baucampus </h3>
-		<img src="https://baucampus.ch/bilder/baucampus.png" class="w3-center" style="width:20%;" alt="Baucampus">
-
- </div>
-  <div class="w3-third w3-container">
-		<h3 style="color:#26292c;margin-bottom:4vh;">Kontakt</h3>
-		<p style="font-size:16px;">Tel.: 05722 / 913800</p>
-		<p style="font-size:16px;">Fax: 05722 / 289 0638</p>
-		<p style="font-size:16px; margin-bottom:10px;">E-Mail: oskar_lohse@baucampus.de</p>
-
-  </div>
-  <div class="w3-third w3-container">
-		<h3 style="color:#26292c;">Themen</h3>
-
-@include('partials._orte')
-	  </div>
-</div>
-
-
-<div class="w3-row" style="padding-left:10vh; padding-top:2vh; padding-bottom:2vh; border-top:1px solid #EBEBED; font-size:14px;">
-  <div class="w3-third w3-container">
-    <a href="/impressum">Impressum</a>
-    <a href="/datenschutzerklaerung">Datenschutzerklärung</a> 
-
- </div>
-  <div class="w3-third w3-container">
-
-  </div>
-  <div class="w3-third w3-container">
-    <a href="https://baucampus.de">Baucampus.de</a>     
-    <a href="https://baucampus.at">Baucampus.at</a>
-    <a href="https://baucampus.at">Baucampus.ch</a>
-    <a href="https://baucampus.de">Baucampus.fr</a> 
-
-  </div>
-</div>
-
-
-</footer>
-   <script src="/kontakt-script.js"></script>
-</body>
-</html> 
-
+      </div>
+    </section><!-- End Services Section -->
+    @include('partials._contact')
+ @endsection
+ @include('partials._themen')
