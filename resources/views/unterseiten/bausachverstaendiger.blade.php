@@ -160,7 +160,7 @@ $breitemax = $x['breitengrad']+1
 @endphp
 @foreach($ort as $orte)
 @if($orte->breitengrad >= $breitemin && $orte->breitengrad <= $breitemax)
-<a href="/{{$orte->ortschweiz}}/bausachverstaendiger">Bausachverständiger {{$orte->ortschweiz}}</a><br>
+<a href="/">Bausachverständiger</a><br>
 @endif
 @endforeach
 @endsection
