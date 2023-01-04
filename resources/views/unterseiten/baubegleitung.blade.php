@@ -10,13 +10,12 @@
 <div class="w3-row">
 
 <!-- Blog entries -->
-<div class="w3-col l8 s12">
+<div>
   <!-- Blog entry -->
 
-    <img src="/img/baubegleitung.jpg" alt="Baubegleitung" title="Baubegleitung" style="width:100%; height:500px; object-fit: cover; object-position:center;">
+    <img src="/img/baubegleitung.jpg" alt="Baubegleitung" title="Baubegleitung" class="pb-5" style="width:100%; height:500px; object-fit: cover; object-position:center;">
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
       <div class="container">
 
         <div class="section-title">
@@ -37,17 +36,12 @@
         </div>
 
       </div>
-    </section><!-- End About Section -->
+<!-- End About Section -->
 <!-- END BLOG ENTRIES -->
 </div>
 
 <!-- END GRID -->
 </div><br>
-
-
-
-
-
 
 @include('partials._contact')
 @endsection
