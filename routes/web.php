@@ -17,6 +17,7 @@ use App\Models\Gutachter;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::group(['domain' => 'baucampus.ch'], function () {
     Route::get('/startseite', [OrteController::class, 'startseite'], function (){
     });
