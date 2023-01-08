@@ -50,7 +50,8 @@ Route::group(['domain' => 'baucampus.ch'], function () {
 });
 
 //Österreich//
-
+Route::get('/team', [OrteatController::class, 'team'], function () {
+});
 Route::group(['domain' => 'baucampus.at'], function () {
 Route::get('/startseite', [OrteatController::class, 'startseite'], function (){
  });
@@ -74,8 +75,7 @@ Route::get('/immobilienbewertung', [OrteatController::class, 'immobilienbewertun
 });
 Route::get('/', [OrteatController::class, 'index'], function () {
 });
-Route::get('/team', [OrteatController::class, 'team'], function () {
-});
+
 Route::get('/gutachter', [OrteatController::class, 'gutachter'], function () {
 });
 Route::get('kontakt', [ContactController::class, 'index']);
