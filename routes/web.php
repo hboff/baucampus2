@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrteController;
 use App\Http\Controllers\OrteatController;
 use App\Http\Controllers\GutachterController;
+use App\Http\Controllers\ContactController;
 use App\Models\Ort;
 use App\Models\Gutachter;
 
@@ -93,7 +94,9 @@ Route::get('/impressum', function() {
 Route::get('/orte/index', function(){
     return view('orte/index');
 });
+Route::get('kontakt', [ContactController::class, 'index']);
 
+Route::post('kontakt', [ContactController::class, 'store'])->name('contact.us.store');
 
 
 //Österreich//
