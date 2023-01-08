@@ -77,9 +77,8 @@ Route::get('/', [OrteatController::class, 'index'], function () {
 Route::get('/team', [OrteatController::class, 'team'], function () {
 });
 Route::get('/gutachter', [OrteatController::class, 'gutachter'], function () {
+
 });
-Route::get('kontakt', [ContactController::class, 'index']);
-Route::post('kontakt', [ContactController::class, 'store'])->name('contact.us.store');
 });
 
 
@@ -95,6 +94,9 @@ Route::get('/impressum', function() {
 Route::get('/orte/index', function(){
     return view('orte/index');
 });
+Route::get('kontakt', [ContactController::class, 'index']);
+
+Route::post('kontakt', [ContactController::class, 'store'])->name('contact.us.store');
 
 
 //Österreich//
