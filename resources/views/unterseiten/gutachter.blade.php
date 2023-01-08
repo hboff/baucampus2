@@ -135,7 +135,7 @@ p + p {
   
   @foreach($gutachter as $gutachters)
   <tr>
-    <td><img src="/img/{{$gutachters['Photo']}}" style="vertical-align: middle; width: 100px; height: 100px; border-radius: 50%; object-fit: cover; object-position: center;">{{$gutachters['FirstName']}} {{$gutachters['LastName']}}</td>
+    <td><a  href="/gutachter/{{$gutachters['UrlName']}}" target="_blank"><img src="/img/{{$gutachters['Photo']}}" style="vertical-align: middle; width: 100px; height: 100px; border-radius: 50%; object-fit: cover; object-position: center;">{{$gutachters['FirstName']}} {{$gutachters['LastName']}}</a></td>
     <td>{{$gutachters['Adress']}}<br/>{{$gutachters['PostalCode']}} {{$gutachters['City']}}</td>
     <td>{{$gutachters['Phone']}} <br/>{{$gutachters['Email']}}<br/><a  href="https://www.baugutachter-kiel.eu/" target="_blank">www.baugutachter-kiel.eu/</a></td>
 
