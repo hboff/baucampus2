@@ -140,7 +140,7 @@ p + p {
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="/startseite" class="w3-bar-item w3-button"  onclick="toggleFunction()">Baucampus</a>
+    <a href="/" class="w3-bar-item w3-button"  onclick="toggleFunction()">Baucampus</a>
     <a href="/baubegleitung"  title="Baubegleitung" class="w3-bar-item w3-button"  onclick="toggleFunction()">Baubegleitung</a>
     <a href="/bauschaden" title="Bauschaden" class="w3-bar-item w3-button"  onclick="toggleFunction()">Bauschaden</a>
     <a href="/energieberatung"  title="Energieberatung" class="w3-bar-item w3-button"  onclick="toggleFunction()">Energieberatung</a>
