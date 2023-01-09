@@ -2,7 +2,7 @@
 @section('content')
 @include('partials._sidebar')
 @foreach ($gutachter as $gutachters)
-@if ($name == $gutachters['LastName'])
+@if ($name == $gutachters['UrlName'])
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
