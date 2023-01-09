@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrteController;
 use App\Http\Controllers\OrteatController;
 use App\Http\Controllers\GutachterController;
+use App\Http\Controllers\ContactController;
 use App\Models\Ort;
 use App\Models\Gutachter;
 
@@ -17,7 +18,12 @@ use App\Models\Gutachter;
 | contains the "web" middleware group. Now create something great!
 |
 */
+<<<<<<< HEAD
 //Route::group(['domain' => 'baucampus.ch'], function () {
+=======
+
+Route::group(['domain' => 'baucampus.ch'], function () {
+>>>>>>> 65fe61ceb92c94e13dbcfb7fa09e106bff4c9cd2
     Route::get('/startseite', [OrteController::class, 'startseite'], function (){
     });
    Route::get('/gutachter', [GutachterController::class, 'index']);
@@ -48,6 +54,7 @@ use App\Models\Gutachter;
 //});
 
 //Österreich//
+<<<<<<< HEAD
 
 //Route::group(['domain' => 'baucampus.at'], function () {
 //Route::get('/startseite', [OrteatController::class, 'startseite'], function (){
@@ -78,6 +85,39 @@ use App\Models\Gutachter;
 //
 //});
 //});
+=======
+Route::get('/team', [OrteatController::class, 'team'], function () {
+});
+Route::group(['domain' => 'baucampus.at'], function () {
+Route::get('/startseite', [OrteatController::class, 'startseite'], function (){
+ });
+Route::get('/gutachter', [GutachterController::class, 'index']);
+
+Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){
+});
+Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){
+});
+Route::get('/schimmelpilz', [OrteatController::class, 'schimmelpilz'], function () {
+});
+Route::get('/hauskaufberatung', [OrteatController::class, 'hauskaufberatung'], function () {
+});
+Route::get('/baubegleitung', [OrteatController::class, 'baubegleitung'], function () {
+});
+Route::get('/bauschaden', [OrteatController::class, 'bauschaden'], function () {
+});
+Route::get('/energieberatung', [OrteatController::class, 'energieberatung'], function () {
+});
+Route::get('/immobilienbewertung', [OrteatController::class, 'immobilienbewertung'], function () {
+});
+Route::get('/', [OrteatController::class, 'index'], function () {
+});
+
+Route::get('/gutachter', [OrteatController::class, 'gutachter'], function () {
+});
+Route::get('kontakt', [ContactController::class, 'index']);
+Route::post('kontakt', [ContactController::class, 'store'])->name('contact.us.store');
+});
+>>>>>>> 65fe61ceb92c94e13dbcfb7fa09e106bff4c9cd2
 
 
 Route::get('/show', function(){
@@ -92,7 +132,6 @@ Route::get('/impressum', function() {
 Route::get('/orte/index', function(){
     return view('orte/index');
 });
-
 
 
 //Österreich//

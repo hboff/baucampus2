@@ -194,6 +194,64 @@ function toggleFunction() {
   <link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
 
+<<<<<<< HEAD
+=======
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-secondary shadow">
+    <div class="container-fluid">
+      <button class="d-block d-xl-none navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarprofile" aria-controls="sidebarprofile"><i class="bi bi-person-circle"></i></button>
+      <a class="navbar-brand" href="#">Baucampus</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark d-block bg-secondary" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Baucampus</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Leistungen
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="/baubegleitung">Baubegelitung</a></li>
+                <li><a class="dropdown-item" href="/bauschaden">Bauschaden</a></li>
+                <li><a class="dropdown-item" href="/energieberatung">Energieberatung</a></li>
+                <li><a class="dropdown-item" href="/hauskaufberatung">Hauskaufberatung</a></li>
+                <li><a class="dropdown-item" href="/immobilienbewertung">Immobilienbewertung</a></li>
+                <li><a class="dropdown-item" href="/schimmelpilz">Schimmelpilz</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Über Uns
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="/gutachter">Gutachter</a></li>
+                <li><a class="dropdown-item" href="/team"> Das Team</a></li>
+                <li><a class="dropdown-item" href="https://baucampus.com">Partner werden</a></li>
+
+
+
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Preise</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+>>>>>>> 65fe61ceb92c94e13dbcfb7fa09e106bff4c9cd2
   @yield('content')
     
   <section id="services" class="services">
