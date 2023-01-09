@@ -23,98 +23,185 @@
     height: 50px;
     border-radius: 50%;
   }
+  .zooma {
+	overflow: hidden;
+}
+.zooma img {
+	width: 100%;
+	height: auto;
+	/* SCALE */
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+	/* VERZÖGERUNG */
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-ms-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+.zooma img:hover {
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+
+.heading-separator {
+    position: relative;
+    margin: 0;
+    padding-bottom: 70px;
+color: #26292c;
+
+}
+
+.heading-separator:after {
+    content: "";
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    width: 50px;
+    margin: 0 auto;
+    background-color: #267df4;
+}
+/* Section: Features */
+.section-features h2 {
+    padding-bottom: 40px;
+    font-size: 30px;
+}
+
+.section-features img {
+    position: absolute;
+    right: 15px;
+    height: 380px;
+}
+.subheading-text {
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* Section: Services */
+.section-services .subheading-text {
+    margin-bottom: 90px;
+}
+p + p {
+    margin-top: 1vh;
+}
+
 </style>
+
+<body>
+<div class="w3-top w3-text-white w3-osk-customs" >
+
+  <div class="w3-bar w3-text-white" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-left" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      Baucampus
+    </a>
+
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      Nav<i class="fa fa-bars"></i>
+    </a>
+
+    <a href="/startseite" class="w3-hide-small w3-left hover-underline-animation oskkk text-white"style="padding-left:100px;">Baucampus</a>
+   <a href="/kontakt" class=" w3-hide-small w3-hide-medium w3-right hover-underline-animation oskkk text-white" style="padding-right:100px;">Kontakt</a>
+   <a href="/kosten-preise" class=" w3-hide-small w3-hide-medium w3-right hover-underline-animation oskkk text-white">Preise</a>
+
+ <div class="w3-dropdown-hover w3-hide-small w3-hide-medium w3-right ">
+      <a class=" hover-underline-animation oskkk text-white">Über uns &#9207;</a>     
+      <div class="w3-dropdown-content w3-bar-block w3-card" style="position:fixed;">
+        <a href="/gutachter" class="w3-bar-item w3-button" style="font-size:20px;" title="Gutachter Baucampus">Gutachter</a>
+        <a href="/research" class="w3-bar-item w3-button" style="font-size:20px;" title="Marktberichte Baucampus">Marktberichte</a>
+      </div>
+</div>
+
+
+ <div class="w3-dropdown-hover w3-hide-small w3-hide-medium w3-right ">
+      <a class=" hover-underline-animation oskkk text-white">Leistungen &#9207;</a>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4" style="position:fixed;">
+        <a href="/baubegleitung" class="w3-bar-item w3-button" style="font-size:20px;" title="Baubegleitung">Baubegleitung</a>
+        <a href="/bauschaden" class="w3-bar-item w3-button" style="font-size:20px;" title="Bauschaden">Bauschaden</a>
+        <a href="/energieberatung" class="w3-bar-item w3-button" style="font-size:20px;" title="Energieberatung">Energieberatung</a>
+        <a href="/hauskaufberatung" class="w3-bar-item w3-button" style="font-size:20px;" title="Hauskaufberatung">Hauskaufberatung</a>
+        <a href="/immobilienbewertung" class="w3-bar-item w3-button" style="font-size:20px;" title="Immobilienbewertung">Immobilienbewertung</a>
+        <a href="/schimmelpilz" class="w3-bar-item w3-button" style="font-size:20px;" title="Schimmelpilz">Schimmelpilz</a>
+      </div>
+</div>
+
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="/startseite" class="w3-bar-item w3-button"  onclick="toggleFunction()">Baucampus</a>
+    <a href="/baubegleitung"  title="Baubegleitung" class="w3-bar-item w3-button"  onclick="toggleFunction()">Baubegleitung</a>
+    <a href="/bauschaden" title="Bauschaden" class="w3-bar-item w3-button"  onclick="toggleFunction()">Bauschaden</a>
+    <a href="/energieberatung"  title="Energieberatung" class="w3-bar-item w3-button"  onclick="toggleFunction()">Energieberatung</a>
+    <a href="/hauskaufberatung" title="Hauskaufberatung" class="w3-bar-item w3-button"  onclick="toggleFunction()">Hauskaufberatung</a>
+    <a href="/immobilienbewertung" title="Immobilienbewertung" class="w3-bar-item w3-button"  onclick="toggleFunction()">Immobilienbewertung</a>
+    <a href="/schimmelpilz" title="Schimmelpilz" class="w3-bar-item w3-button"  onclick="toggleFunction()">Schimmelpilz</a>
+    <a href="/gutachter"  title="Gutachter Baucampus" class="w3-bar-item w3-button"  onclick="toggleFunction()">Gutachter</a>
+    <a href="/research"  title="Marktberichte Baucampus" class="w3-bar-item w3-button"  onclick="toggleFunction()">Marktberichte</a>
+
+  </div>
+</div>
+<script>
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-osk-custom";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-osk-custom", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
 
 <!DOCTYPE html>
 <html lang="de">
+<meta charset="UTF-8">
+<title>Baucampus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://baucampus.ch/w3.css">
+<link rel="stylesheet" type="text/css" href="https://baucampus.ch/style.css">
+  <link rel="stylesheet" href="https://baucampus.ch/ideen-style.css">
+<link rel="stylesheet" type="text/css" href="https://baucampus.ch/kontakt-style.css">
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<link href="/style.css" rel="stylesheet">
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Baucampus</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="/vendor/aos/aos.css" rel="stylesheet">
+<link href="/vendor/aos/aos.css" rel="stylesheet">
   <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="/style.css" rel="stylesheet">
 
-</head>
-
-<body>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-secondary shadow">
-    <div class="container-fluid">
-      <button class="d-block d-xl-none navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarprofile" aria-controls="sidebarprofile"><i class="bi bi-person-circle"></i></button>
-      <a class="navbar-brand" href="#">Baucampus</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end text-bg-dark d-block bg-secondary" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Baucampus</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Leistungen
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="/baubegleitung">Baubegelitung</a></li>
-                <li><a class="dropdown-item" href="/bauschaden">Bauschaden</a></li>
-                <li><a class="dropdown-item" href="/energieberatung">Energieberatung</a></li>
-                <li><a class="dropdown-item" href="/hauskaufberatung">Hauskaufberatung</a></li>
-                <li><a class="dropdown-item" href="/immobilienbewertung">Immobilienbewertung</a></li>
-                <li><a class="dropdown-item" href="/schimmelpilz">Schimmelpilz</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Über Uns
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="/team"> Das Team</a></li>
-                <li><a class="dropdown-item" href="#">Bauschaden</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Preise</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Kontakt</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-  
   @yield('content')
     
-    <section id="services" class="services">
+  <section id="services" class="services">
       <div class="container">
 
         <div class="row">
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <h4 class="title"><a href="">Baucampus</a></h4>
+            <h4 class="title">Baucampus</h4>
             <img src="/img/logo.png" alt="" style="    vertical-align: middle;
     width: 150;
     height: 150px;
@@ -123,13 +210,13 @@
 object-position: center;" class="description">
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 class="title"><a href="">Themen</a></h4>
+            <h4 class="title">Themen</h4>
             <p class="description">@include('partials._orte')</p>
         </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <h4 class="title"><a href="">Allgemeines</a></h4>
-            <a class="description link-dark" href="#"><u>Datenschutzerklärung</u></a>
-            <a class="description link-dark" href="#"><u>Impressum</u></a>
+            <h4 class="title">Allgemeines</h4>
+            <a class="description link-dark" href="https://baucampus.de/impressum">Impressum</a>
+            <a class="description link-dark" href="https://baucampus.de/datenschutzerklaerung">Datenschutzerklärung</a> 
           </div>
           
       </div>

@@ -17,7 +17,7 @@ use App\Models\Gutachter;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::group(['domain' => 'baucampus.ch'], function () {
+//Route::group(['domain' => 'baucampus.ch'], function () {
     Route::get('/startseite', [OrteController::class, 'startseite'], function (){
     });
    Route::get('/gutachter', [GutachterController::class, 'index']);
@@ -45,39 +45,39 @@ Route::group(['domain' => 'baucampus.ch'], function () {
    Route::get('/gutachter', [OrteController::class, 'gutachter'], function () {
    
    });
-});
+//});
 
 //Österreich//
 
-Route::group(['domain' => 'baucampus.at'], function () {
-Route::get('/startseite', [OrteatController::class, 'startseite'], function (){
- });
-Route::get('/gutachter', [GutachterController::class, 'index']);
-
-Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){
-});
-Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){
-});
-Route::get('/schimmelpilz', [OrteatController::class, 'schimmelpilz'], function () {
-});
-Route::get('/hauskaufberatung', [OrteatController::class, 'hauskaufberatung'], function () {
-});
-Route::get('/baubegleitung', [OrteatController::class, 'baubegleitung'], function () {
-});
-Route::get('/bauschaden', [OrteatController::class, 'bauschaden'], function () {
-});
-Route::get('/energieberatung', [OrteatController::class, 'energieberatung'], function () {
-});
-Route::get('/immobilienbewertung', [OrteatController::class, 'immobilienbewertung'], function () {
-});
-Route::get('/', [OrteatController::class, 'index'], function () {
-});
-Route::get('/team', [OrteatController::class, 'team'], function () {
-});
-Route::get('/gutachter', [OrteatController::class, 'gutachter'], function () {
-
-});
-});
+//Route::group(['domain' => 'baucampus.at'], function () {
+//Route::get('/startseite', [OrteatController::class, 'startseite'], function (){
+// });
+//Route::get('/gutachter', [GutachterController::class, 'index']);
+//
+//Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){
+//});
+//Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){
+//});
+//Route::get('/schimmelpilz', [OrteatController::class, 'schimmelpilz'], function () {
+//});
+//Route::get('/hauskaufberatung', [OrteatController::class, 'hauskaufberatung'], function () {
+//});
+//Route::get('/baubegleitung', [OrteatController::class, 'baubegleitung'], function () {
+//});
+//Route::get('/bauschaden', [OrteatController::class, 'bauschaden'], function () {
+//});
+//Route::get('/energieberatung', [OrteatController::class, 'energieberatung'], function () {
+//});
+//Route::get('/immobilienbewertung', [OrteatController::class, 'immobilienbewertung'], function () {
+//});
+//Route::get('/', [OrteatController::class, 'index'], function () {
+//});
+//Route::get('/team', [OrteatController::class, 'team'], function () {
+//});
+//Route::get('/gutachter', [OrteatController::class, 'gutachter'], function () {
+//
+//});
+//});
 
 
 Route::get('/show', function(){

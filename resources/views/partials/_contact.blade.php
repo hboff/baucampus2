@@ -1,5 +1,5 @@
 <!-- ======= Contact Section ======= -->
-<section id="contact" class="contact">
+<section id="contact" class="contact pt-0 mt-0">
       <div class="container">
 
         <div class="section-title">
