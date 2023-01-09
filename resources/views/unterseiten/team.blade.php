@@ -75,8 +75,4 @@
 
 </div>
 
-
-
-
-@include('partials._contact')
 @endsection

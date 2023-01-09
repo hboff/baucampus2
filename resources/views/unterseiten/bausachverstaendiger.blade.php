@@ -150,7 +150,6 @@
 
 
 
-@include('partials._contact')
 @endsection
 @section('ortsname')
 @php

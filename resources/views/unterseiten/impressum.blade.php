@@ -62,12 +62,5 @@ Im Rahmen der Kontaktaufnahme mit uns (z.B. per Kontaktformular oder E-Mail) wer
         </div>
       </div>
 
-
-
-
-
-
-
-@include('partials._contact')
 @endsection
 @include('partials._themen')
