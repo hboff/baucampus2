@@ -111,7 +111,7 @@ p + p {
       Nav<i class="fa fa-bars"></i>
     </a>
 
-    <a href="/startseite" class="w3-hide-small w3-left hover-underline-animation oskkk text-white"style="padding-left:100px;">Baucampus</a>
+    <a href="/" class="w3-hide-small w3-left hover-underline-animation oskkk text-white"style="padding-left:100px;">Baucampus</a>
    <a href="/kontakt" class=" w3-hide-small w3-hide-medium w3-right hover-underline-animation oskkk text-white" style="padding-right:100px;">Kontakt</a>
    <a href="/kosten-preise" class=" w3-hide-small w3-hide-medium w3-right hover-underline-animation oskkk text-white">Preise</a>
 
