@@ -119,32 +119,93 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Betreff</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Nachricht</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Nachricht senden</button></div>
-            </form>
+
+           <div class="card-body">
+                        @if(Session::has('success'))
+                            <div class="alert alert-success">
+                                {{Session::get('success')}}
+                            </div>
+                        @endif
+                        <form method="POST" action="{{ route('contact.us.store') }}" id="contactUSForm">
+                            {{ csrf_field() }}
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <strong>Vorname:</strong>
+                                        <input type="text" name="firstname" class="form-control" placeholder="Vorname" value="{{ old('firstname') }}">
+                                        @if ($errors->has('firstname'))
+                                            <span class="text-danger">{{ $errors->first('firstname') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <strong>Nachname:</strong>
+                                        <input type="text" name="lastname" class="form-control" placeholder="Nachname" value="{{ old('lastname') }}">
+                                        @if ($errors->has('lastname'))
+                                            <span class="text-danger">{{ $errors->first('lastname') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <strong>Phone:</strong>
+                                        <input type="text" name="phone" class="form-control" placeholder="Telefonnummer" value="{{ old('phone') }}">
+                                        @if ($errors->has('phone'))
+                                            <span class="text-danger">{{ $errors->first('phone') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <strong>Email:</strong>
+                                        <input type="text" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
+                                        @if ($errors->has('email'))
+                                            <span class="text-danger">{{ $errors->first('email') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <strong>Stadt:</strong>
+                                        <input type="text" name="city" class="form-control" placeholder="Stadt" value="{{ old('city') }}">
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <strong>Objecttype:</strong>
+                                        <input type="text" name="objecttype" class="form-control" placeholder="Objecttype" value="{{ old('objecttype') }}">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <strong>Message:</strong>
+                                        <textarea name="message" rows="3" class="form-control">{{ old('message') }}</textarea>
+                                        @if ($errors->has('message'))
+                                            <span class="text-danger">{{ $errors->first('message') }}</span>
+                                        @endif
+                                    </div>  
+                                </div>
+                            </div>    
+                             <p><input type="checkbox"  name="checkbox" value="Checkbox"> 
+                                         @if ($errors->has('checkbox'))
+                                            <span class="text-danger">{{ $errors->first('checkbox') }}</span>
+                                        @endif   
+                                        
+                              Ich stimme zu, dass meine Angaben aus dem Kontaktformular zur Bearbeitung meiner Anfrage erhoben und verarbeitet werden. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer <a href="/datenschutzerklaerung">Datenschutzerklärung</a>.</p>
+                            <div class="form-group text-center">
+                                <button class="btn btn-success btn-submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
           </div>
 
         </div>

@@ -24,7 +24,7 @@ class Contact extends Model
 
   
 
-    public $fillable = ['name', 'email', 'phone', 'subject', 'message'];
+    public $fillable = ['lastname', 'email', 'phone', 'firstname','city', 'objecttype', 'message'];
 
   
 

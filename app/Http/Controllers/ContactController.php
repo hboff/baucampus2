@@ -52,15 +52,21 @@ class ContactController extends Controller
 
         $request->validate([
 
-            'name' => 'required',
+            'firstname' => 'required',
+
+            'lastname' => 'required',
 
             'email' => 'required|email',
 
             'phone' => 'required|digits:10|numeric',
 
-            'subject' => 'required',
+            'city' => 'required',
 
-            'message' => 'required'
+            'objecttype' => 'required',
+
+            'message' => 'required',
+
+            'checkbox' => 'required'
 
         ]);
 

@@ -6,14 +6,18 @@
 
 <strong>Anfragedetails: </strong><br>
 
-<strong>Name: </strong>{{ $data->name }} <br>
+<strong>Vorname: </strong>{{ $data->firstname }} <br>
 
-<strong>Email: </strong>{{ $data->email }} <br>
+<strong>Nachname: </strong>{{ $data->lastname }} <br>
 
 <strong>Telefon: </strong>{{ $data->phone }} <br>
 
-<strong>Objekt: </strong>{{ $data->subject }} <br>
+<strong>Email: </strong>{{ $data->email}} <br>
 
-<strong>Nachricht: </strong>{{ $data->user_query }} <br><br>
+<strong>Stadt: </strong>{{ $data->city }} <br>
+
+<strong>Objekttyp: </strong>{{ $data->objecttype }} <br>
+
+<strong>Nachricht: </strong>{{ $data->message }} <br><br>
 
 Baucampus

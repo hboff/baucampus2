@@ -100,6 +100,7 @@ p + p {
 </style>
 
 <body>
+  
 <div class="w3-top w3-text-white w3-osk-customs" >
 
   <div class="w3-bar w3-text-white" id="myNavbar">
