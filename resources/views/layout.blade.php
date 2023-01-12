@@ -121,6 +121,9 @@ p + p {
       <div class="w3-dropdown-content w3-bar-block w3-card" style="position:fixed;">
         <a href="/gutachter" class="w3-bar-item w3-button" style="font-size:20px;" title="Gutachter Baucampus">Gutachter</a>
         <a href="/research" class="w3-bar-item w3-button" style="font-size:20px;" title="Marktberichte Baucampus">Marktberichte</a>
+        <a href="/team" class="w3-bar-item w3-button" style="font-size:20px;" title="Marktberichte Baucampus">Team</a>
+        <a href="https://baucampus.com" class="w3-bar-item w3-button" style="font-size:20px;" title="Marktberichte Baucampus">Partner werden</a>
+        
       </div>
 </div>
 

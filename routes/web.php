@@ -20,7 +20,7 @@ use App\Models\Gutachter;
 */
    Route::get('/gutachter', [GutachterController::class, 'index']);
 
-Route::group(['domain' => 'baucampus.ch'], function () {
+//Route::group(['domain' => 'baucampus.ch'], function () {
     Route::get('/startseite', [OrteController::class, 'startseite'], function (){
     });
    Route::get('/gutachter', [GutachterController::class, 'index']);
@@ -48,7 +48,7 @@ Route::group(['domain' => 'baucampus.ch'], function () {
    Route::get('/gutachter', [OrteController::class, 'gutachter'], function () {
    
    });
-});
+//});
 
 //Österreich//
 
@@ -81,7 +81,15 @@ Route::get('/gutachter', [OrteatController::class, 'gutachter'], function () {
 
 });
 });
-
+Route::get('/kontakt', function(){
+    return view('unterseiten/kontakt');
+});
+Route::get('/kosten-preise', function() {
+    return view('unterseiten/kosten-preise');
+});
+Route::get('/research', function() {
+    return view('unterseiten/research');
+});
 
 Route::get('/show', function(){
     return view('orte/show');
