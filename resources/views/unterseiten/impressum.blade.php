@@ -1,9 +1,9 @@
 @extends('layout')
 @section('content')    
-<div class="container">
+<div class="container pt-5 mt-5">
 
-        <div class="section-title">
-<h1 class="pt-5"><b>Impressum</b></h1>
+        <div class="section-title pt-5 mt-5">
+<h1 class="pt-5 mt-5"><b>Impressum</b></h1>
 </div>
 <p>Oskar Lohse</p>
 <p>Dubai Silicon Oasis</p>

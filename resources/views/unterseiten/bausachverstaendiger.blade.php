@@ -6,8 +6,10 @@
 
 
 <main id="main">
+</br>
+</br>
 
-<section id="about" class="about">
+<div id="about" class="about pt-5">
       <div class="container">
 
         <div class="section-title">
@@ -28,14 +30,14 @@
         </div>
 
       </div>
-    </section><!-- End About Section -->
+</div><!-- End About Section -->
 <!-- END BLOG ENTRIES -->
 </div>
 
 <!-- END GRID -->
 </div><br>
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <div id="about" class="about">
       <div class="container">
 
         <div class="section-title">
@@ -56,7 +58,7 @@
         </div>
 
       </div>
-    </section><!-- End About Section -->
+</div><!-- End About Section -->
 <!-- END BLOG ENTRIES -->
 </div>
 
@@ -64,7 +66,7 @@
 </div><br>
 
 <!-- ======= About Section ======= -->
-<section id="about" class="about">
+<div id="about" class="about">
       <div class="container">
 
         <div class="section-title">
@@ -85,14 +87,14 @@
         </div>
 
       </div>
-    </section><!-- End About Section -->
+</div><!-- End About Section -->
 <!-- END BLOG ENTRIES -->
 </div>
 
 <!-- END GRID -->
 </div><br>
  <!-- ======= About Section ======= -->
- <section id="about" class="about">
+ <div id="about" class="about">
       <div class="container">
 
         <div class="section-title">
@@ -110,14 +112,14 @@
         </div>
 
       </div>
-    </section><!-- End About Section -->
+</div><!-- End About Section -->
 <!-- END BLOG ENTRIES -->
 </div>
 
 <!-- END GRID -->
 </div><br>
 <!-- ======= About Section ======= -->
-<section id="about" class="about">
+<div id="about" class="about">
       <div class="container">
 
         <div class="section-title">
@@ -138,7 +140,7 @@
         </div>
 
       </div>
-    </section><!-- End About Section -->
+</div><!-- End About Section -->
 <!-- END BLOG ENTRIES -->
 </div>
 

@@ -46,7 +46,7 @@ class OrteatController extends Controller
     }
     public function immobilienbewertung() {
         $status='at';
-        return view ('unterseiten.hauskaufberatung', compact('status'));
+        return view ('unterseiten.immobilienbewertung', compact('status'));
     }
     public function team() {
         $status='at';

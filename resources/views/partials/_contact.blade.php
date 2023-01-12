@@ -81,7 +81,7 @@
 
  @case('2')
        
-    <section id="contact" class="contact pt-0 mt-0">
+    <div id="contact" class="contact pt-5">
       <div class="container">
 
         <div class="section-title">
@@ -211,6 +211,6 @@
         </div>
 
       </div>
-    </section>
+</div>
     @break
  @endswitch

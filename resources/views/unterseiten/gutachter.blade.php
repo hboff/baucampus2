@@ -113,12 +113,12 @@ p + p {
 <div class="w3-row">
 
 <!-- Blog entries -->
-<div class="w3-col l8 s12">
+<div>
   <!-- Blog entry -->
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
+    <div id="about" class="about pt-5 mt-5">
+      <div class="container pt-5">
 
         <div class="section-title">
           <h2>Gutachter</h2>
@@ -144,7 +144,7 @@ p + p {
 
 </table>
 
-    </section><!-- End About Section -->
+</div><!-- End About Section -->
 <!-- END BLOG ENTRIES -->
 </div>
 

@@ -10,17 +10,17 @@
 <div class="w3-row">
 
 <!-- Blog entries -->
-<div class="w3-col l8 s12">
+<div>
   <!-- Blog entry -->
 
-    <img src="/img/immobilienbewertung.jpg" alt="Immobilienbewertung" title="Immobilienbertung" style="width:100%; height:500px; object-fit: cover; object-position:center;">
+    <img src="/img/immobilienbewertung.jpg" alt="Immobilienbewertung" title="Immobilienbertung" class="pb-5" style="width:100%; height:500px; object-fit: cover; object-position:center;">
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <div id="about" class="about">
       <div class="container">
 
         <div class="section-title">
-          <h2>Immobielienbewertung</h2>
+          <h2>Immobilienbewertung</h2>
         </div>
 
         <div class="row">
@@ -36,7 +36,7 @@
         </div>
 
       </div>
-    </section><!-- End About Section -->
+</div><!-- End About Section -->
 <!-- END BLOG ENTRIES -->
 </div>
 

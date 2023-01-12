@@ -48,7 +48,7 @@ class OrteController extends Controller
     }
     public function immobilienbewertung() {
         $status='ch';
-        return view ('unterseiten.hauskaufberatung', compact('status'));
+        return view ('unterseiten.immobilienbewertung', compact('status'));
     }
     public function team() {
         $status='ch';

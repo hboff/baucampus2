@@ -200,7 +200,7 @@ function toggleFunction() {
   @yield('content')
   
   @include('partials._contact')
-  <section id="services" class="services">
+  <div id="services" class="services">
       <div class="container">
 
         <div class="row">
@@ -224,7 +224,7 @@ object-position: center;" class="description">
           </div>
           
       </div>
-    </section><!-- End Footer Section -->
+</div><!-- End Footer Section -->
   </main><!-- End #main -->
 
 

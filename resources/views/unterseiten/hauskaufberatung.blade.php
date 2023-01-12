@@ -10,13 +10,13 @@
 <div class="w3-row">
 
 <!-- Blog entries -->
-<div class="w3-col l8 s12">
+<div>
   <!-- Blog entry -->
 
-    <img src="/img/haus-2.jpg" alt="Hauskaufberatung" title="Hauskaufberatung" style="width:100%; height:500px; object-fit: cover; object-position:center;">
+    <img src="/img/haus-2.jpg" alt="Hauskaufberatung" title="Hauskaufberatung" class="pb-5" style="width:100%; height:500px; object-fit: cover; object-position:center;">
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <div id="about" class="about">
       <div class="container">
 
         <div class="section-title">
@@ -37,18 +37,12 @@
         </div>
 
       </div>
-    </section><!-- End About Section -->
+      </div> <!-- End About Section -->
 <!-- END BLOG ENTRIES -->
 </div>
 
 <!-- END GRID -->
-</div><br>
-
-
-
-
-
-
+</div>
 
 @endsection
 @include('partials._themen')

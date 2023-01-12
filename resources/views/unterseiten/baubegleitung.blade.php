@@ -16,6 +16,7 @@
     <img src="/img/baubegleitung.jpg" alt="Baubegleitung" title="Baubegleitung" class="pb-5" style="width:100%; height:500px; object-fit: cover; object-position:center;">
 
     <!-- ======= About Section ======= -->
+    <div id="about" class="about">
       <div class="container">
 
         <div class="section-title">
@@ -36,7 +37,7 @@
         </div>
 
       </div>
-<!-- End About Section -->
+      </div><!-- End About Section -->
 <!-- END BLOG ENTRIES -->
 </div>
 
