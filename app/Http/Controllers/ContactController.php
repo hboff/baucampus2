@@ -58,11 +58,9 @@ class ContactController extends Controller
 
             'email' => 'required|email',
 
-            'phone' => 'required|digits:10|numeric',
+            'phone' => 'required|numeric',
 
             'city' => 'required',
-
-            'objecttype' => 'required',
 
             'message' => 'required',
 
@@ -79,6 +77,7 @@ class ContactController extends Controller
         return redirect()->back()
 
                          ->with(['success' => 'Thank you for contact us. we will contact you shortly.']);
+                         
 
     }
 

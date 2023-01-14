@@ -126,11 +126,12 @@
                                 {{Session::get('success')}}
                             </div>
                         @endif
-                        <form method="POST" action="{{ route('contact.us.store') }}" id="contactUSForm">
+                        <form method="POST" action="{{ route('contact.us.store') }}" id="contactUSForm" class="php-email-form-osk">
                             {{ csrf_field() }}
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
+
                                         <strong>Vorname:</strong>
                                         <input type="text" name="firstname" class="form-control" placeholder="Vorname" value="{{ old('firstname') }}">
                                         @if ($errors->has('firstname'))
@@ -173,14 +174,33 @@
                                     <div class="form-group">
                                         <strong>Stadt:</strong>
                                         <input type="text" name="city" class="form-control" placeholder="Stadt" value="{{ old('city') }}">
-
+                                        @if ($errors->has('city'))
+                                            <span class="text-danger">{{ $errors->first('city') }}</span>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <strong>Objecttype:</strong>
-                                        <input type="text" name="objecttype" class="form-control" placeholder="Objecttype" value="{{ old('objecttype') }}">
-
+  <select name="objecttype" id="cars">
+<option value="" selected="selected">- Art der Immobilie (optional) -</option>
+ <option value="Einfamilienhaus">Einfamilienhaus</option>
+  <option value="Zweifamilienhaus">Zweifamilienhaus</option>
+    <option value="Doppelhaushälfte">Doppelhaushälfte</option>
+     <option value="Reihenhaus">Reihenhaus</option>
+       <option value="Mehrfamilienhaus">Mehrfamilienhaus</option>
+        <option value="Eigentumswohnung">Eigentumswohnung</option>
+         <option value="Wohnhaus mit Mischnutzung">Wohnhaus mit Mischnutzung</option>
+            <option value="Bürogebäude">Bürogebäude</option>
+                 <option value="Alten-/Pflegeheim">Alten-/Pflegeheim</option>
+                  <option value="Hotel/Beherbergungsstätte">Hotel/Beherbergungsstätte</option>
+                    <option value="Verbrauchermarkt">Verbrauchermarkt</option>
+                      <option value="Garage/Hochgarage/Tiefgarage">Garage/Hochgarage/Tiefgarage</option>
+                        <option value="Produktionsgebäude">Produktionsgebäude</option>
+                         <option value="Lagergebäude">Lagergebäude</option>
+                          <option value="Landwirtschaftliche Gebäude">Landwirtschaftliche Gebäude</option>
+                           <option value="Sonstige Gebäude">Sonstige Gebäude</option>
+                           </select>
                                     </div>
                                 </div>
                             </div>
@@ -202,7 +222,9 @@
                                         
                               Ich stimme zu, dass meine Angaben aus dem Kontaktformular zur Bearbeitung meiner Anfrage erhoben und verarbeitet werden. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer <a href="/datenschutzerklaerung">Datenschutzerklärung</a>.</p>
                             <div class="form-group text-center">
-                                <button class="btn btn-success btn-submit">Submit</button>
+                                            <div class="text-center"><button class="submit">Submit</button></div>
+
+                                
                             </div>
                         </form>
                     </div>
