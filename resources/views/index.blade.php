@@ -3,7 +3,7 @@
 <div class="w3-display-container w3-animate-opacity w3-center">
 <img sizes="(max-width: 1400px) 100vw, 1400px"  src="https://baucampus.ch/bilder/baucampus-startseite.jpg" alt="Mein Haus" style="width:100%;min-height:350px;max-height:65vh; object-fit: cover; object-position:bottom;">
   <div class="w3-container w3-display-middle w3-margin-bottom">  
-  	<div  ">  
+  	<div>  
 		<h1 style="color:white;">Baucampus<h1>
  
  	</div>
