@@ -21,33 +21,33 @@ use App\Models\Gutachter;
    Route::get('/gutachter', [GutachterController::class, 'index']);
 
 //Route::group(['domain' => 'baucampus.ch'], function () {
-    Route::get('/startseite', [OrteController::class, 'startseite'], function (){
-    });
-   Route::get('/gutachter', [GutachterController::class, 'index']);
-   
-   Route::get('/{ort}/bausachverstaendiger', [OrteController::class, 'show'], function (Request $request){
-   });
-   Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){
-   });
-   Route::get('/schimmelpilz', [OrteController::class, 'schimmelpilz'], function () {
-   });
-   Route::get('/hauskaufberatung', [OrteController::class, 'hauskaufberatung'], function () {
-   });
-   Route::get('/baubegleitung', [OrteController::class, 'baubegleitung'], function () {
-   });
-   Route::get('/bauschaden', [OrteController::class, 'bauschaden'], function () {
-   });
-   Route::get('/energieberatung', [OrteController::class, 'energieberatung'], function () {
-   });
-   Route::get('/immobilienbewertung', [OrteController::class, 'immobilienbewertung'], function () {
-   });
-   Route::get('/', [OrteController::class, 'index'], function () {
-   });
-   Route::get('/team', [OrteController::class, 'team'], function () {
-   });
-   Route::get('/gutachter', [OrteController::class, 'gutachter'], function () {
-   
-   });
+//    Route::get('/startseite', [OrteController::class, 'startseite'], function (){
+//    });
+//   Route::get('/gutachter', [GutachterController::class, 'index']);
+//   
+//   Route::get('/{ort}/bausachverstaendiger', [OrteController::class, 'show'], function (Request $request){
+//   });
+//   Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){
+//   });
+//   Route::get('/schimmelpilz', [OrteController::class, 'schimmelpilz'], function () {
+//   });
+//   Route::get('/hauskaufberatung', [OrteController::class, 'hauskaufberatung'], function () {
+//   });
+//   Route::get('/baubegleitung', [OrteController::class, 'baubegleitung'], function () {
+//   });
+//   Route::get('/bauschaden', [OrteController::class, 'bauschaden'], function () {
+//   });
+//   Route::get('/energieberatung', [OrteController::class, 'energieberatung'], function () {
+//   });
+//   Route::get('/immobilienbewertung', [OrteController::class, 'immobilienbewertung'], function () {
+//   });
+//   Route::get('/', [OrteController::class, 'index'], function () {
+//   });
+//   Route::get('/team', [OrteController::class, 'team'], function () {
+//   });
+//   Route::get('/gutachter', [OrteController::class, 'gutachter'], function () {
+//   
+//   });
 //});
 
 //Österreich//
