@@ -96,7 +96,7 @@
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Ort:</h4>
-                <p>Hrdenbergstraße 10, 32427 Minden</p>
+                <p>Hardenbergstraße 10, 32427 Minden</p>
               </div>
 
               <div class="email">
@@ -132,7 +132,6 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
 
-                                        <strong>Vorname:</strong>
                                         <input type="text" name="firstname" class="form-control" placeholder="Vorname" value="{{ old('firstname') }}">
                                         @if ($errors->has('firstname'))
                                             <span class="text-danger">{{ $errors->first('firstname') }}</span>
@@ -141,7 +140,6 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <strong>Nachname:</strong>
                                         <input type="text" name="lastname" class="form-control" placeholder="Nachname" value="{{ old('lastname') }}">
                                         @if ($errors->has('lastname'))
                                             <span class="text-danger">{{ $errors->first('lastname') }}</span>
@@ -152,7 +150,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <strong>Phone:</strong>
+
                                         <input type="text" name="phone" class="form-control" placeholder="Telefonnummer" value="{{ old('phone') }}">
                                         @if ($errors->has('phone'))
                                             <span class="text-danger">{{ $errors->first('phone') }}</span>
@@ -161,7 +159,6 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <strong>Email:</strong>
                                         <input type="text" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
                                         @if ($errors->has('email'))
                                             <span class="text-danger">{{ $errors->first('email') }}</span>
@@ -172,7 +169,6 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <strong>Stadt:</strong>
                                         <input type="text" name="city" class="form-control" placeholder="Stadt" value="{{ old('city') }}">
                                         @if ($errors->has('city'))
                                             <span class="text-danger">{{ $errors->first('city') }}</span>
@@ -181,8 +177,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <strong>Objecttype:</strong>
-  <select name="objecttype" id="cars">
+  <select name="objecttype" id="cars" class="form-control">
 <option value="" selected="selected">- Art der Immobilie (optional) -</option>
  <option value="Einfamilienhaus">Einfamilienhaus</option>
   <option value="Zweifamilienhaus">Zweifamilienhaus</option>
@@ -207,8 +202,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <strong>Message:</strong>
-                                        <textarea name="message" rows="3" class="form-control">{{ old('message') }}</textarea>
+                                        <textarea name="message" placeholder="Ihre Anfrage" rows="3" class="form-control">{{ old('message') }}</textarea>
                                         @if ($errors->has('message'))
                                             <span class="text-danger">{{ $errors->first('message') }}</span>
                                         @endif
@@ -222,7 +216,7 @@
                                         
                               Ich stimme zu, dass meine Angaben aus dem Kontaktformular zur Bearbeitung meiner Anfrage erhoben und verarbeitet werden. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer <a href="/datenschutzerklaerung">Datenschutzerklärung</a>.</p>
                             <div class="form-group text-center">
-                                            <div class="text-center"><button class="submit">Submit</button></div>
+                                            <div class="text-center"><button class="submit" style="    background-color: #149ddd; border: none; color: white; padding: 16px 32px; text-decoration: none; margin: 4px 2px; cursor: pointer; font-size: 16px; border-radius: 5px;">Submit</button></div>
 
                                 
                             </div>
@@ -236,3 +230,18 @@
 </div>
     @break
  @endswitch
+#create submit button and add the class submit
+#add the class submit to the css file 
+
+// select button and the select class
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+

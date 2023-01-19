@@ -91,6 +91,7 @@ Route::get('/research', function() {
     return view('unterseiten/research');
 });
 
+
 Route::get('/show', function(){
     return view('orte/show');
 });
