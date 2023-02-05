@@ -67,7 +67,7 @@ Route::get('/', [OrteatController::class, 'index']);
 Route::get('/team', [OrteatController::class, 'team']);
 Route::get('/gutachter', [OrteatController::class, 'gutachter']);
 });
-Route::group(['domain' => 'immobiienbewertung-bielefeld.com'], function () {
+Route::group(['domain' => 'immobilienbewertung-bielefeld.com'], function () {
 Route::get('/startseite', [OrteatController::class, 'startseite']);
 Route::get('/gutachter', [GutachterController::class, 'index']);
 Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){});
