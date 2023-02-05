@@ -63,6 +63,51 @@ Route::get('/orteat', function() {
 
 
 
+//
+//$routes = [
+//    '/',
+//    '/schimmelpilz',
+//    '/hauskaufberatung',
+//    '/baubegleitung',
+//    '/bauschaden',
+//    '/energieberatung',
+//    '/immobilienbewertung',
+//];
+//
+//$domains = [
+//    'immobilienbewertung-bielefeld.com' => [
+//        'laengengrad' => [51.0, 52.0],
+//        'breitengrad' => [7.0, 8.0],
+//    ],
+//    'immobilienbewertung-wuppertal.eu' => [
+//        'laengengrad' => [51.0, 52.0],
+//        'breitengrad' => [7.0, 8.0],
+//    ],
+//    'baucampus.at' => [
+//        'laengengrad' => [48.0, 49.0],
+//        'breitengrad' => [12.0, 13.0],
+//    ],
+//    'baucampus.be' => [
+//        'laengengrad' => [50.0, 51.0],
+//        'breitengrad' => [3.0, 4.0],
+//    ],
+//    'baucampus.nl' => [
+//        'laengengrad' => [52.0, 53.0],
+//        'breitengrad' => [4.0, 5.0],
+//    ],
+//];
+//
+//foreach ($domains as $domain) {
+//    Route::domain($domain)->group(function () use ($routes) {
+//        foreach ($routes as $route) {
+//            $controllerMethod = str_replace('/', '', $route);
+//            Route::get($route, [OrteatController::class, $controllerMethod]);
+//        }
+//    });
+//}
+
+
+
 
 $routes = [
     '/',
@@ -75,26 +120,11 @@ $routes = [
 ];
 
 $domains = [
-    'immobilienbewertung-bielefeld.com' => [
-        'laengengrad' => [51.0, 52.0],
-        'breitengrad' => [7.0, 8.0],
-    ],
-    'immobilienbewertung-wuppertal.eu' => [
-        'laengengrad' => [51.0, 52.0],
-        'breitengrad' => [7.0, 8.0],
-    ],
-    'baucampus.at' => [
-        'laengengrad' => [48.0, 49.0],
-        'breitengrad' => [12.0, 13.0],
-    ],
-    'baucampus.be' => [
-        'laengengrad' => [50.0, 51.0],
-        'breitengrad' => [3.0, 4.0],
-    ],
-    'baucampus.nl' => [
-        'laengengrad' => [52.0, 53.0],
-        'breitengrad' => [4.0, 5.0],
-    ],
+    'immobilienbewertung-bielefeld.com',
+    'immobilienbewertung-wuppertal.eu',
+    'baucampus.at',
+    'baucampus.be',
+    'baucampus.nl',
 ];
 
 foreach ($domains as $domain) {
@@ -105,6 +135,16 @@ foreach ($domains as $domain) {
         }
     });
 }
+
+
+
+
+
+
+
+
+
+
 
 
 //Route::group(['domain' => 'baucampus.at'], function () {
