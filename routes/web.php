@@ -21,11 +21,19 @@ use App\Models\Gutachter;
 */
 
 
-Route::get('/show-orte', function() {
-    $orteats = DB::table('orteat')->get();
-    return view('show-orte', compact('orteats'));
-});
 
+
+
+Route::get('/', function () {
+    $currentLongitude = 51.0;
+    $currentLatitude = 7.0;
+
+    $orte = Orteat::whereBetween('laengengrad', [51.0, 52.0])
+        ->whereBetween('breitengrad', [7.0, 8.0])
+        ->get(['ort', 'orturl']);
+
+    return view('show-orte', ['orte' => $orte]);
+});
 
 
 

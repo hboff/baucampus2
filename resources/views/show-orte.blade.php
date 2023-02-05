@@ -6,13 +6,17 @@
         </tr>
     </thead>
     <tbody>
-        @foreach ($orteats as $orteat)
+        @foreach ($orte as $ort)
         <tr>
-            <td>{{ $orteat->ort }}</td>
-            <td>{{ $orteat->ort_url }}</td>
+            <td>{{ $ort->ort }}</td>
+            <td>{{ $ort->ort_url }}</td>
         </tr>
         @endforeach
     </tbody>
 </table>
-
-This code assumes that you have a table named orteat in your database with columns ort and orturl. The first code snippet gets the data from the orteat table using the DB facade in Laravel and passes the data to the view file. The second code snippet is a blade template that displays the data in a table using a foreach loop.
+////////////
+<ul>
+    @foreach ($orte as $ort)
+        <li><a href="{{ $ort->ort_url }}">{{ $ort->ort }}</a></li>
+    @endforeach
+</ul>
