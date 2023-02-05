@@ -51,6 +51,31 @@ use App\Models\Gutachter;
 //});
 
 //Österreich//
+$domains = [
+    'immobilienbewertung-bielefeld.com' => [
+        '/schimmelpilz',
+        '/hauskaufberatung',
+    ],
+    'immobilienbewertung-wuppertal.eu' => [
+        '/baubegleitung',
+        '/bauschaden',
+    ],
+    'domain3.com' => [
+        '/energieberatung',
+        '/immobilienbewertung',
+    ],
+];
+
+foreach ($domains as $domain => $routes) {
+    Route::domain($domain)->group(function () use ($routes) {
+        foreach ($routes as $route) {
+            $controllerMethod = str_replace('/', '', $route);
+            Route::get($route, [OrteatController::class, $controllerMethod]);
+        }
+    });
+}
+
+
 
 Route::group(['domain' => 'baucampus.at'], function () {
 Route::get('/startseite', [OrteatController::class, 'startseite']);
@@ -67,21 +92,21 @@ Route::get('/', [OrteatController::class, 'index']);
 Route::get('/team', [OrteatController::class, 'team']);
 Route::get('/gutachter', [OrteatController::class, 'gutachter']);
 });
-Route::group(['domain' => 'immobilienbewertung-bielefeld.com'], function () {
-Route::get('/startseite', [OrteatController::class, 'startseite']);
-Route::get('/gutachter', [GutachterController::class, 'index']);
-Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){});
-Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){});
-Route::get('/schimmelpilz', [OrteatController::class, 'schimmelpilz']);
-Route::get('/hauskaufberatung', [OrteatController::class, 'hauskaufberatung']);
-Route::get('/baubegleitung', [OrteatController::class, 'baubegleitung']);
-Route::get('/bauschaden', [OrteatController::class, 'bauschaden']);
-Route::get('/energieberatung', [OrteatController::class, 'energieberatung']);
-Route::get('/immobilienbewertung', [OrteatController::class, 'immobilienbewertung']);
-Route::get('/', [OrteatController::class, 'index']);
-Route::get('/team', [OrteatController::class, 'team']);
-Route::get('/gutachter', [OrteatController::class, 'gutachter']);
-});
+//Route::group(['domain' => 'immobilienbewertung-bielefeld.com'], function () {
+//Route::get('/startseite', [OrteatController::class, 'startseite']);
+//Route::get('/gutachter', [GutachterController::class, 'index']);
+//Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){});
+//Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){});
+//Route::get('/schimmelpilz', [OrteatController::class, 'schimmelpilz']);
+//Route::get('/hauskaufberatung', [OrteatController::class, 'hauskaufberatung']);
+//Route::get('/baubegleitung', [OrteatController::class, 'baubegleitung']);
+//Route::get('/bauschaden', [OrteatController::class, 'bauschaden']);
+//Route::get('/energieberatung', [OrteatController::class, 'energieberatung']);
+//Route::get('/immobilienbewertung', [OrteatController::class, 'immobilienbewertung']);
+//Route::get('/', [OrteatController::class, 'index']);
+//Route::get('/team', [OrteatController::class, 'team']);
+//Route::get('/gutachter', [OrteatController::class, 'gutachter']);
+//});
 //Route::get('/kontakt', function(){
 //    return view('unterseiten/kontakt');
 //});
