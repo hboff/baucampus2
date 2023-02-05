@@ -53,77 +53,53 @@ use App\Models\Gutachter;
 //Österreich//
 
 Route::group(['domain' => 'baucampus.at'], function () {
-Route::get('/startseite', [OrteatController::class, 'startseite'], function (){
- });
+Route::get('/startseite', [OrteatController::class, 'startseite']);
 Route::get('/gutachter', [GutachterController::class, 'index']);
-
-Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){
+Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){});
+Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){});
+Route::get('/schimmelpilz', [OrteatController::class, 'schimmelpilz']);
+Route::get('/hauskaufberatung', [OrteatController::class, 'hauskaufberatung']);
+Route::get('/baubegleitung', [OrteatController::class, 'baubegleitung']);
+Route::get('/bauschaden', [OrteatController::class, 'bauschaden']);
+Route::get('/energieberatung', [OrteatController::class, 'energieberatung']);
+Route::get('/immobilienbewertung', [OrteatController::class, 'immobilienbewertung']);
+Route::get('/', [OrteatController::class, 'index']);
+Route::get('/team', [OrteatController::class, 'team']);
+Route::get('/gutachter', [OrteatController::class, 'gutachter']);
 });
-Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){
+Route::group(['domain' => 'immobiienbewertung-bielefeld.com'], function () {
+Route::get('/startseite', [OrteatController::class, 'startseite']);
+Route::get('/gutachter', [GutachterController::class, 'index']);
+Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){});
+Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){});
+Route::get('/schimmelpilz', [OrteatController::class, 'schimmelpilz']);
+Route::get('/hauskaufberatung', [OrteatController::class, 'hauskaufberatung']);
+Route::get('/baubegleitung', [OrteatController::class, 'baubegleitung']);
+Route::get('/bauschaden', [OrteatController::class, 'bauschaden']);
+Route::get('/energieberatung', [OrteatController::class, 'energieberatung']);
+Route::get('/immobilienbewertung', [OrteatController::class, 'immobilienbewertung']);
+Route::get('/', [OrteatController::class, 'index']);
+Route::get('/team', [OrteatController::class, 'team']);
+Route::get('/gutachter', [OrteatController::class, 'gutachter']);
 });
-Route::get('/schimmelpilz', [OrteatController::class, 'schimmelpilz'], function () {
-});
-Route::get('/hauskaufberatung', [OrteatController::class, 'hauskaufberatung'], function () {
-});
-Route::get('/baubegleitung', [OrteatController::class, 'baubegleitung'], function () {
-});
-Route::get('/bauschaden', [OrteatController::class, 'bauschaden'], function () {
-});
-Route::get('/energieberatung', [OrteatController::class, 'energieberatung'], function () {
-});
-Route::get('/immobilienbewertung', [OrteatController::class, 'immobilienbewertung'], function () {
-});
-Route::get('/', [OrteatController::class, 'index'], function () {
-});
-Route::get('/team', [OrteatController::class, 'team'], function () {
-});
-Route::get('/gutachter', [OrteatController::class, 'gutachter'], function () {
-
-});
-});
-Route::get('/kontakt', function(){
-    return view('unterseiten/kontakt');
-});
-Route::get('/kosten-preise', function() {
-    return view('unterseiten/kosten-preise');
-});
-Route::get('/research', function() {
-    return view('unterseiten/research');
-});
-
-
-Route::get('/show', function(){
-    return view('orte/show');
-});
-
-Route::get('/impressum', function() {
-    return view('unterseiten/impressum');
-});
-
-
-Route::get('/orte/index', function(){
-    return view('orte/index');
-});
-
-Route::get('contact-us', [ContactController::class, 'index']);
-
-Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
-//Österreich//
-
-//Route::group(['domain' => 'baucampus.at'], function () {
-//    Route::get('/', function () {
-//        return view('startseiteat');
-//    });
+//Route::get('/kontakt', function(){
+//    return view('unterseiten/kontakt');
 //});
-
-
-
-//gutgekauft/////////////////////////////////////////////
-
-
-//Route::group(['domain' => 'gutgekauft.com'], function () {
-//    Route::get('/', function () {
-//       return view('index');
+//Route::get('/kosten-preise', function() {
+//    return view('unterseiten/kosten-preise');
+//});
+//Route::get('/research', function() {
+//    return view('unterseiten/research');
+//});
+//Route::get('/show', function(){
+//    return view('orte/show');
+//});
+//Route::get('/impressum', function() {
+//    return view('unterseiten/impressum');
+//});
+//Route::get('/orte/index', function(){
+//    return view('orte/index');
+//});
 //
-//    });
-//});
+//Route::get('contact-us', [ContactController::class, 'index']);
+//Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
