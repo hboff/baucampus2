@@ -26,57 +26,11 @@ use Illuminate\Support\Facades\DB;
 //});
 
 
-$routes = [
-    '/',
-    '/schimmelpilz',
-    '/hauskaufberatung',
-    '/baubegleitung',
-    '/bauschaden',
-    '/energieberatung',
-    '/immobilienbewertung',
-];
-
-$domains = [
-    'immobilienbewertung-bielefeld.com' => [
-        'laengengrad' => [1.0, 100.0],
-        'breitengrad' => [1.0, 100.0],
-    ],
-    'immobilienbewertung-wuppertal.eu' => [
-        'laengengrad' => [51.0, 52.0],
-        'breitengrad' => [7.0, 8.0],
-    ],
-    'baucampus.at' => [
-        'laengengrad' => [47.0, 48.0],
-        'breitengrad' => [10.0, 11.0],
-    ],
-    'baucampus.be' => [
-        'laengengrad' => [50.0, 51.0],
-        'breitengrad' => [4.0, 5.0],
-    ],
-    'baucampus.nl' => [
-        'laengengrad' => [52.0, 53.0],
-        'breitengrad' => [4.0, 5.0],
-    ],
-];
-
-foreach ($domains as $domain => $coordinates) {
-    Route::domain($domain)->group(function () use ($routes, $coordinates) {
-        foreach ($routes as $route) {
-            $controllerMethod = str_replace('/', '', $route);
-            Route::get($route, [OrteatController::class, $controllerMethod])
-                ->with([
-                    'laengengrad' => $coordinates['laengengrad'],
-                    'breitengrad' => $coordinates['breitengrad'],
-                ]);
-        }
-    });
-}
-
-Route::get('/orteat', function() {
+Route::get('/orteat', function() {  
     $orteats = DB::table('orteat')
-        ->whereBetween('laengengrad', request()->get('laengengrad'))
-        ->whereBetween('breitengrad', request()->get('breitengrad'))
-        ->get();
+        ->whereBetween('laengengrad', [1.0, 12.0])
+        ->whereBetween('breitengrad', [10.0, 52.0])
+                ->get();
     
     return view('orteat', compact('orteats'));
 });
@@ -121,11 +75,26 @@ $routes = [
 ];
 
 $domains = [
-    'immobilienbewertung-bielefeld.com',
-    'immobilienbewertung-wuppertal.eu',
-    'baucampus.at',
-    'baucampus.be',
-    'baucampus.nl',
+    'immobilienbewertung-bielefeld.com' => [
+        'laengengrad' => [51.0, 52.0],
+        'breitengrad' => [7.0, 8.0],
+    ],
+    'immobilienbewertung-wuppertal.eu' => [
+        'laengengrad' => [51.0, 52.0],
+        'breitengrad' => [7.0, 8.0],
+    ],
+    'baucampus.at' => [
+        'laengengrad' => [48.0, 49.0],
+        'breitengrad' => [12.0, 13.0],
+    ],
+    'baucampus.be' => [
+        'laengengrad' => [50.0, 51.0],
+        'breitengrad' => [3.0, 4.0],
+    ],
+    'baucampus.nl' => [
+        'laengengrad' => [52.0, 53.0],
+        'breitengrad' => [4.0, 5.0],
+    ],
 ];
 
 foreach ($domains as $domain) {
