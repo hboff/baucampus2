@@ -9,7 +9,7 @@
         @foreach ($orteats as $orteat)
         <tr>
             <td>{{ $orteat->ort }}</td>
-            <td>{{ $orteat->orturl }}</td>
+            <td>{{ $orteat->ort_url }}</td>
         </tr>
         @endforeach
     </tbody>
