@@ -18,55 +18,24 @@ use App\Models\Gutachter;
 | contains the "web" middleware group. Now create something great!
 |
 */
-   Route::get('/gutachter', [GutachterController::class, 'index']);
 
-//Route::group(['domain' => 'baucampus.ch'], function () {
-//    Route::get('/startseite', [OrteController::class, 'startseite'], function (){
-//    });
-//   Route::get('/gutachter', [GutachterController::class, 'index']);
-//   
-//   Route::get('/{ort}/bausachverstaendiger', [OrteController::class, 'show'], function (Request $request){
-//   });
-//   Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){
-//   });
-//   Route::get('/schimmelpilz', [OrteController::class, 'schimmelpilz'], function () {
-//   });
-//   Route::get('/hauskaufberatung', [OrteController::class, 'hauskaufberatung'], function () {
-//   });
-//   Route::get('/baubegleitung', [OrteController::class, 'baubegleitung'], function () {
-//   });
-//   Route::get('/bauschaden', [OrteController::class, 'bauschaden'], function () {
-//   });
-//   Route::get('/energieberatung', [OrteController::class, 'energieberatung'], function () {
-//   });
-//   Route::get('/immobilienbewertung', [OrteController::class, 'immobilienbewertung'], function () {
-//   });
-//   Route::get('/', [OrteController::class, 'index'], function () {
-//   });
-//   Route::get('/team', [OrteController::class, 'team'], function () {
-//   });
-//   Route::get('/gutachter', [OrteController::class, 'gutachter'], function () {
-//   
-//   });
-//});
 
-//Österreich//
-$domains = [
-    'immobilienbewertung-bielefeld.com' => [
-        '/schimmelpilz',
-        '/hauskaufberatung',
-    ],
-    'immobilienbewertung-wuppertal.eu' => [
-        '/baubegleitung',
-        '/bauschaden',
-    ],
-    'domain3.com' => [
-        '/energieberatung',
-        '/immobilienbewertung',
-    ],
+$routes = [
+    '/schimmelpilz',
+    '/hauskaufberatung',
+    '/baubegleitung',
+    '/bauschaden',
+    '/energieberatung',
+    '/immobilienbewertung',
 ];
 
-foreach ($domains as $domain => $routes) {
+$domains = [
+    'immobilienbewertung-bielefeld.com',
+    'immobilienbewertung-wuppertal.eu',
+    'domain3.com',
+];
+
+foreach ($domains as $domain) {
     Route::domain($domain)->group(function () use ($routes) {
         foreach ($routes as $route) {
             $controllerMethod = str_replace('/', '', $route);
@@ -74,8 +43,6 @@ foreach ($domains as $domain => $routes) {
         }
     });
 }
-
-
 
 Route::group(['domain' => 'baucampus.at'], function () {
 Route::get('/startseite', [OrteatController::class, 'startseite']);
@@ -92,21 +59,7 @@ Route::get('/', [OrteatController::class, 'index']);
 Route::get('/team', [OrteatController::class, 'team']);
 Route::get('/gutachter', [OrteatController::class, 'gutachter']);
 });
-//Route::group(['domain' => 'immobilienbewertung-bielefeld.com'], function () {
-//Route::get('/startseite', [OrteatController::class, 'startseite']);
-//Route::get('/gutachter', [GutachterController::class, 'index']);
-//Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){});
-//Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){});
-//Route::get('/schimmelpilz', [OrteatController::class, 'schimmelpilz']);
-//Route::get('/hauskaufberatung', [OrteatController::class, 'hauskaufberatung']);
-//Route::get('/baubegleitung', [OrteatController::class, 'baubegleitung']);
-//Route::get('/bauschaden', [OrteatController::class, 'bauschaden']);
-//Route::get('/energieberatung', [OrteatController::class, 'energieberatung']);
-//Route::get('/immobilienbewertung', [OrteatController::class, 'immobilienbewertung']);
-//Route::get('/', [OrteatController::class, 'index']);
-//Route::get('/team', [OrteatController::class, 'team']);
-//Route::get('/gutachter', [OrteatController::class, 'gutachter']);
-//});
+//   Route::get('/gutachter', [GutachterController::class, 'index']);
 //Route::get('/kontakt', function(){
 //    return view('unterseiten/kontakt');
 //});
