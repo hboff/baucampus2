@@ -101,5 +101,5 @@ Route::get('/gutachter', [OrteatController::class, 'gutachter']);
 //    return view('orte/index');
 //});
 //
-//Route::get('contact-us', [ContactController::class, 'index']);
-//Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
+Route::get('contact-us', [ContactController::class, 'index']);
+Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
