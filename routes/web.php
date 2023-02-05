@@ -27,6 +27,7 @@ use App\Models\Orteat;
 
 $routes = [
     'index',
+    
     'startseite',
     'schimmelpilz',
     'hauskaufberatung',
