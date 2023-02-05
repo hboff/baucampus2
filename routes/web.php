@@ -21,32 +21,78 @@ use App\Models\Gutachter;
 */
 
 
-$routes = [
-    '/',
-    '/schimmelpilz',
-    '/hauskaufberatung',
-    '/baubegleitung',
-    '/bauschaden',
-    '/energieberatung',
-    '/immobilienbewertung',
-];
+Route::get('/show-orte', function () {
+    $orte = Orteat::whereBetween('laengengrad', [51.0, 52.0])->whereBetween('breitengrad', [7.0, 8.0])->get();
+    return view('show-orte', ['orte' => $orte]);
+});
 
-$domains = [
-    'immobilienbewertung-bielefeld.com',
-    'immobilienbewertung-wuppertal.eu',
-    'baucampus.at',
-    'baucampus.be',
-    'baucampus.nl',
-];
 
-foreach ($domains as $domain) {
-    Route::domain($domain)->group(function () use ($routes) {
-        foreach ($routes as $route) {
-            $controllerMethod = str_replace('/', '', $route);
-            Route::get($route, [OrteatController::class, $controllerMethod]);
-        }
-    });
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//$routes = [
+//    '/',
+//    '/schimmelpilz',
+//    '/hauskaufberatung',
+//    '/baubegleitung',
+//    '/bauschaden',
+//    '/energieberatung',
+//    '/immobilienbewertung',
+//];
+//
+//$domains = [
+//    'immobilienbewertung-bielefeld.com',
+//    'immobilienbewertung-wuppertal.eu',
+//    'baucampus.at',
+//    'baucampus.be',
+//    'baucampus.nl',
+//];
+//
+//foreach ($domains as $domain) {
+//    Route::domain($domain)->group(function () use ($routes) {
+//        foreach ($routes as $route) {
+//            $controllerMethod = str_replace('/', '', $route);
+//            Route::get($route, [OrteatController::class, $controllerMethod]);
+//        }
+//    });
+//}
 
 
 //Route::group(['domain' => 'baucampus.at'], function () {

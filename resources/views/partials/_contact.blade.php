@@ -230,18 +230,5 @@
 </div>
     @break
  @endswitch
-#create submit button and add the class submit
-#add the class submit to the css file 
-
-// select button and the select class
-select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
 
 
