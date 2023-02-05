@@ -21,6 +21,7 @@ use App\Models\Gutachter;
 
 
 $routes = [
+    '/',
     '/schimmelpilz',
     '/hauskaufberatung',
     '/baubegleitung',
@@ -32,7 +33,9 @@ $routes = [
 $domains = [
     'immobilienbewertung-bielefeld.com',
     'immobilienbewertung-wuppertal.eu',
-    'domain3.com',
+    'baucampus.at',
+    'baucampus.be',
+    'baucampus.nl',
 ];
 
 foreach ($domains as $domain) {
