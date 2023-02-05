@@ -22,7 +22,7 @@ use App\Models\Orteat;
 
 
 
-
+ 
 
 
 $routes = [
