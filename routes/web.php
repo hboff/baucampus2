@@ -18,6 +18,11 @@ use Illuminate\Support\Facades\DB;
 |
 */
 
+//Route::get('/orteat', function() {
+//    $orteats = DB::table('orteat')
+//        ->get();
+//    return view('orteat', compact('orteats'));
+//});
 
 
 Route::get('/orteat', function() {  
@@ -28,6 +33,7 @@ Route::get('/orteat', function() {
     
     return view('orteat', compact('orteats'));
 });
+
 $routes = [
     '/',
     '/schimmelpilz',
@@ -50,9 +56,7 @@ foreach ($domains as $domain) {
     Route::domain($domain)->group(function () use ($routes) {
         foreach ($routes as $route) {
             $controllerMethod = str_replace('/', '', $route);
-            Route::get($route, function () use ($controllerMethod) {
-                return $controllerMethod;
-            });
+            Route::get($route, [OrteatController::class, $controllerMethod]);
         }
     });
 }

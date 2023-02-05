@@ -8,6 +8,5 @@ class Ort extends Model
 {
 
 
-     protected $table = 'orteat';
      protected $fillable = ['ort'];
 }
