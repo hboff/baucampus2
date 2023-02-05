@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Orteat;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrteController;
 use App\Http\Controllers\OrteatController;
@@ -31,22 +32,42 @@ $routes = [
 ];
 
 $domains = [
-    'immobilienbewertung-bielefeld.com',
-    'immobilienbewertung-wuppertal.eu',
-    'baucampus.at',
-    'baucampus.be',
-    'baucampus.nl',
+    'immobilienbewertung-bielefeld.com' => [
+        'laengengrad' => [51.0, 52.0],
+        'breitengrad' => [7.0, 8.0],
+    ],
+    'immobilienbewertung-wuppertal.eu' => [
+        'laengengrad' => [51.0, 52.0],
+        'breitengrad' => [7.0, 8.0],
+    ],
+    'baucampus.at' => [
+        'laengengrad' => [48.0, 49.0],
+        'breitengrad' => [12.0, 13.0],
+    ],
+    'baucampus.be' => [
+        'laengengrad' => [50.0, 51.0],
+        'breitengrad' => [3.0, 4.0],
+    ],
+    'baucampus.nl' => [
+        'laengengrad' => [52.0, 53.0],
+        'breitengrad' => [4.0, 5.0],
+    ],
 ];
 
-foreach ($domains as $domain) {
-    Route::domain($domain)->group(function () use ($routes) {
+foreach ($domains as $domain => $values) {
+    Route::domain($domain)->group(function () use ($routes, $values) {
         foreach ($routes as $route) {
             $controllerMethod = str_replace('/', '', $route);
-            Route::get($route, [OrteatController::class, $controllerMethod]);
+            Route::get($route, function () use ($controllerMethod, $values) {
+                $orte = Orteat::whereBetween('laengengrad', $values['laengengrad'])
+                    ->whereBetween('breitengrad', $values['breitengrad'])
+                    ->get();
+
+                return view('orteat.' . $controllerMethod, ['orte' => $orte]);
+            });
         }
     });
 }
-
 Route::group(['domain' => 'baucampus.at'], function () {
 Route::get('/startseite', [OrteatController::class, 'startseite']);
 Route::get('/gutachter', [GutachterController::class, 'index']);
