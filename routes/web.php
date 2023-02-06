@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\GutachterController;
 
 use App\Http\Controllers\OrteatController;
 use Illuminate\Support\Facades\DB;
@@ -63,6 +64,7 @@ foreach ($domains as $domain => $domainData) {
 Route::domain($domain)->group(function () use ($routes, $domainData) {
     Route::get('/', [OrteatController::class, 'index']);
     Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){});
+    Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){});
     Route::get('contact-us', [ContactController::class, 'index']);
     Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
 foreach ($routes as $route) {
