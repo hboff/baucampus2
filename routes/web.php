@@ -25,7 +25,33 @@ use Illuminate\Support\Facades\DB;
 //    return view('orteat', compact('orteats'));
 //});
 
-Route::domain(['baucampus.be', 'baucampus.at', 'baucampus.nl'])->get('/{page?}', [PagesController::class, 'index'])->where('page', '(hauskaufberatung|baubegleitung|bauschaden)')->name('pages');
+
+Route::domain('baucampus.at')->group(function () {
+    Route::get('/', function () {
+        $data = DB::table('orteat')->whereBetween('laengengrad', [1.0, 12.0])->whereBetween('breitengrad', [10.0, 52.0])->get();
+        return view('bauschaden', ['data' => $data]);
+    });
+});
+
+Route::domain('baucampus.be')->group(function () {
+    Route::get('/', function () {
+        $data = DB::table('orteat')->whereBetween('laengengrad', [1.0, 12.0])->whereBetween('breitengrad', [10.0, 52.0])->get();
+        return view('bauschaden', ['data' => $data]);
+    });
+});
+
+Route::domain('baucampus.nl')->group(function () {
+    Route::get('/', function () {
+        $data = DB::table('orteat')->whereBetween('laengengrad', [1.0, 12.0])->whereBetween('breitengrad', [10.0, 52.0])->get();
+        return view('hauskaufberatung', ['data' => $data]);
+    });
+});
+
+
+
+
+
+
 //Route::get('/orteat', function() {  
 //    $orteats = DB::table('orteat')
 //        ->whereBetween('laengengrad', [1.0, 12.0])

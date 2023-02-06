@@ -6,10 +6,10 @@
         </tr>
     </thead>
     <tbody>
-        @foreach ($orteats as $orteat)
+        @foreach ($data as $item)
         <tr>
-            <td>{{ $orteat->ort }}</td>
-            <td>{{ $orteat->ort_url }}</td>
+            <td>{{ $item->ort }}</td>
+            <td>{{ $item->ort_url }}</td>
         </tr>
         @endforeach
     </tbody>
