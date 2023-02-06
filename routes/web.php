@@ -19,33 +19,58 @@ use Illuminate\Support\Facades\DB;
 |
 */
 
-//Route::get('/orteat', function() {
-//    $orteats = DB::table('orteat')
-//        ->get();
-//    return view('orteat', compact('orteats'));
-//});
-
-
-Route::domain('baucampus.at')->group(function () {
-    Route::get('/', function () {
-        $data = DB::table('orteat')->whereBetween('laengengrad', [1.0, 12.0])->whereBetween('breitengrad', [10.0, 52.0])->get();
-        return view('orteat', ['data' => $data]);
-    });
+Route::get('/orteat', function() {  
+    $orteats = DB::table('orteat')
+        ->whereBetween('laengengrad', [1.0, 12.0])
+        ->whereBetween('breitengrad', [10.0, 52.0])
+                ->get();
+    
+    return view('orteat', compact('orteats'));
 });
 
-Route::domain('baucampus.be')->group(function () {
-    Route::get('/', function () {
-        $data = DB::table('orteat')->whereBetween('laengengrad', [1.0, 12.0])->whereBetween('breitengrad', [10.0, 52.0])->get();
-        return view('orteat', ['data' => $data]);
-    });
-});
+$routes = [
+    '/schimmelpilz',
+    '/hauskaufberatung',
+    '/baubegleitung',
+    '/bauschaden',
+    '/energieberatung',
+    '/immobilienbewertung',
+];
 
-Route::domain('baucampus.nl')->group(function () {
-    Route::get('/', function () {
-        $data = DB::table('orteat')->whereBetween('laengengrad', [1.0, 12.0])->whereBetween('breitengrad', [10.0, 52.0])->get();
-        return view('orteat', ['data' => $data]);
+$domains = [
+    'immobilienbewertung-bielefeld.com' => [
+        'laengengrad' => [1.0, 12.0],
+        'breitengrad' => [10.0, 52.0],
+    ],
+    'immobilienbewertung-wuppertal.eu' => [
+        'laengengrad' => [1.0, 12.0],
+        'breitengrad' => [10.0, 52.0],
+    ],
+    'baucampus.at' => [
+        'laengengrad' => [48.0, 49.0],
+        'breitengrad' => [10.0, 52.0],
+    ],
+    'baucampus.be' => [
+        'laengengrad' => [50.0, 51.0],
+        'breitengrad' => [10.0, 52.0],
+    ],
+    'baucampus.nl' => [
+        'laengengrad' => [52.0, 53.0],
+        'breitengrad' => [10.0, 52.0],
+    ],
+];
+
+
+foreach ($domains as $domain => $domainData) {
+    Route::domain($domain)->group(function () use ($routes, $domainData) {
+        foreach ($routes as $route) {
+            Route::get($route, function () use ($domainData) {
+                $data = DB::table('orteat')->whereBetween('laengengrad', $domainData['laengengrad'])->whereBetween('breitengrad', $domainData['breitengrad'])->get();
+                return view('bauschaden', ['data' => $data]);
+            });
+        }
     });
-});
+}
 
 
 
@@ -127,11 +152,11 @@ Route::domain('baucampus.nl')->group(function () {
 //
 //$domains = [
 //    'immobilienbewertung-bielefeld.com' => [
-//        'laengengrad' => [51.0, 52.0],
+//        'laengengrad' => [1.0, 12.0],
 //        'breitengrad' => [7.0, 8.0],
 //    ],
 //    'immobilienbewertung-wuppertal.eu' => [
-//        'laengengrad' => [51.0, 52.0],
+//        'laengengrad' => [1.0, 12.0],
 //        'breitengrad' => [7.0, 8.0],
 //    ],
 //    'baucampus.at' => [
