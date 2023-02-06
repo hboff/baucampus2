@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PagesController;
 
 use App\Http\Controllers\OrteatController;
 use Illuminate\Support\Facades\DB;
@@ -24,56 +25,55 @@ use Illuminate\Support\Facades\DB;
 //    return view('orteat', compact('orteats'));
 //});
 
-
-Route::get('/orteat', function() {  
-    $orteats = DB::table('orteat')
-        ->whereBetween('laengengrad', [1.0, 12.0])
-        ->whereBetween('breitengrad', [10.0, 52.0])
-                ->get();
-    
-    return view('orteat', compact('orteats'));
-});
-
-$routes = [
-    '/',
-    '/schimmelpilz',
-    '/hauskaufberatung',
-    '/baubegleitung',
-    '/bauschaden',
-    '/energieberatung',
-    '/immobilienbewertung',
-];
-
-$domains = [
-    'immobilienbewertung-bielefeld.com',
-    'immobilienbewertung-wuppertal.eu',
-    'baucampus.at',
-    'baucampus.be',
-    'baucampus.nl',
-];
-
-foreach ($domains as $domain) {
-    Route::domain($domain)->group(function () use ($routes) {
-        foreach ($routes as $route) {
-            $controllerMethod = str_replace('/', '', $route);
-            Route::get($route, [OrteatController::class, $controllerMethod]);
-        }
-    });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Route::domain(['baucampus.be', 'baucampus.at', 'baucampus.nl'])->get('/{page?}', [PagesController::class, 'index'])->where('page', '(hauskaufberatung|baubegleitung|bauschaden)')->name('pages');
+//Route::get('/orteat', function() {  
+//    $orteats = DB::table('orteat')
+//        ->whereBetween('laengengrad', [1.0, 12.0])
+//        ->whereBetween('breitengrad', [10.0, 52.0])
+//                ->get();
+//    
+//    return view('orteat', compact('orteats'));
+//});
+//
+//$routes = [
+//    '/schimmelpilz',
+//    '/hauskaufberatung',
+//    '/baubegleitung',
+//    '/bauschaden',
+//    '/energieberatung',
+//    '/immobilienbewertung',
+//];
+//
+//$domains = [
+//    'immobilienbewertung-bielefeld.com',
+//    'immobilienbewertung-wuppertal.eu',
+//    'baucampus.at',
+//    'baucampus.be',
+//    'baucampus.nl',
+//];
+//
+//foreach ($domains as $domain) {
+//    Route::domain($domain)->group(function () use ($routes) {
+//        foreach ($routes as $route) {
+//            $controllerMethod = str_replace('/', '', $route);
+//            Route::get($route, [OrteatController::class, $controllerMethod]);
+//        }
+//    });
+//}
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
