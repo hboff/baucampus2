@@ -25,14 +25,14 @@ use Illuminate\Support\Facades\DB;
 //});
 
 
-//Route::get('/orteat', function() {  
-//    $orteats = DB::table('orteat')
-//        ->whereBetween('laengengrad', [1.0, 12.0])
-//        ->whereBetween('breitengrad', [10.0, 52.0])
-//                ->get();
-//    
-//    return view('orteat', compact('orteats'));
-//});
+Route::get('/orteat', function() {  
+    $orteats = DB::table('orteat')
+        ->whereBetween('laengengrad', [1.0, 12.0])
+        ->whereBetween('breitengrad', [10.0, 52.0])
+                ->get();
+    
+    return view('orteat', compact('orteats'));
+});
 
 $routes = [
     '/',
@@ -70,13 +70,8 @@ $domains = [
 foreach ($domains as $domain) {
     Route::domain($domain)->group(function () use ($routes) {
         foreach ($routes as $route) {
-       Route::get('/' . $route, function() {  
-         $orteats = DB::table('orteat')
-            ->whereBetween('laengengrad', [1.0, 12.0])
-            ->whereBetween('breitengrad', [10.0, 52.0])
-            ->get();
-        return view('orteat', compact('orteats'));
-        });
+            $controllerMethod = str_replace('/', '', $route);
+            Route::get($route, [OrteatController::class, $controllerMethod]);
         }
     });
 }
