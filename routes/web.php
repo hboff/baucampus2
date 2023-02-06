@@ -66,7 +66,7 @@ foreach ($domains as $domain => $domainData) {
         foreach ($routes as $route) {
             Route::get($route, function () use ($domainData) {
                 $data = DB::table('orteat')->whereBetween('laengengrad', $domainData['laengengrad'])->whereBetween('breitengrad', $domainData['breitengrad'])->get();
-                return view('bauschaden', ['data' => $data]);
+                return view('orteat', ['data' => $data]);
             });
         }
     });
