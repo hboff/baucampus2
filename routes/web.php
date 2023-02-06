@@ -29,21 +29,21 @@ use Illuminate\Support\Facades\DB;
 Route::domain('baucampus.at')->group(function () {
     Route::get('/', function () {
         $data = DB::table('orteat')->whereBetween('laengengrad', [1.0, 12.0])->whereBetween('breitengrad', [10.0, 52.0])->get();
-        return view('bauschaden', ['data' => $data]);
+        return view('orteat', ['data' => $data]);
     });
 });
 
 Route::domain('baucampus.be')->group(function () {
     Route::get('/', function () {
         $data = DB::table('orteat')->whereBetween('laengengrad', [1.0, 12.0])->whereBetween('breitengrad', [10.0, 52.0])->get();
-        return view('bauschaden', ['data' => $data]);
+        return view('orteat', ['data' => $data]);
     });
 });
 
 Route::domain('baucampus.nl')->group(function () {
     Route::get('/', function () {
         $data = DB::table('orteat')->whereBetween('laengengrad', [1.0, 12.0])->whereBetween('breitengrad', [10.0, 52.0])->get();
-        return view('hauskaufberatung', ['data' => $data]);
+        return view('orteat', ['data' => $data]);
     });
 });
 
