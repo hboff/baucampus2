@@ -19,15 +19,6 @@ use Illuminate\Support\Facades\DB;
 |
 */
 
-//Route::get('/orteat', function() {  
-//    $orteats = DB::table('orteat')
-//        ->whereBetween('laengengrad', [1.0, 12.0])
-//        ->whereBetween('breitengrad', [10.0, 52.0])
-//                ->get();
-//    
-//    return view('orteat', compact('orteats'));
-//});
-
 $routes = [
     'schimmelpilz',
     'hauskaufberatung',
@@ -35,6 +26,13 @@ $routes = [
     'bauschaden',
     'energieberatung',
     'immobilienbewertung',
+    'gutachter',
+    'team',
+    'kontakt',
+    'kosten-preise',
+    'research',
+    'show',
+    'impressum',
 ];
 
 $domains = [
@@ -63,6 +61,9 @@ $domains = [
 
 foreach ($domains as $domain => $domainData) {
 Route::domain($domain)->group(function () use ($routes, $domainData) {
+    Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){});
+    Route::get('contact-us', [ContactController::class, 'index']);
+    Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
 foreach ($routes as $route) {
 Route::get($route, function () use ($route, $domainData) {
 $data = DB::table('orteat')
@@ -74,129 +75,6 @@ $data = DB::table('orteat')
     }
 });
 }
-
-
-
-
-
-//Route::get('/orteat', function() {  
-//    $orteats = DB::table('orteat')
-//        ->whereBetween('laengengrad', [1.0, 12.0])
-//        ->whereBetween('breitengrad', [10.0, 52.0])
-//                ->get();
-//    
-//    return view('orteat', compact('orteats'));
-//});
-//
-//$routes = [
-//    '/schimmelpilz',
-//    '/hauskaufberatung',
-//    '/baubegleitung',
-//    '/bauschaden',
-//    '/energieberatung',
-//    '/immobilienbewertung',
-//];
-//
-//$domains = [
-//    'immobilienbewertung-bielefeld.com',
-//    'immobilienbewertung-wuppertal.eu',
-//    'baucampus.at',
-//    'baucampus.be',
-//    'baucampus.nl',
-//];
-//
-//foreach ($domains as $domain) {
-//    Route::domain($domain)->group(function () use ($routes) {
-//        foreach ($routes as $route) {
-//            $controllerMethod = str_replace('/', '', $route);
-//            Route::get($route, [OrteatController::class, $controllerMethod]);
-//        }
-//    });
-//}
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//$routes = [
-//    '/',
-//    '/schimmelpilz',
-//    '/hauskaufberatung',
-//    '/baubegleitung',
-//    '/bauschaden',
-//    '/energieberatung',
-//    '/immobilienbewertung',
-//];
-//
-//$domains = [
-//    'immobilienbewertung-bielefeld.com' => [
-//        'laengengrad' => [1.0, 12.0],
-//        'breitengrad' => [7.0, 8.0],
-//    ],
-//    'immobilienbewertung-wuppertal.eu' => [
-//        'laengengrad' => [1.0, 12.0],
-//        'breitengrad' => [7.0, 8.0],
-//    ],
-//    'baucampus.at' => [
-//        'laengengrad' => [48.0, 49.0],
-//        'breitengrad' => [12.0, 13.0],
-//    ],
-//    'baucampus.be' => [
-//        'laengengrad' => [50.0, 51.0],
-//        'breitengrad' => [3.0, 4.0],
-//    ],
-//    'baucampus.nl' => [
-//        'laengengrad' => [52.0, 53.0],
-//        'breitengrad' => [4.0, 5.0],
-//    ],
-//];
-//
-//foreach ($domains as $domain) {
-//    Route::domain($domain)->group(function () use ($routes) {
-//        foreach ($routes as $route) {
-//            $controllerMethod = str_replace('/', '', $route);
-//            Route::get($route, [OrteatController::class, $controllerMethod]);
-//        }
-//    });
-//}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //Route::group(['domain' => 'baucampus.at'], function () {
@@ -236,5 +114,3 @@ $data = DB::table('orteat')
 //    return view('orte/index');
 //});
 //
-Route::get('contact-us', [ContactController::class, 'index']);
-Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
