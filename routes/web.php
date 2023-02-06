@@ -19,22 +19,22 @@ use Illuminate\Support\Facades\DB;
 |
 */
 
-Route::get('/orteat', function() {  
-    $orteats = DB::table('orteat')
-        ->whereBetween('laengengrad', [1.0, 12.0])
-        ->whereBetween('breitengrad', [10.0, 52.0])
-                ->get();
-    
-    return view('orteat', compact('orteats'));
-});
+//Route::get('/orteat', function() {  
+//    $orteats = DB::table('orteat')
+//        ->whereBetween('laengengrad', [1.0, 12.0])
+//        ->whereBetween('breitengrad', [10.0, 52.0])
+//                ->get();
+//    
+//    return view('orteat', compact('orteats'));
+//});
 
 $routes = [
-    '/schimmelpilz',
-    '/hauskaufberatung',
-    '/baubegleitung',
-    '/bauschaden',
-    '/energieberatung',
-    '/immobilienbewertung',
+    'schimmelpilz',
+    'hauskaufberatung',
+    'baubegleitung',
+    'bauschaden',
+    'energieberatung',
+    'immobilienbewertung',
 ];
 
 $domains = [
@@ -47,11 +47,11 @@ $domains = [
         'breitengrad' => [10.0, 52.0],
     ],
     'baucampus.at' => [
-        'laengengrad' => [48.0, 49.0],
+        'laengengrad' => [1.0, 12.0],
         'breitengrad' => [10.0, 52.0],
     ],
     'baucampus.be' => [
-        'laengengrad' => [50.0, 51.0],
+        'laengengrad' => [1.0, 12.0],
         'breitengrad' => [10.0, 52.0],
     ],
     'baucampus.nl' => [
@@ -62,16 +62,18 @@ $domains = [
 
 
 foreach ($domains as $domain => $domainData) {
-    Route::domain($domain)->group(function () use ($routes, $domainData) {
-        foreach ($routes as $route) {
-            Route::get($route, function () use ($domainData) {
-                $data = DB::table('orteat')->whereBetween('laengengrad', $domainData['laengengrad'])->whereBetween('breitengrad', $domainData['breitengrad'])->get();
-                return view('orteat', ['data' => $data]);
-            });
-        }
-    });
+Route::domain($domain)->group(function () use ($routes, $domainData) {
+foreach ($routes as $route) {
+Route::get($route, function () use ($route, $domainData) {
+$data = DB::table('orteat')
+->whereBetween('laengengrad', $domainData['laengengrad'])
+->whereBetween('breitengrad', $domainData['breitengrad'])
+->get();
+            return view($route, ['data' => $data]);
+        });
+    }
+});
 }
-
 
 
 
