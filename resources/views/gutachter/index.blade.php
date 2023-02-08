@@ -1,10 +1,36 @@
 @php
 $contact=1;
 @endphp
-<!-- Photoswipe library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+
+ <!-- PhotoSwipe library and CSS files -->
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" />
+    <style>
+      /* Gallery container */
+      .gallery-container {
+        padding: 30px;
+      }
+      
+      /* Gallery item */
+      .gallery-item {
+        display: inline-block;
+        margin: 10px;
+        text-align: center;
+      }
+      
+      /* Image thumbnail */
+      .thumbnail {
+        display: block;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+    </style>
+
+ <!-- Custom Style  -->
 
 <style>
   .osk-custom {
@@ -184,17 +210,25 @@ $contact=1;
       </div>
     </section><!-- End About Section -->
 
-<div class="my-gallery">
-  <a href="/img/{{$gutachters['Photo']}}" data-size="1920x1080">
-    <img src="/img/{{$gutachters['Photo']}}" />
-  </a>
-  <a href="/img/{{$gutachters['Photo']}}" data-size="1024x768">
-    <img src="/img/{{$gutachters['Photo']}}" />
-  </a>
-  <a href="/img/{{$gutachters['Photo']}}" data-size="800x600">
-    <img src="/img/{{$gutachters['Photo']}}" />
-  </a>
-</div>
+
+
+    <!-- Gallery container -->
+    <div class="gallery-container">
+      <!-- Gallery item -->
+      <a href="https://placekitten.com/600/400" class="gallery-item" itemprop="contentUrl" data-size="600x400">
+        <img src="https://placekitten.com/200/200" class="thumbnail" itemprop="thumbnail" alt="Image 1" />
+      </a>
+      
+      <!-- Gallery item -->
+      <a href="https://placekitten.com/600/400" class="gallery-item" itemprop="contentUrl" data-size="600x400">
+        <img src="https://placekitten.com/200/200" class="thumbnail" itemprop="thumbnail" alt="Image 2" />
+      </a>
+      
+      <!-- Gallery item -->
+      <a href="https://placekitten.com/600/400" class="gallery-item" itemprop="contentUrl" data-size="600x400">
+        <img src="https://placekitten.com/200/200" class="thumbnail" itemprop="thumbnail" alt="Image 3" />
+      </a>
+    </div>
 
 
     <!-- ======= Resume Section ======= -->
@@ -372,29 +406,50 @@ object-position: center;" class="description">
 
   <!-- Template Main JS File -->
   <script src="/js/main.js"></script>
- <script>var pswpElement = document.querySelectorAll('.pswp')[0];
 
-// build items array
-var items = [];
-var galleryElements = document.querySelectorAll('.my-gallery a');
-for (var i = 0, l = galleryElements.length; i < l; i++) {
-  items.push({
-    src: galleryElements[i].getAttribute('href'),
-    w: parseInt(galleryElements[i].getAttribute('data-size').split('x')[0]),
-    h: parseInt(galleryElements[i].getAttribute('data-size').split('x')[1]),
-  });
-}
 
-// define options (if needed)
-var options = {
-  // optionName: 'option value'
-  // for example:
-  index: 0 // start at first slide
-};
 
-// Initialize PhotoSwipe
-var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-gallery.init();</script>
+
+     <!-- PhotoSwipe core JS file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
+    <!-- PhotoSwipe UI JS file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+    <script>
+      // Initialize PhotoSwipe
+      var gallery = new PhotoSwipe(
+        document.querySelectorAll('.pswp')[0],
+        PhotoSwipeUI_Default,
+        [
+          {
+            src: 'https://placekitten.com/600/400',
+            w: 600,
+            h: 400
+          },
+               ],
+        {
+          index: 0
+        }
+      );
+      
+      // Get gallery items
+      var galleryItems = document.querySelectorAll('.gallery-item');
+      
+      // Loop through gallery items
+      for (var i = 0; i < galleryItems.length; i++) {
+        var item = galleryItems[i];
+        
+        // Attach click event to each gallery item
+        item.onclick = function(e) {
+          e.preventDefault();
+          
+          // Update PhotoSwipe index based on clicked item
+          gallery.options.index = [].slice.call(galleryItems).indexOf(this);
+          
+          // Open PhotoSwipe
+          gallery.init();
+        };
+      }
+    </script>
 </body>
 
 </html>
