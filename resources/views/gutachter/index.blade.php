@@ -2,11 +2,19 @@
 $contact=1;
 @endphp
 
+<!DOCTYPE html>
+<html lang="de">
 
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Baucampus</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
  <!-- PhotoSwipe library and CSS files -->
 
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" />
     <style>
       /* Gallery container */
@@ -29,6 +37,9 @@ $contact=1;
         object-fit: cover;
       }
     </style>
+    
+
+
 
  <!-- Custom Style  -->
 
@@ -59,16 +70,8 @@ $contact=1;
   }
 </style>
 
-<!DOCTYPE html>
-<html lang="de">
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Baucampus</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -410,7 +413,8 @@ object-position: center;" class="description">
 
 
 
-     <!-- PhotoSwipe core JS file -->
+    
+    <!-- PhotoSwipe core JS file -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
     <!-- PhotoSwipe UI JS file -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
@@ -424,8 +428,7 @@ object-position: center;" class="description">
             src: 'https://placekitten.com/600/400',
             w: 600,
             h: 400
-          },
-               ],
+          },      ],
         {
           index: 0
         }
