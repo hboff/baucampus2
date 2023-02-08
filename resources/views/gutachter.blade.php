@@ -1,5 +1,8 @@
 @extends('layout')
 @section('content')
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
 <style>
 .zooma {
 	overflow: hidden;
@@ -101,7 +104,22 @@ p + p {
 }
 
 </style>
+<script>var map = L.map('map').setView([51.165691, 10.451526], 6);
 
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+var locations = [  [52.520008, 13.404954],
+  [50.937531, 6.960279],
+  [48.135125, 11.581981],
+  // Add 9 more locations...
+];
+
+for (var i = 0; i < locations.length; i++) {
+  var marker = L.marker(locations[i]).addTo(map);
+}
+</script>
 
 
 <title>Gutachter Baucampus</title>
@@ -144,6 +162,8 @@ p + p {
   @endforeach
 
 </table>
+
+<div id="map" style="width:100%; height:400px;"></div>
 
 </div><!-- End About Section -->
 <!-- END BLOG ENTRIES -->
