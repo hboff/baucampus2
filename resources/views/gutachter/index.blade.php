@@ -188,10 +188,10 @@ $contact=1;
   <a href="/img/{{$gutachters['Photo']}}" data-size="1920x1080">
     <img src="/img/{{$gutachters['Photo']}}" />
   </a>
-  <a href="image2.jpg" data-size="1024x768">
+  <a href="/img/{{$gutachters['Photo']}}" data-size="1024x768">
     <img src="/img/{{$gutachters['Photo']}}" />
   </a>
-  <a href="image3.jpg" data-size="800x600">
+  <a href="/img/{{$gutachters['Photo']}}" data-size="800x600">
     <img src="/img/{{$gutachters['Photo']}}" />
   </a>
 </div>
