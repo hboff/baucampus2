@@ -1,6 +1,11 @@
 @php
 $contact=1;
 @endphp
+<!-- Photoswipe library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
 <style>
   .osk-custom {
     background-color: #6d767e;
@@ -179,6 +184,17 @@ $contact=1;
       </div>
     </section><!-- End About Section -->
 
+<div class="my-gallery">
+  <a href="image1.jpg" data-size="1920x1080">
+    <img src="/img/{{$gutachters['Photo']}}" />
+  </a>
+  <a href="image2.jpg" data-size="1024x768">
+    <img src="/img/{{$gutachters['Photo']}}" />
+  </a>
+  <a href="image3.jpg" data-size="800x600">
+    <img src="/img/{{$gutachters['Photo']}}" />
+  </a>
+</div>
 
 
     <!-- ======= Resume Section ======= -->
@@ -356,7 +372,30 @@ object-position: center;" class="description">
 
   <!-- Template Main JS File -->
   <script src="/js/main.js"></script>
+ <script>
+ var pswpElement = document.querySelectorAll('.pswp')[0];
 
+// build items array
+var items = [];
+var galleryElements = document.querySelectorAll('.my-gallery a');
+for (var i = 0, l = galleryElements.length; i < l; i++) {
+  items.push({
+    src: galleryElements[i].getAttribute('href'),
+    w: parseInt(galleryElements[i].getAttribute('data-size').split('x')[0]),
+    h: parseInt(galleryElements[i].getAttribute('data-size').split('x')[1]),
+  });
+}
+
+// define options (if needed)
+var options = {
+  // optionName: 'option value'
+  // for example:
+  index: 0 // start at first slide
+};
+
+// Initialize PhotoSwipe
+var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+gallery.init();</script>
 </body>
 
 </html>
