@@ -104,22 +104,7 @@ p + p {
 }
 
 </style>
-<script>var map = L.map('map').setView([51.165691, 10.451526], 6);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
-var locations = [  [52.520008, 13.404954],
-  [50.937531, 6.960279],
-  [48.135125, 11.581981],
-  // Add 9 more locations...
-];
-
-for (var i = 0; i < locations.length; i++) {
-  var marker = L.marker(locations[i]).addTo(map);
-}
-</script>
 
 
 <title>Gutachter Baucampus</title>
@@ -171,5 +156,20 @@ for (var i = 0; i < locations.length; i++) {
 
 <!-- END GRID -->
 </div><br>
+<script>var map = L.map('map').setView([51.165691, 10.451526], 6);
 
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+var locations = [  [52.520008, 13.404954],
+  [50.937531, 6.960279],
+  [48.135125, 11.581981],
+  // Add 9 more locations...
+];
+
+for (var i = 0; i < locations.length; i++) {
+  var marker = L.marker(locations[i]).addTo(map);
+}
+</script>
 @endsection
