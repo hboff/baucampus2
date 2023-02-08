@@ -185,7 +185,7 @@ $contact=1;
     </section><!-- End About Section -->
 
 <div class="my-gallery">
-  <a href="image1.jpg" data-size="1920x1080">
+  <a href="/img/{{$gutachters['Photo']}}" data-size="1920x1080">
     <img src="/img/{{$gutachters['Photo']}}" />
   </a>
   <a href="image2.jpg" data-size="1024x768">
@@ -372,8 +372,7 @@ object-position: center;" class="description">
 
   <!-- Template Main JS File -->
   <script src="/js/main.js"></script>
- <script>
- var pswpElement = document.querySelectorAll('.pswp')[0];
+ <script>var pswpElement = document.querySelectorAll('.pswp')[0];
 
 // build items array
 var items = [];
