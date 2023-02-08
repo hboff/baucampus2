@@ -184,17 +184,28 @@ $contact=1;
       </div>
     </section><!-- End About Section -->
 
-<div class="my-gallery"></div>
-  <a href="/img/{{$gutachters['Photo']}}" data-size="1920x1080">
-    <img src="/img/{{$gutachters['Photo']}}" />
-  </a>
-  <a href="image2.jpg" data-size="1024x768">
-    <img src="/img/{{$gutachters['Photo']}}" />
-  </a>
-  <a href="image3.jpg" data-size="800x600">
-    <img src="/img/{{$gutachters['Photo']}}" />
-  </a>
-</div>
+
+    <div class="test-gallery">
+      <a href="https://dummyimage.com/1200x600/000/fff" data-pswp-width="1200" data-pswp-height="600">
+        <img src="https://dummyimage.com/120x60/000/fff" alt="" />
+      </a>
+      <a href="https://dummyimage.com/1200x1200/000/fff" data-pswp-width="1200" data-pswp-height="1200">
+        <img src="https://dummyimage.com/60x60/000/fff" alt="" />
+      </a>
+      <a href="https://dummyimage.com/600x1200/000/fff" data-pswp-width="600" data-pswp-height="1200">
+        <img src="https://dummyimage.com/30x60/000/fff" alt="" />
+      </a>
+    </div>
+    
+    <script type="text/javascript">
+      var lightbox = new PhotoSwipeLightbox({
+        gallery: '.test-gallery',
+        children: 'a',
+        // dynamic import is not supported in UMD version
+        pswpModule: PhotoSwipe 
+      });
+      lightbox.init();
+    </script>
 
 
     <!-- ======= Resume Section ======= -->
