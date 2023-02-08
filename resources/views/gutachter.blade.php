@@ -156,7 +156,10 @@ p + p {
 
 <!-- END GRID -->
 </div><br>
-<script>var map = L.map('map').setView([51.165691, 10.451526], 6);
+<script>
+
+
+var map = L.map('map').setView([51.165691, 10.451526], 5);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
