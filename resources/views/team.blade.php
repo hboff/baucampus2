@@ -16,12 +16,12 @@
     <h2 class="font-weight-bold mb-2">Unser Team</h2>
     <p class="font-italic text-muted mb-4">Baucampus Team</p>
 
-    <div class="row pb-5 mb-4">
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+    <div class="card-deck">
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
             <!-- Card-->
             <div class="card shadow-sm border-0 rounded">
-                <div class="card-body p-0"><img src="/img/oskar.jpg" alt="" class="w-100 card-img-top"
-                        style="  object-fit: contain;">
+                <div class="card-body p-0"><img src="/img/oskar.jpg" alt="" class="w-100  card-img-top"
+                        style="object-fit:cover;">
                     <div class="p-4">
                         <h5 class="mb-0 py-2">Oskar Lohse</h5>
                         <p class="text-muted">Founder & CEO</p>
