@@ -187,10 +187,10 @@ $contact=1;
 
     <div class="test-gallery">
       <a href="/img/{{$gutachters['Photo']}}" data-pswp-width="1200" data-pswp-height="600">
-        <img src="/img/{{$gutachters['Photo']}}" alt="" />
+        <img src="/img/{{$gutachters['Photo']}}"  width="200" height="200" alt="" />
       </a>
       <a href="https://dummyimage.com/1200x1200/000/fff" data-pswp-width="1200" data-pswp-height="1200">
-        <img src="https://dummyimage.com/60x60/000/fff" alt="" />
+        <img src="/img/{{$gutachters['Photo']}}"  width="200" height="200" alt="" />
       </a>
       <a href="https://dummyimage.com/600x1200/000/fff" data-pswp-width="600" data-pswp-height="1200">
         <img src="https://dummyimage.com/30x60/000/fff" alt="" />
