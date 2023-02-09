@@ -16,8 +16,8 @@
     <h2 class="font-weight-bold mb-2">Unser Team</h2>
     <p class="font-italic text-muted mb-4">Baucampus Team</p>
 
-    <div class="card-deck">
-            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+    <div class="row pb-5 mb-4">
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
             <!-- Card-->
             <div class="card shadow-sm border-0 rounded">
                 <div class="card-body p-0"><img src="/img/oskar.jpg" alt="" class="w-100  card-img-top"
@@ -71,7 +71,32 @@
 
     <!-- Row two [Team]-->
 
-
+<div class="card-deck">
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
 
 </div>
 
