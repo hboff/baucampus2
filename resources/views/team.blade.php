@@ -22,7 +22,7 @@
 <div class="row row-cols-1 row-cols-md-4 g-4">
   <div class="col">
     <div class="card h-100 shadow-sm border-0 rounded">
-      <img src="/img/oskar.jpg" class="card-img-top"
+      <img src="/img/friedrich-lohse.jpg" class="card-img-top"
         alt="Oskar Lohse" />
       <div class="card-body">
         <p class="text-muted">Oskar Lohse</p>
