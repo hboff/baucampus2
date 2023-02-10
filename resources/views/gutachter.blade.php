@@ -165,10 +165,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-var locations = [  [52.520008, 13.404954],
-  [50.937531, 6.960279],
-  [48.135125, 11.581981],
-  // Add 9 more locations...
+var locations = [ 
+  @foreach($gutachter as $gutachters)
+  [{{$gutachters['HomeCityLat']}}, {{$gutachters['HomeCityLon']}}],
+  @endforeach
 ];
 
 for (var i = 0; i < locations.length; i++) {
