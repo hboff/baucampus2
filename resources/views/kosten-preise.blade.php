@@ -1,5 +1,24 @@
 @extends('layout')
 @section('content')
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+th{
+background-color:#435761;
+color:#fff;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  min-width: 100px;
+}
+
+</style>
 
 <title>Schimmelpilzberatung mit Bausachverständigem</title>
 <meta name="Description" content="Die Baubegleitung als Arbeitsbereich des Bausachverständigen kurz erklärt.">
@@ -20,22 +39,17 @@
       <div class="container"> 
     
       <div class="section-title">
-		  <h2>Preise<h2>
+		  <h2>Preisliste Baucampus 2023<h2>
+      
 
 
-    <div class="w3-row-padding" style="margin:10vh;"> 
-		<h3 class="w3-center text-dark">Baucampus</h3>
-                <p class=" w3-center text-dark">Preisliste Baucampus 2023</p>
-    </div>
-
-
-<div class="w3-text-black gr2"> 
+<div class="contaier-fluid"> 
 
 <div style="overflow-x:auto;">
   <table>
     <tr>
-      <th>Bauschaden</th>
-      <th>Preis</th>
+      <th class="col-11">Bauschaden</th>
+      <th class="col-1">Preis</th>
     </tr>
     <tr>
       <td>Ortstermin mit einem Bausachverständigen zur mündlichen Beratung am Objekt, ink. An- und Abfahrt</td>
@@ -56,8 +70,8 @@
 <div style="overflow-x:auto;">
   <table>  
 <tr>
-      <th>Schimmelpilzberatung</th>
-      <th>Preis</th>
+      <th class="col-11">Schimmelpilzberatung</th>
+      <th class="col-1">Preis</th>
     </tr>
 
     <tr>
@@ -77,8 +91,8 @@
 <div style="overflow-x:auto;">
   <table>
     <tr>
-      <th>Hauskaufberatung, Kaufberatung Eigentumswohnung</th>
-      <th>Preis</th>
+      <th class="col-11">Hauskaufberatung, Kaufberatung Eigentumswohnung</th>
+      <th class="col-1">Preis</th>
     </tr>
     <tr>
       <td>Ortstermin mit einem Bausachverständigen zur mündlichen Hauskaufberatung inkl. An- und Abfahrt für ein Einfamilienhaus oder eine Eigentumswohnung bis 200 qm Wohnfläche</td>
@@ -105,8 +119,8 @@
 <div style="overflow-x:auto;">
   <table>
     <tr>
-      <th>Baubegleitung</th>
-      <th>Preis</th>
+      <th class="col-11">Baubegleitung</th>
+      <th class="col-1">Preis</th>
     </tr>
     <tr>
       <td>Baubegleitung für den Neubau eines Hauses bzw. einer Eigentumswohung, inkl An und Abfahrt. Ersttermin mit einem Bausachverständigen zur Erfassung der Bauunterlagen, sowie der Besichtigung des Baugrundstücks</td>
@@ -129,8 +143,8 @@
 <div style="overflow-x:auto;">
   <table>
     <tr>
-      <th>Energieberatung</th>
-      <th>Preis</th>
+      <th class="col-11">Energieberatung</th>
+      <th class="col-1">Preis</th>
     </tr>
     <tr>
       <td>Ortstermin mit einem Bausachverständigen im Rahmen einer Energieberatung am Objekt, inkl An- und Abfahrt</td>
@@ -156,8 +170,8 @@
   <div style="overflow-x:auto;">
   <table>
     <tr>
-      <th>Gewerbeimmobilien</th>
-      <th>Preis</th>
+      <th class="col-11">Gewerbeimmobilien</th>
+      <th class="col-1">Preis</th>
     </tr>
     <tr>
       <td>Ortstermin mit einem Bausachverständigen zum Erwerb einer Gewerbeimmobilie</td>
@@ -170,8 +184,8 @@
  <div style="overflow-x:auto;">
   <table>
     <tr>
-      <th>Haus-Check</th>
-      <th>Preis</th>
+      <th class="col-11">Haus-Check</th>
+      <th class="col-1">Preis</th>
     </tr>
     <tr>
       <td>Ortstermin mit einem Bausachverständigen, an einer Bestandsimmobilie. Suche nach Bauschäden und Beratung zu den festgestellten Mängeln, sowie Sanierungsvorschläge</td>
@@ -184,8 +198,8 @@
  <div style="overflow-x:auto;">
   <table>
     <tr>
-      <th>Bewertung anhand des Exposes</th>
-      <th>Preis</th>
+      <th class="col-11">Bewertung anhand des Exposes</th>
+      <th class="col-1">Preis</th>
     </tr>
     <tr>
       <td>Bewertung einer Immobilie anhand des Exposes und weiterer durch den Kunden zur Verfügung gestellten Daten.</td>
@@ -198,13 +212,9 @@
     <br/>
     </div>
     </div>
-    </div>
-  </div><!-- End About Section -->
-  <!-- END BLOG ENTRIES -->
-  </div>
 
-<!-- END GRID -->
-</div><br>
+ 
+
 
 
 
