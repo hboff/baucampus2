@@ -8,32 +8,6 @@ $contact=1;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.5/umd/photoswipe-lightbox.umd.min.js" integrity="sha512-CpBwN19ws59x5RFIMhBV+IYMhqtp4HTzVgfW1PCxkg36bwXu4tlWs47RiSUCj+EUhaeRMxj4w7CUG5v9w+7h1Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.5/photoswipe.css" integrity="sha512-OKOmvT2OKCG+gZ/a+r5CL4kiNCpeda/gwQ2H+ndaNZlwZUp29wxNcrkoJ44udPFmSP9xLxK6dWVoib963YJTCA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<style>
-  .osk-custom {
-    background-color: #6d767e;
-  }
-
-  .osk-custom2 {
-    backdrop-filter: invert(.2) blur(10px);
-  }
-
-  .osk-customs {
-    z-index: 5000;
-    backdrop-filter: invert(.2) blur(10px);
-  }
-
-  .oska {
-    padding-left: 12.33vw;
-    padding-right: 15vw;
-  }
-
-  .avatar {
-    vertical-align: middle;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
-</style>
 
 <!DOCTYPE html>
 <html lang="de">
