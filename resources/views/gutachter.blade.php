@@ -152,7 +152,7 @@ p + p {
 </div><br><!-- End About Section -->
 <!-- END BLOG ENTRIES -->
 </div>
-<div id="map" style="width:100%; height:400px;"></div>
+<div id="map" style="width:100%; height:400px;" class="mt-5"></div>
 
 <!-- END GRID -->
 </div><br>
