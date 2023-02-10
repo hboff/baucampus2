@@ -22,9 +22,9 @@ object-position: center;">
 @endforeach
   <div class="profile">
     <img src="/img/logo.png" alt="" class="mt-2" style="    vertical-align: middle;
-width: 180px;
-height: 180px;
-border-radius: 50%;
+width: 120px;
+height: 120px;
+
 object-fit: cover;
 object-position: center;">
     <h1 class="text-light mb-3"><a href="index.html">Hauptstelle Baucampus</a></h1>
