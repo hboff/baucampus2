@@ -339,7 +339,7 @@ $contact=1;
     @else
 @endif
 @endforeach
-@endsection
+
  <script>var pswpElement = document.querySelectorAll('.pswp')[0];
 
 // build items array
@@ -367,3 +367,4 @@ gallery.init();</script>
 
 </html>
  @include('partials._themen')
+ @endsection
