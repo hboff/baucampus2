@@ -79,8 +79,8 @@ $data = DB::table('orteat')
 });
 }
 
-//Route::get('/team', function () {
-//    return view('team');
+//Route::get('/kontakt', function () {
+//    return view('kontakt');
 //});
 
 //Route::group(['domain' => 'baucampus.at'], function () {
