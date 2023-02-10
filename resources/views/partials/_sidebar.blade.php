@@ -21,7 +21,7 @@ object-position: center;">
 @endif
 @endforeach
   <div class="profile">
-    <img src="/img/logo.jpg" alt="" class="mt-2" style="    vertical-align: middle;
+    <img src="/img/logo.png" alt="" class="mt-2" style="    vertical-align: middle;
 width: 180px;
 height: 180px;
 border-radius: 50%;
