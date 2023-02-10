@@ -72,6 +72,19 @@
 
     </div>
   </div>
+  <div class="col">
+    <div class="card h-100 shadow-sm border-0 rounded">
+      <img src="/img/friedrich-lohse.jpg" class="card-img-top"
+        alt="Friedrich Lohse" />
+      <div class="card-body">
+        <p class="text-muted">Friedrich Lohse</p>
+        <p class="card-text">
+            Head of Research & Development
+        </p>
+      </div>
+
+    </div>
+  </div>
 </div>
 
 </div>
