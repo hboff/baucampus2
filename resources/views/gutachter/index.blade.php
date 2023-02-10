@@ -172,7 +172,7 @@
 
       </div>
     </section><!-- End Resume Section -->
-
+@endif
     
  <script>var pswpElement = document.querySelectorAll('.pswp')[0];
 
