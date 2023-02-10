@@ -21,15 +21,15 @@ object-position: center;">
 @endif
 @endforeach
   <div class="profile">
-    <img src="/img/profile.jpg" alt="" class="mt-2" style="    vertical-align: middle;
+    <img src="/img/logo.jpg" alt="" class="mt-2" style="    vertical-align: middle;
 width: 180px;
 height: 180px;
 border-radius: 50%;
 object-fit: cover;
 object-position: center;">
-    <h1 class="text-light mb-3"><a href="index.html">Rainer Kößling</a></h1>
-    <p class="text-light text-center mb-0">Telefon: 0176 56908588</p>
-    <p class="text-light text-center">koessling@baucampus.de</p>
+    <h1 class="text-light mb-3"><a href="index.html">Hauptstelle Baucampus</a></h1>
+    <p class="text-light text-center mb-0">Telefon: 05722 913800</p>
+    <p class="text-light text-center">kontakt@baucampus.de</p>
   </div>
 </div>
 </header><!-- End Header -->
