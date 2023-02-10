@@ -149,13 +149,14 @@ p + p {
 </table>
 
 
-</div><!-- End About Section -->
+</div><br><!-- End About Section -->
 <!-- END BLOG ENTRIES -->
 </div>
 <div id="map" style="width:100%; height:400px;"></div>
 
 <!-- END GRID -->
 </div><br>
+
 <script>
 
 
