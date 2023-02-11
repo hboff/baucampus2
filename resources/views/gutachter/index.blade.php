@@ -134,13 +134,7 @@ $contact=1;
 
         <div class="section-title">
           <h2>Über mich</h2>
-          <p>Mein Name ist {{$gutachters['FirstName']}} {{$gutachters['LastName']}}
-            Ich bin geprüfter und anerkannter Bausachverständiger, Energieberater sowie geprüfter Fachsanierer und Tüv
-            zertifizierter Schimmelsanierer
-
-            Ich bin 53 Jahre alt, verheiratet, habe 4 Kinder und verfüge über fast 33 Jahre Berufserfahrung in der
-            Baubranche.
-            Dieses Wissen wird durch ständige Weiterbildung und zahlreiche Schulungen noch weiter ausgebaut.
+          <p>{{$gutachters['Text']}}
 
 
 
