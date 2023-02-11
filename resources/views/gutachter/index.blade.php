@@ -190,8 +190,8 @@ $contact=1;
       <a href="/img/certificates/{{$certificate['Certificate']}}.jpg" data-pswp-width="1200" data-pswp-height="600">
         <img src="/img/certificates/{{$certificate['Certificate']}}.jpg"  width="200" height="200" alt="" />
       </a>
+      @else
        @endif
-       @else
  @endforeach
     </div>
    
