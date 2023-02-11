@@ -4,7 +4,7 @@
 @if ($name == $gutachters['UrlName'])
 
 <!-- ======= Contact Section ======= -->
-<section id="contact" class="contact pt-0 mt-0">
+<section id="contact" class="contact pt-0 mt-0 mb-0 pb-0">
       <div class="container">
 
         <div class="section-title">
@@ -133,7 +133,7 @@
                          </div>  
                      </div>
                  </div>    
-                  <p class="mb-5"><input type="checkbox"  name="checkbox" value="Checkbox"> 
+                  <p><input type="checkbox"  name="checkbox" value="Checkbox"> 
                               @if ($errors->has('checkbox'))
                                  <span class="text-danger">{{ $errors->first('checkbox') }}</span>
                              @endif   
