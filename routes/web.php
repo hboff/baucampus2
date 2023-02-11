@@ -61,27 +61,43 @@ $domains = [
 
 
 foreach ($domains as $domain => $domainData) {
-Route::domain($domain)->group(function () use ($routes, $domainData) {
-    Route::get('/', [OrteatController::class, 'index']);
-    Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){});
-    Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){});
-    Route::get('contact-us', [ContactController::class, 'index']);
-    Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
-foreach ($routes as $route) {
-Route::get($route, function () use ($route, $domainData) {
-$data = DB::table('orteat')
-->whereBetween('laengengrad', $domainData['laengengrad'])
-->whereBetween('breitengrad', $domainData['breitengrad'])
-->get();
-$expert = DB::table('gutachter')
-->whereBetween('HomeCityLat', $domainData['breitengrad'])
-->whereBetween('HomeCityLon', $domainData['laengengrad'])
-->get();
-return view($route, ['data' => $data, 'expert' => $expert]);
-});
+    Route::domain($domain)->group(function () use ($routes, $domainData) {
+        Route::get('/', [OrteatController::class, 'index']);
+        Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){});
+        Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){});
+        Route::get('contact-us', [ContactController::class, 'index']);
+        Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
+    foreach ($routes as $route) {
+    Route::get($route, function () use ($route, $domainData) {
+        $orteatData = DB::table('orteat')
+        ->whereBetween('laengengrad', $domainData['laengengrad'])
+        ->whereBetween('breitengrad', $domainData['breitengrad'])
+        ->get();
+
+        $gutachterData = DB::table('gutachter')
+        ->whereBetween('lat', $domainData['laengengrad'])
+        ->whereBetween('lat2', $domainData['breitengrad'])
+        ->get();
+
+        $data = [];
+        foreach ($orteatData as $orteat) {
+            foreach ($gutachterData as $expert) {
+                if ($orteat->laengengrad >= $expert->lat && $orteat->laengengrad <= $expert->lat2 &&
+                    $orteat->breitengrad >= $expert->lat && $orteat->breitengrad <= $expert->lat2) {
+                    $data[] = [
+                        'orteat' => $orteat,
+                        'expert' => $expert
+                    ];
+                }
+            }
+        }
+
+        return view($route, ['data' => $data]);
+        });
     }
 });
 }
+
 
 //Route::get('/kontakt', function () {
 //    return view('kontakt');
