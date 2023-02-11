@@ -10,7 +10,7 @@
   </div>
 </div>
 
-@foreach ($gutachter as $datum)
+@foreach ($expert as $datum)
     <tr>
         <td>{{ $datum->LastName }}</td>
         

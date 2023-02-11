@@ -128,14 +128,6 @@ p + p {
                 <p class="subheading-text w3-center">Unsere Bausachverständigen</p>
         </div>
 
-        <table>
-    <tr>
-        <th>Name</th>
-        <th>Längengrad</th>
-        <th>Breitengrad</th>
-    </tr>
-    
-</table>
 
           <table>
   <tr>
