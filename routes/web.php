@@ -67,36 +67,32 @@ foreach ($domains as $domain => $domainData) {
         Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){});
         Route::get('contact-us', [ContactController::class, 'index']);
         Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
-    foreach ($routes as $route) {
-    Route::get($route, function () use ($route, $domainData) {
-        $orteatData = DB::table('orteat')
-        ->whereBetween('laengengrad', $domainData['laengengrad'])
-        ->whereBetween('breitengrad', $domainData['breitengrad'])
-        ->get();
 
-        $gutachterData = DB::table('gutachter')
-        ->whereBetween('Lat', $domainData['breitengrad'])
-        ->whereBetween('Lat2', $domainData['breitengrad'])
-        ->get();
+        foreach ($routes as $route) {
+            Route::get($route, function () use ($route, $domainData) {
+                $data = DB::table('orteat')
+                    ->whereBetween('laengengrad', $domainData['laengengrad'])
+                    ->whereBetween('breitengrad', $domainData['breitengrad'])
+                    ->get();
+                $gutachterData = [];
 
-        $data = [];
-        foreach ($orteatData as $orteat) {
-            foreach ($gutachterData as $gutachter) {
-                if ($orteat->breitengrad >= $gutachter->Lat && $orteat->breitengrad <= $gutachter->Lat2) {
-                    $data[] = [
-                        'orteat' => $orteat,
-                        'gutachter' => $gutachter
-                    ];
-                    break;
+                foreach ($data as $ort) {
+                    $gutachter = DB::table('gutachter')
+                        ->whereBetween('lat', [$ort->laengengrad, $ort->breitengrad])
+                        ->whereBetween('lat2', [$ort->laengengrad, $ort->breitengrad])
+                        ->first();
+                    if ($gutachter) {
+                        $gutachterData[] = [
+                            'ort' => $ort->name,
+                            'gutachter_last_name' => $gutachter->last_name
+                        ];
+                    }
                 }
-            }
-        }
-        
 
-        return view($route, ['data' => $data]);
-        });
-    }
-});
+                return view($route, ['data' => $data, 'gutachterData' => $gutachterData]);
+            });
+        }
+    });
 }
 
 
