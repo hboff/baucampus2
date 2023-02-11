@@ -223,7 +223,12 @@ $contact=1;
 
             <h3 class="resume-title">Education</h3>
             <div class="resume-item">
-            {{$gutachters['Education']}}
+              <h4>{{$gutachters['Education']}}</h4>
+              <h5>2015 - 2016</h5>
+              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui
+                ut dignissimos deleniti nerada porti sand markend</p>
+            </div>
             <div class="resume-item">
               <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
               <h5>2010 - 2014</h5>
