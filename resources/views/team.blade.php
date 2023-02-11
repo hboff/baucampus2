@@ -10,7 +10,7 @@
 
 <!-- Grid -->
 
-        <div class="section-title pt-5">
+        <div class="section-title">
           <h2>Unser Team</h2>
                 <p class="subheading-text w3-center">Baucampus Team</p>
         </div>
