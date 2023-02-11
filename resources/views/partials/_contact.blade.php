@@ -42,9 +42,9 @@
           </div>
 
           
-          <div class="col-lg-7 mt-5 mb-5 mt-lg-0 d-flex align-items-stretch">
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
 
-<div class="card-body">
+<div class="card-body mb-5">
              @if(Session::has('success'))
                  <div class="alert alert-success">
                      {{Session::get('success')}}
