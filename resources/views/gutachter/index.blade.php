@@ -183,7 +183,7 @@ $contact=1;
 
       </div>
     </section><!-- End About Section -->
-@foreach ($gutachter_certificate as $certificate)
+@foreach ($gutachter_certificates as $certificate)
     @if ($gutachters['PartnerID'] == $certificate['PartnerID'])
     <div class="test-gallery">
       <a href="{{$certificate['Certificate']}}" data-pswp-width="1200" data-pswp-height="600">
@@ -206,6 +206,7 @@ $contact=1;
       });
       lightbox.init();
     </script>
+    @else
  @endif
  @endforeach
 
