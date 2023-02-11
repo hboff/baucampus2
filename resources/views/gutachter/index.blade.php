@@ -187,7 +187,7 @@ $contact=1;
     @if ($gutachters['PartnerID'] == $certificate['PartnerID'])
     <div class="test-gallery">
       <a href="{{$certificate['Certificate']}}" data-pswp-width="1200" data-pswp-height="600">
-        <img src="{{$certificate['Certificate']}}"  width="200" height="200" alt="" />
+        <img src="{{$certificate['Certificate']}}.jpg"  width="200" height="200" alt="" />
       </a>
       
     </div>
