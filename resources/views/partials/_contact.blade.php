@@ -14,7 +14,7 @@
 
         <div class="row" data-aos="fade-in">
 
-          <div class="col-lg-5 d-flex align-items-stretch mb-0">
+          <div class="col-lg-5 d-flex align-items-stretch">
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
@@ -41,9 +41,9 @@
 
           </div>
 
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch mb-0">
 
-<div class="card-body mb-5">
+<div class="card-body">
              @if(Session::has('success'))
                  <div class="alert alert-success">
                      {{Session::get('success')}}
