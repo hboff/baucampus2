@@ -23,7 +23,7 @@
         </div>
 
 
-<div class="w3-row-padding" style="margin:10vh;"> 
+<div class="w3-row-padding"> 
                 <p class="subheading-text w3-center">Immobilien Marktberichte</p>
 </div>
 
@@ -49,7 +49,9 @@
     <div class="w3-xlarge w3-display-bottomleft w3-padding w3-osk-customs" style="width:100%;">Marktbericht 2020</div>
   </div>
 </div>
-
+<div class="w3-row-padding"> 
+                <p class="subheading-text w3-center">Checklisten</p>
+</div>
 <div class="w3-third">
   <div class="w3-display-container w3-text-black zooma" style="margin-bottom:16px;">
     <a href="https://www.baucampus.de/baucampus-checkliste-hauskauf.pdf"><img src="https://www.baucampus.de/Bilder/checkliste-hauskauf.jpg" alt="Fassaden Design" style="min-height:300px; height:50vh; width: 100% !important; object-fit: cover; object-position:top;"></a>
