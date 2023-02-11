@@ -128,7 +128,12 @@ p + p {
                 <p class="subheading-text w3-center">Unsere Bausachverständigen</p>
         </div>
 
-
+        @foreach ($expert as $datum)
+    <tr>
+        <td>{{ $datum->LastName }}</td>
+        
+    </tr>
+    @endforeach
           <table>
   <tr>
     <th>Gutachter</th>
