@@ -11,7 +11,7 @@
 <!-- Grid -->
 <div id="about" class="about">
       <div class="container">
-        <div class="section-title pt-5">
+        <div class="section-title">
           <h2>Unser Team</h2>
                 <p class="subheading-text w3-center">Baucampus Team</p>
         </div>
@@ -25,7 +25,7 @@
 <div class="row row-cols-1 row-cols-md-4 g-4">
   <div class="col">
     <div class="card h-100 shadow-sm border-0 rounded">
-      <img src="/img/oskar.jpg" class="card-img-top"
+      <img src="/img/friedrich-lohse.jpg" class="card-img-top"
         alt="Oskar Lohse" />
       <div class="card-body">
         <p class="text-muted">Oskar Lohse</p>
@@ -38,7 +38,7 @@
   </div>
   <div class="col">
     <div class="card h-100 shadow-sm border-0 rounded">
-      <img src="/img/bausachverstaendiger_heller.jpg" class="card-img-top"
+      <img src="/img/bausachverstaendiger-freda-lohse.jpg" class="card-img-top"
         alt="Barbara Heller" />
       <div class="card-body">
         <p class="text-muted">Barbara Heller</p>
