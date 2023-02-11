@@ -50,7 +50,7 @@ $domains = [
         'breitengrad' => [10.0, 52.0],
     ],
     'baucampus.be' => [
-        'laengengrad' => [1.0, 12.0],
+        'laengengrad' => [8.0, 12.0],
         'breitengrad' => [51.0, 52.0],
     ],
     'baucampus.nl' => [
