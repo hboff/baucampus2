@@ -87,9 +87,11 @@ foreach ($domains as $domain => $domainData) {
                         'orteat' => $orteat,
                         'gutachter' => $gutachter
                     ];
+                    break;
                 }
             }
         }
+        
 
         return view($route, ['data' => $data]);
         });
