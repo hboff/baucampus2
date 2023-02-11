@@ -22,7 +22,7 @@
         <div class="section-title">
           <h2>Hauskaufberatung</h2>
         </div>
-        @foreach ($gutachter as $datum)
+        @foreach ($expert as $datum)
     <tr>
         <td>{{ $datum->LastName }}</td>
         <td>{{ $datum->Lat }}</td>
