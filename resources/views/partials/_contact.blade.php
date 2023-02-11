@@ -4,7 +4,7 @@
 @if ($name == $gutachters['UrlName'])
 
 <!-- ======= Contact Section ======= -->
-<section id="contact" class="contact pt-0 mt-0 mb-0">
+<section id="contact" class="contact pt-0 mt-0">
       <div class="container">
 
         <div class="section-title">
@@ -36,7 +36,7 @@
               <iframe
                 src="{{$gutachters['Map']}}"
                 frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                referrerpolicy="no-referrer-when-downgrade" class="mb-0"></iframe>
             </div>
 
           </div>
