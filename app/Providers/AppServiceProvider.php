@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\View;
 use App\Models\Ort;
 use App\Models\Orteat;
 use App\Models\Gutachter;
+use App\Models\Certificate;
 
 class AppServiceProvider extends ServiceProvider
 {
