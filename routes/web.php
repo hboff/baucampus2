@@ -75,6 +75,7 @@ $data = DB::table('orteat')
 ->get();
 $expert = DB::table('gutachter')
 ->whereBetween('HomeCityLat', $domainData['breitengrad'])
+->whereBetween('HomeCityLon', $domainData['laengengrad'])
 ->get();
 return view($route, ['data' => $data, 'expert' => $expert]);
 });
