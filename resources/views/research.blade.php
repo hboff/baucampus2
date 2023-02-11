@@ -24,7 +24,6 @@
 
 
 <div class="w3-row-padding" style="margin:10vh;"> 
-		<h2 class="heading-separator w3-center">Baucampus</h2>
                 <p class="subheading-text w3-center">Immobilien Marktberichte</p>
 </div>
 
