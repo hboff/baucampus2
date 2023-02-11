@@ -25,7 +25,9 @@
         @foreach ($gutachter as $datum)
     <tr>
         <td>{{ $datum->LastName }}</td>
-        
+        <td>{{ $datum->Lat }}</td>
+        <td>{{ $datum->Lat2 }}</td>
+
     </tr>
     @endforeach
         <div class="row">
