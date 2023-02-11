@@ -229,8 +229,9 @@ $contact=1;
               <h5>{{$vita['Time']}}</h5>
               <p><em>{{$vita['Description']}}</em></p>
             </div>
-            @endif
             @else
+            @endif
+            
             @endforeach
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
