@@ -9,11 +9,14 @@
 <img src="/img/baubegleitung.jpg" alt="Baubegleitung" title="Baubegleitung" style="width:100%; height:500px; object-fit: cover; object-position:center;">
 
 <!-- Grid -->
-
+<div id="about" class="about">
+      <div class="container">
         <div class="section-title">
           <h2>Unser Team</h2>
                 <p class="subheading-text w3-center">Baucampus Team</p>
         </div>
+</div>
+</div>
 
 <div class="container py-5">
 
