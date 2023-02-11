@@ -4,7 +4,7 @@
 @if ($name == $gutachters['UrlName'])
 
 <!-- ======= Contact Section ======= -->
-<section id="contact" class="contact pt-0 mt-0">
+<section id="contact" class="contact pt-0 mt-0 mb-0">
       <div class="container">
 
         <div class="section-title">
@@ -139,7 +139,7 @@
                              @endif   
                              
                    Ich stimme zu, dass meine Angaben aus dem Kontaktformular zur Bearbeitung meiner Anfrage erhoben und verarbeitet werden. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer <a href="/datenschutzerklaerung">Datenschutzerklärung</a>.</p>
-                 <div class="form-group text-center">
+                 <div class="form-group text-center mb-5">
                                  <div class="text-center"><button class="submit" style="    background-color: #149ddd; border: none; color: white; padding: 16px 32px; text-decoration: none; margin: 4px 2px; cursor: pointer; font-size: 16px; border-radius: 5px;">Submit</button></div>
 
                      
