@@ -226,8 +226,8 @@ $contact=1;
 @if ($gutachters['PartnerId'] == $vita['PartnerId'])
             <div class="resume-item">
               <h4>{{$vita['Degree']}}</h4>
-              <h5></h5>
-              <p><em></em></p>
+              <h5>{{$vita['Time']}}</h5>
+              <p><em>{{$vita['Description']}}</em></p>
             </div>
 @endif
 @endforeach
