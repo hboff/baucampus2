@@ -59,7 +59,6 @@ $domains = [
     ],
 ];
 
-
 foreach ($domains as $domain => $domainData) {
 Route::domain($domain)->group(function () use ($routes, $domainData) {
     Route::get('/', [OrteatController::class, 'index']);
@@ -85,7 +84,6 @@ return view($route, ['data' => $data, 'expert' => $expert]);
 }                   
 });
 }
-
 //Route::get('/kontakt', function () {
 //    return view('kontakt');
 //});
