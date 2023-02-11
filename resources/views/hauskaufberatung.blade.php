@@ -22,7 +22,12 @@
         <div class="section-title">
           <h2>Hauskaufberatung</h2>
         </div>
-
+        @foreach ($gutachter as $datum)
+    <tr>
+        <td>{{ $datum->LastName }}</td>
+        
+    </tr>
+    @endforeach
         <div class="row">
           <div class="col-lg-6" data-aos="fade-right">
           <p>Beim <b>Kauf eines Hauses</b> oder einer Eigentumswohnung stellen sich viele Fragen. Mit einer professionellen und unabhängigen <b>Hauskaufberatung</b> durch unsere Bausachverständigen gehen Sie den richtigen Schritt, um ein Haus oder eine Eigentumswohnung auf der Basis klarer <b>Fakten</b> zu erwerben.</p>
