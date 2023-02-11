@@ -222,15 +222,24 @@ $contact=1;
             </div>
 
             <h3 class="resume-title">Education</h3>
-            @foreach ($vitas as vita)
-            @if ($gutachters['PartnerID'] == $vita['PartnerID'])
+@foreach ($vitas as vita)
+@if ($gutschters['PartnerId'] == $vita['PartnerId'])
             <div class="resume-item">
               <h4>{{$vita['Degree']}}</h4>
               <h5>{{$vita['Time']}}</h5>
               <p><em>{{$vita['Description']}}</em></p>
+              
             </div>
-            @endif
-            @endforeach
+@endif
+@endforeach
+            <div class="resume-item">
+              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
+              <h5>2010 - 2014</h5>
+              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius
+                unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart
+                dila</p>
+            </div>
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Professional Experience</h3>
