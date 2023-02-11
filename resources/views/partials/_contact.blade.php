@@ -33,11 +33,13 @@
                 <h4>Telefon:</h4>
                 <p>{{$gutachters['Phone']}}</p>
               </div>
+              <div class="mb-0">
               <iframe
                 src="{{$gutachters['Map']}}"
                 frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade" class="mb-0"></iframe>
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+</div>
 
           </div>
 
