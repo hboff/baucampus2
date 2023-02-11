@@ -11,7 +11,7 @@
 <!-- Grid -->
 <div id="about" class="about">
       <div class="container">
-        <div class="section-title">
+        <div class="section-title pt-5">
           <h2>Unser Team</h2>
                 <p class="subheading-text w3-center">Baucampus Team</p>
         </div>
