@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Certificate extends Model
 {
-    protected $table = 'gutachter_certificate';
+    protected $table = 'gutachter_certificates';
 }
