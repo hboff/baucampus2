@@ -82,8 +82,7 @@ foreach ($domains as $domain => $domainData) {
         $data = [];
         foreach ($orteatData as $orteat) {
             foreach ($gutachterData as $gutachter) {
-                if ($orteat->laengengrad >= $gutachter->Lat && $orteat->laengengrad <= $gutachter->Lat2 &&
-                    $orteat->laengengrad >= $gutachter->Lat && $orteat->laengengrad <= $gutachter->Lat2) {
+                if ($orteat->laengengrad >= $gutachter->Lat && $orteat->laengengrad <= $gutachter->Lat2) {
                     $data[] = [
                         'orteat' => $orteat,
                         'gutachter' => $gutachter
