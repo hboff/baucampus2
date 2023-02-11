@@ -81,12 +81,12 @@ foreach ($domains as $domain => $domainData) {
 
         $data = [];
         foreach ($orteatData as $orteat) {
-            foreach ($gutachterData as $expert) {
-                if ($orteat->laengengrad >= $expert->Lat && $orteat->laengengrad <= $expert->Lat2 &&
-                    $orteat->breitengrad >= $expert->Lat && $orteat->breitengrad <= $expert->Lat2) {
+            foreach ($gutachterData as $gutachter) {
+                if ($orteat->laengengrad >= $gutachter->Lat && $orteat->laengengrad <= $gutachter->Lat2 &&
+                    $orteat->breitengrad >= $gutachter->Lat && $orteat->breitengrad <= $gutachter->Lat2) {
                     $data[] = [
                         'orteat' => $orteat,
-                        'expert' => $expert
+                        'gutachter' => $gutachter
                     ];
                 }
             }
