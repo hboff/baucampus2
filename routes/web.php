@@ -67,19 +67,22 @@ Route::domain($domain)->group(function () use ($routes, $domainData) {
     Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){});
     Route::get('contact-us', [ContactController::class, 'index']);
     Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
+
+
 foreach ($routes as $route) {
 Route::get($route, function () use ($route, $domainData) {
 $data = DB::table('orteat')
 ->whereBetween('laengengrad', $domainData['laengengrad'])
 ->whereBetween('breitengrad', $domainData['breitengrad'])
 ->get();
-$expert = DB::table('gutachter')
-->whereBetween('HomeCityLat', $domainData['breitengrad'])
-->whereBetween('HomeCityLon', $domainData['laengengrad'])
-->get();
+foreach ($data as $item) {
+  $expert = DB::table('gutachter')
+    ->whereBetween('laengengrad', [$item->lon, $item->lon2])
+    ->first();
+}
 return view($route, ['data' => $data, 'expert' => $expert]);
-});
-    }
+}); 
+}                   
 });
 }
 
