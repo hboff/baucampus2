@@ -32,5 +32,6 @@ class AppServiceProvider extends ServiceProvider
         View::share('status', Ort::all());
         View::share('status', Orteat::all());
         View::share('gutachter', Gutachter::all());
+        View::share('gutachter_certificate', Certificate::all());
     }
 }

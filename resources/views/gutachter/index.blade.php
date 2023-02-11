@@ -183,10 +183,10 @@ $contact=1;
 
       </div>
     </section><!-- End About Section -->
-
-
+@foreach ($gutachter_certificate as $certificate)
+    @if ($gutachters['PartnerID'] == $certificate['PartnerID'])
     <div class="test-gallery">
-      <a href="/img/{{$gutachters['Photo']}}" data-pswp-width="1200" data-pswp-height="600">
+      <a href="{{$certificate['Certificate']}}" data-pswp-width="1200" data-pswp-height="600">
         <img src="/img/{{$gutachters['Photo']}}"  width="200" height="200" alt="" />
       </a>
       <a href="https://dummyimage.com/1200x1200/000/fff" data-pswp-width="1200" data-pswp-height="1200">
@@ -196,7 +196,7 @@ $contact=1;
         <img src="https://dummyimage.com/30x60/000/fff" alt="" />
       </a>
     </div>
-    
+   
     <script type="text/javascript">
       var lightbox = new PhotoSwipeLightbox({
         gallery: '.test-gallery',
@@ -206,7 +206,8 @@ $contact=1;
       });
       lightbox.init();
     </script>
-
+ @endif
+ @endforeach
 
     <!-- ======= Resume Section ======= -->
     <section id="resume" class="resume">

@@ -50,7 +50,7 @@ $domains = [
         'breitengrad' => [10.0, 52.0],
     ],
     'baucampus.be' => [
-        'laengengrad' => [8.0, 12.0],
+        'laengengrad' => [1.0, 12.0],
         'breitengrad' => [51.0, 52.0],
     ],
     'baucampus.nl' => [
@@ -67,32 +67,36 @@ foreach ($domains as $domain => $domainData) {
         Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){});
         Route::get('contact-us', [ContactController::class, 'index']);
         Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
+    foreach ($routes as $route) {
+    Route::get($route, function () use ($route, $domainData) {
+        $orteatData = DB::table('orteat')
+        ->whereBetween('laengengrad', $domainData['laengengrad'])
+        ->whereBetween('breitengrad', $domainData['breitengrad'])
+        ->get();
 
-        foreach ($routes as $route) {
-            Route::get($route, function () use ($route, $domainData) {
-                $data = DB::table('orteat')
-                    ->whereBetween('laengengrad', $domainData['laengengrad'])
-                    ->whereBetween('breitengrad', $domainData['breitengrad'])
-                    ->get();
-                $gutachterData = [];
+        $gutachterData = DB::table('gutachter')
+        ->whereBetween('Lat', $domainData['breitengrad'])
+        ->whereBetween('Lat2', $domainData['breitengrad'])
+        ->get();
 
-                foreach ($data as $ort) {
-                    $gutachter = DB::table('gutachter')
-                        ->whereBetween('Lat', [$ort->laengengrad, $ort->breitengrad])
-                        ->whereBetween('Lat2', [$ort->laengengrad, $ort->breitengrad])
-                        ->first();
-                    if ($gutachter) {
-                        $gutachterData[] = [
-                            'ort' => $ort->name,
-                            'gutachter_last_name' => $gutachter->LastName
-                        ];
-                    }
+        $data = [];
+        foreach ($orteatData as $orteat) {
+            foreach ($gutachterData as $gutachter) {
+                if ($orteat->breitengrad >= $gutachter->Lat && $orteat->breitengrad <= $gutachter->Lat2) {
+                    $data[] = [
+                        'orteat' => $orteat,
+                        'gutachter' => $gutachter
+                    ];
+                    break;
                 }
-
-                return view($route, ['data' => $data, 'gutachterData' => $gutachterData]);
-            });
+            }
         }
-    });
+        
+
+        return view($route, ['data' => $data]);
+        });
+    }
+});
 }
 
 
