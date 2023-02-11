@@ -223,12 +223,11 @@ $contact=1;
 
             <h3 class="resume-title">Education</h3>
 @foreach ($vitas as vita)
-@if ($gutschters['PartnerId'] == $vita['PartnerId'])
+@if ($gutachters['PartnerId'] == $vita['PartnerId'])
             <div class="resume-item">
               <h4>{{$vita['Degree']}}</h4>
-              <h5>{{$vita['Time']}}</h5>
-              <p><em>{{$vita['Description']}}</em></p>
-              
+              <h5></h5>
+              <p><em></em></p>
             </div>
 @endif
 @endforeach
