@@ -8,6 +8,7 @@ use App\Models\Ort;
 use App\Models\Orteat;
 use App\Models\Gutachter;
 use App\Models\Certificate;
+use App\Models\Vita;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -34,5 +35,6 @@ class AppServiceProvider extends ServiceProvider
         View::share('status', Orteat::all());
         View::share('gutachter', Gutachter::all());
         View::share('gutachter_certificates', Certificate::all());
+        View::share('vitas', Vita::all());
     }
 }

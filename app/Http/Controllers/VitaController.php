@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Certificate;
+use App\Models\Vita;
 
-class GutachterController extends Controller
+class VitaController extends Controller
 {
 
 }
