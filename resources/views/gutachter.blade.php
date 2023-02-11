@@ -128,6 +128,20 @@ p + p {
                 <p class="subheading-text w3-center">Unsere Bausachverständigen</p>
         </div>
 
+        <table>
+    <tr>
+        <th>Name</th>
+        <th>Längengrad</th>
+        <th>Breitengrad</th>
+    </tr>
+    @foreach ($data as $datum)
+    <tr>
+        <td>{{ $datum->name }}</td>
+        <td>{{ $datum->laengengrad }}</td>
+        <td>{{ $datum->breitengrad }}</td>
+    </tr>
+    @endforeach
+</table>
 
           <table>
   <tr>
