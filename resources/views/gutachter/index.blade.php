@@ -186,8 +186,8 @@ $contact=1;
 @foreach ($gutachter_certificates as $certificate)
     @if ($gutachters['PartnerID'] == $certificate['PartnerID'])
     <div class="test-gallery">
-      <a href="/certificates/{{$certificate['Certificate']}}" data-pswp-width="1200" data-pswp-height="600">
-        <img src="/certificates/{{$certificate['Certificate']}}.jpg"  width="200" height="200" alt="" />
+      <a href="/img/certificates/{{$certificate['Certificate']}}" data-pswp-width="1200" data-pswp-height="600">
+        <img src="/img/certificates/{{$certificate['Certificate']}}.jpg"  width="200" height="200" alt="" />
       </a>
       
     </div>
