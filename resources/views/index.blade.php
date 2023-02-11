@@ -10,12 +10,6 @@
   </div>
 </div>
 
-@foreach ($expert as $datum)
-    <tr>
-        <td>{{ $datum->LastName }}</td>
-        
-    </tr>
-    @endforeach
 <div class="w3-row-padding" style="margin:10vh; background-color:#fff;"> 
 		<h2 class="heading-separator w3-center">Baucampus</h2>
                 <p class="subheading-text w3-center">Das Sachverständigennetzwerk</p>
