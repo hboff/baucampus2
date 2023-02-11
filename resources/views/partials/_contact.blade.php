@@ -4,7 +4,7 @@
 @if ($name == $gutachters['UrlName'])
 
 <!-- ======= Contact Section ======= -->
-<section id="contact" class="contact pt-0 mt-0 mb-0 pb-0">
+<section id="contact" class="contact pt-0">
       <div class="container">
 
         <div class="section-title">
@@ -42,7 +42,7 @@
           </div>
 
           
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+          <div class="col-lg-7 mt-5 mb-5 mt-lg-0 d-flex align-items-stretch">
 
 <div class="card-body">
              @if(Session::has('success'))
