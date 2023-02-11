@@ -227,7 +227,7 @@ $contact=1;
             <div class="resume-item">
               <h4>{{$vita['Degree']}}</h4>
               <h5>{{$vita['Time']}}</h5>
-              <p><em>{{$vita['Descriptiion']}}</em></p>
+              <p><em>{{$vita['Description']}}</em></p>
             </div>
     @endif
     @endforeach
