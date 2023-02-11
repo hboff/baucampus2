@@ -76,14 +76,14 @@ foreach ($domains as $domain => $domainData) {
 
         $gutachterData = DB::table('gutachter')
         ->whereBetween('Lat', $domainData['laengengrad'])
-        ->whereBetween('Lat2', $domainData['breitengrad'])
+        ->whereBetween('Lat2', $domainData['laengengrad'])
         ->get();
 
         $data = [];
         foreach ($orteatData as $orteat) {
             foreach ($gutachterData as $gutachter) {
                 if ($orteat->laengengrad >= $gutachter->Lat && $orteat->laengengrad <= $gutachter->Lat2 &&
-                    $orteat->breitengrad >= $gutachter->Lat && $orteat->breitengrad <= $gutachter->Lat2) {
+                    $orteat->laengengrad >= $gutachter->Lat && $orteat->laengengrad <= $gutachter->Lat2) {
                     $data[] = [
                         'orteat' => $orteat,
                         'gutachter' => $gutachter
