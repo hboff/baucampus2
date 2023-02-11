@@ -43,13 +43,13 @@
 </div>
 </div>
 
-<div class="w3-third">
+<div class="w3-third mb-5">
     <div class="w3-card-4 w3-display-container zooma" style="margin-bottom:16px;">
     <a href="https://www.baucampus.de/baucampus-marktbericht-immobilien-2020.pdf"><img src="https://www.baucampus.de/Bilder/baucampus-marktbericht-2020.jpg" alt="Marktbericht Immobilien 2020" style="min-height:300px; height:50vh; width: 100% !important; object-fit: cover; object-position:top;"></a>
     <div class="w3-xlarge w3-display-bottomleft w3-padding w3-osk-customs" style="width:100%;">Marktbericht 2020</div>
   </div>
 </div>
-<div class="w3-row-padding mb-5 pt-5" > 
+<div class="w3-row-padding mb-5" > 
                 <p class="subheading-text w3-center">Checklisten</p>
 </div>
 <div class="w3-third">
