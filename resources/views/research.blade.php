@@ -32,6 +32,13 @@
 
 <div class="w3-third">
     <div class="w3-card-4 w3-display-container zooma" style="margin-bottom:16px;">
+    <a href="https://www.baucampus.de/baucampus-marktbericht-immobilien-2022.pdf"><img src="/img/baucampus-marktbericht-2022.png" alt="Marktbericht Immobilien 2022" style="min-height:300px; height:50vh; width: 100% !important; object-fit: cover; object-position:top;"></a>
+    <div class="w3-xlarge w3-display-bottomleft w3-padding w3-osk-customs" style="width:100%;">Marktbericht 2022</div>
+</div>
+</div>
+
+<div class="w3-third">
+    <div class="w3-card-4 w3-display-container zooma" style="margin-bottom:16px;">
     <a href="https://www.baucampus.de/baucampus-marktbericht-immobilien-2021.pdf"><img src="https://www.baucampus.de/Bilder/baucampus-marktbericht-2021.png" alt="Marktbericht Immobilien 2021" style="min-height:300px; height:50vh; width: 100% !important; object-fit: cover; object-position:top;"></a>
     <div class="w3-xlarge w3-display-bottomleft w3-padding w3-osk-customs" style="width:100%;">Marktbericht 2021</div>
 </div>
