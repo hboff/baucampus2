@@ -183,13 +183,16 @@ $contact=1;
 
       </div>
     </section><!-- End About Section -->
+    <div class="test-gallery">
+    
 @foreach ($gutachter_certificates as $certificate)
     @if ($gutachters['PartnerID'] == $certificate['PartnerID'])
-    <div class="test-gallery">
-      <a href="/img/certificates/{{$certificate['Certificate']}}" data-pswp-width="1200" data-pswp-height="600">
+      <a href="/img/certificates/{{$certificate['Certificate']}}.jpg" data-pswp-width="1200" data-pswp-height="600">
         <img src="/img/certificates/{{$certificate['Certificate']}}.jpg"  width="200" height="200" alt="" />
       </a>
-      
+       @endif
+       @else
+ @endforeach
     </div>
    
     <script type="text/javascript">
@@ -201,9 +204,7 @@ $contact=1;
       });
       lightbox.init();
     </script>
-    @else
- @endif
- @endforeach
+
 
     <!-- ======= Resume Section ======= -->
     <section id="resume" class="resume">
