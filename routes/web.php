@@ -75,7 +75,7 @@ $data = DB::table('orteat')
 ->get();
 $expert = DB::table('gutachter')
 ->get();
-return view($route, ['data' => $data, 'gutachter' => $expert]);
+return view($route, ['data' => $data, 'expert' => $expert]);
 });
     }
 });
