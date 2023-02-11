@@ -75,8 +75,8 @@ foreach ($domains as $domain => $domainData) {
         ->get();
 
         $gutachterData = DB::table('gutachter')
-        ->whereBetween('lat', $domainData['laengengrad'])
-        ->whereBetween('lat2', $domainData['breitengrad'])
+        ->whereBetween('Lat', $domainData['laengengrad'])
+        ->whereBetween('Lat2', $domainData['breitengrad'])
         ->get();
 
         $data = [];
