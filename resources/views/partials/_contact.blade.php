@@ -14,7 +14,7 @@
 
         <div class="row" data-aos="fade-in">
 
-          <div class="col-lg-5 d-flex align-items-stretch">
+          <div class="col-lg-5 d-flex align-items-stretch mb-0">
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
@@ -43,7 +43,7 @@
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
 
-<div class="card-body">
+<div class="card-body mb-5">
              @if(Session::has('success'))
                  <div class="alert alert-success">
                      {{Session::get('success')}}
@@ -123,7 +123,7 @@
                      </div>
                  </div>
                  <div class="row">
-                     <div class="col-md-12 mb-5">
+                     <div class="col-md-12">
                          <div class="form-group">
                              <textarea name="message" placeholder="Ihre Anfrage" rows="3" class="form-control">{{ old('message') }}</textarea>
                              @if ($errors->has('message'))
