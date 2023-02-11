@@ -134,12 +134,7 @@ p + p {
         <th>Längengrad</th>
         <th>Breitengrad</th>
     </tr>
-    @foreach ($gutachter as $datum)
-    <tr>
-        <td>{{ $datum->LastName }}</td>
-        
-    </tr>
-    @endforeach
+    
 </table>
 
           <table>
