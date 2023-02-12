@@ -93,9 +93,10 @@ $expert = $data = DB::table('orteat')
 
 
            
-           return view($route, ['data' => $data, 'expert' => $expert])
-           ->with('expert', $expert)
-           ->nest('partials._sidebar', ['expert' => $expert]);
+           return view($route, [
+            'data' => $data, 
+            'expert' => $expert
+        ])->nest('partials._sidebar', ['expert' => $expert]);
 });
 }
 });
