@@ -5,7 +5,7 @@ $contact=1;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.5/umd/photoswipe.umd.min.js" integrity="sha512-BGx0nICmNXjHxPsFbwYviMAT08lytG9dR8vnTEfxLNtCkdeALgC6nDbrhrG0DcnDufmNGFiCXgXIuPPXoo4zPA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.5/umd/photoswipe-lightbox.umd.min.js" integrity="sha512-CpBwN19ws59x5RFIMhBV+IYMhqtp4HTzVgfW1PCxkg36bwXu4tlWs47RiSUCj+EUhaeRMxj4w7CUG5v9w+7h1Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.5/photoswipe.css" integrity="sha512-OKOmvT2OKCG+gZ/a+r5CL4kiNCpeda/gwQ2H+ndaNZlwZUp29wxNcrkoJ44udPFmSP9xLxK6dWVoib963YJTCA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+ <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <style>
   .osk-custom {
     background-color: #6d767e;
@@ -124,6 +124,10 @@ $contact=1;
       <p>Ich bin <span class="typed" data-typed-items="Gutachter, Unternehmer, Bausachverständiger"></span>
       </p>
     </div>
+    <section id="section02" class="demo">
+  <h1>Scroll Down Button #2</h1>
+  <a href="#section03"><span></span>Scroll</a>
+</section>
   </section><!-- End Hero -->
 
   <main id="main">
@@ -132,7 +136,7 @@ $contact=1;
     <section id="about" class="about">
       <div class="container">
 
-        <div class="section-title">
+        <div id="section03" class="section-title" >
           <h2>Über mich</h2>
           <p>{{$gutachters['Text']}}
 
