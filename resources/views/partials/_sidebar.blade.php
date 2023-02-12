@@ -34,4 +34,4 @@ object-position: center;">
   </div>
 </div>
 </header><!-- End Header -->
-@isset($expert)
+@endisset
