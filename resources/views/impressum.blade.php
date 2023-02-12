@@ -8,16 +8,32 @@
 <div class="section-title">
           <h2>Impressum</h2>
         </div>
-<p>Oskar Lohse</p>
-<p>Dubai Silicon Oasis</p>
+<h3>Betreiber der Website:</h3> 
+<p>Der Betreiber FEOS - FZCO ist ein Unternehmen in Dubai und der Hauptsitz des Unternehmens befindet sich in Dubai.</p>      
+<p>FEOS - FZCO</p>
 <p>Building A1</p>
+<p>Dubai Silicon Oasis</p>
+<p>Dubai</p>
 <p>Vereinigte Arabische Emirate</p>
 <p>Elektronische Kontaktdaten:</p>
 <p>Telefon: 057222890636</p>
-<p>Fax 05722 / 289 0638</p>
-<p>oskar_lohse@baucampus.de</p>
+<p>E-mail: oskar_lohse@baucampus.de</p>
+<p>Internet: www.baucampus.de</p>
+<p>General Manager Oskar Lohse</p>
 
+<h3>Kontaktadresse in Deutschland:</h3>
+<p>Casimir Arlabosse</p>
+<p>Waltherstraße 15</p>
+<p>80337 München</p>
+<p>Telefon:</p>
+<p>E-mail: arlabosse@baucampus.de</p>
+<p>Internet: www.baucampus.de</p>
 
+<h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
+
+<p>Casimir Arlabosse</p>
+<p>Waltherstraße 15</p>
+<p>80337 München</p>
       </div>
 
 @endsection
