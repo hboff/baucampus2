@@ -31,6 +31,53 @@ $contact=1;
     height: 50px;
     border-radius: 50%;
   }
+  .demo a:hover {
+  opacity: .5;
+}
+
+#section03 a {
+  padding-top: 60px;
+}
+#section03 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+#section03 a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+#section03 a span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-animation: sdb03 3s infinite;
+  animation: sdb03 3s infinite;
+  box-sizing: border-box;
+}
 </style>
 
 <!DOCTYPE html>
@@ -124,9 +171,8 @@ $contact=1;
       <p>Ich bin <span class="typed" data-typed-items="Gutachter, Unternehmer, Bausachverständiger"></span>
       </p>
     </div>
-    <section id="section03" class="demo">
-<h1>Scroll Down Button #3</h1>
-<a href="#section04"><span></span>Scroll</a>
+    <section id="section01" class="demo">
+  <a href="#about"><span></span>Scroll</a>
 </section>
   </section><!-- End Hero -->
 
