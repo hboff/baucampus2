@@ -11,11 +11,13 @@ use Illuminate\Support\Facades\DB;
 class OrteatController extends Controller
 {
     // Show single lisitng
-    public function show($ortat) {
+    public function show($ortat, $experts) {
         $status='at';
         return view('unterseiten.bausachverstaendiger', [
             'ortsname'=> $ortat,
+            'experts' => $experts
             ]);    }         
+
     public function index() {
         $status='at';
         return view ('index', compact('status'));

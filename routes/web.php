@@ -64,7 +64,7 @@ foreach ($domains as $domain => $domainData) {
 Route::domain($domain)->group(function () use ($routes, $domainData) {
     Route::get('/', [OrteatController::class, 'index']);
     Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){});
-    //Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){});
+    Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){});
     Route::get('contact-us', [ContactController::class, 'index']);
     Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
 
@@ -92,12 +92,9 @@ Route::domain($domain)->group(function () use ($routes, $domainData) {
             ->get();
      //Daten aus der Abfrage werden als Parameter an die View übergeben      
     return view($route, ['data' => $data, 'expert' => $expert]);
-    
 });
-Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request) use($expert){});
 }
 });
-
 }
 
 
