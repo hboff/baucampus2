@@ -239,8 +239,9 @@ $contact=1;
               <h5>{{$experience['Time']}}</h5>
               <p>{{$experience['Title']}}</p>
             </div>
-            @endif
             @else
+            @endif
+            
             @endforeach
           </div>
         </div>
