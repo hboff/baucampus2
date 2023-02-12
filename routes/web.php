@@ -64,7 +64,7 @@ foreach ($domains as $domain => $domainData) {
 Route::domain($domain)->group(function () use ($routes, $domainData) {
     Route::get('/', [OrteatController::class, 'index']);
     Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){});
-    //
+    //Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){});
     Route::get('contact-us', [ContactController::class, 'index']);
     Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
 
@@ -97,18 +97,9 @@ Route::domain($domain)->group(function () use ($routes, $domainData) {
 });
 }
 Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){
-    $expert = DB::table('orteat')
-        ->join('gutachter', function($join) {
-            $join->on('orteat.laengengrad', '>=', 'gutachter.Lon')
-                ->on('orteat.laengengrad', '<=', 'gutachter.Lon2');
-        })
-        // Hier werden deine Werte aus der Datenbank ausgelesen und geprüft welche Orte in dem Domain Array liegen
-        ->whereBetween('orteat.laengengrad', $domainData['laengengrad'])
-        ->whereBetween('orteat.breitengrad', $domainData['breitengrad'])
-        ->get();
-
-    return view('/{ort}/bausachverstaendiger', ['expert' => $expert]);
-});
+    return view('partials._sidebar', compact('expert'));
+  });
+  
 
 
 
