@@ -59,12 +59,25 @@ $domains = [
     ],
 ];
 
-// foreach loop für die einzelnen Domains
+
 foreach ($domains as $domain => $domainData) {
-Route::domain($domain)->group(function () use ($routes, $domainData) {
-    Route::get('/', [OrteatController::class, 'index']);
-    Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){});
-    //Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){});
+    Route::domain($domain)->group(function () use ($routes, $domainData) {
+        Route::get('/', [OrteatController::class, 'index']);
+        Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){});
+        Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){
+            $expert = DB::table('orteat')
+               ->join('gutachter', function($join) {
+                   $join->on('orteat.laengengrad', '>=', 'gutachter.Lon')
+                        ->on('orteat.laengengrad', '<=', 'gutachter.Lon2');
+               })
+               //Hier werden deine Werte aus der Datenbank ausgelesen und geprüft welche Orte in dem Domain Array liegen
+                ->whereBetween('orteat.laengengrad', $domainData['laengengrad'])
+                ->whereBetween('orteat.breitengrad', $domainData['breitengrad'])
+                ->get();
+         //Daten aus der Abfrage werden als Parameter an die View übergeben      
+        return view('ort.bausachverstaendiger', ['expert' => $expert]);
+    });
+    // foreach loop für die einzelnen Domains
     Route::get('contact-us', [ContactController::class, 'index']);
     Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
 
@@ -96,10 +109,7 @@ Route::domain($domain)->group(function () use ($routes, $domainData) {
 }
 });
 }
-Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){
-    return view('partials._sidebar', compact('expert'));
-  });
-  
+
 
 
 
