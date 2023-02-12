@@ -119,8 +119,9 @@ $contact=1;
 @if ($name == $gutachters['UrlName'])
 <!-- ======= Hero Section ======= -->
 <section  class="d-flex flex-column justify-content-center align-items-center">
+<img src="https://www.mein-haus.eu/bilder/mein-haus.jpg" alt="Mein Haus" style="width:100%;height:100vh; object-fit: cover; object-position:center;">
+
     <div class="hero-container" data-aos="fade-in">
-    <img sizes="(max-width: 1400px) 100vw, 1400px"  src="https://www.mein-haus.eu/bilder/mein-haus.jpg" alt="Mein Haus" style="width:100%;min-height:350px;max-height:85vh; object-fit: cover; object-position:center;">
 
       <h1> {{$gutachters['FirstName']}} {{$gutachters['LastName']}} </h1>
       <p>Ich bin <span class="typed" data-typed-items="Gutachter, Unternehmer, Bausachverständiger"></span>
