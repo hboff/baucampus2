@@ -176,8 +176,8 @@ $contact=1;
     
 @foreach ($gutachter_certificates as $certificate)
     @if ($gutachters['PartnerID'] == $certificate['PartnerID'])
-      <a href="/img/certificates/{{$certificate['Certificate']}}.jpg" data-pswp-width="1200" data-pswp-height="600">
-        <img src="/img/certificates/{{$certificate['Certificate']}}.jpg"  width="200" height="200" alt="" />
+      <a href="/img/certificates/{{$certificate['Certificate']}}.jpg" data-pswp-width="300" data-pswp-height="600">
+        <img src="/img/certificates/{{$certificate['Certificate']}}.jpg"  width="100" height="200" alt="" />
       </a>
       @else
        @endif
@@ -218,7 +218,7 @@ $contact=1;
 
             <h3 class="resume-title">Education</h3>
 @foreach ($vitas as $vita)
-@if ($gutachters['PartnerId'] == $vita['PartnerId'])
+@if ($gutachters['PartnerID'] == $vita['PartnerID'])
             <div class="resume-item">
               <h4>{{$vita['Degree']}}</h4>
               <h5>{{$vita['Time']}}</h5>
