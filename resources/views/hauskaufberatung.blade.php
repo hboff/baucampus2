@@ -25,16 +25,17 @@
 <table>
     <thead>
         <tr>
-            <th>Data</th>
-            <th>Expert</th>
+            <th>City Name</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Gutachter Name</th>
         </tr>
     </thead>
     <tbody>
-        @foreach($data as $index => $value)
-            <tr>
-                <td>{{ $value }}</td>
-                <td>{{ $expert[$index] }}</td>
-            </tr>
+        @foreach($expert as $row)
+        <tr>
+            <td>{{ $row->LastName }}</td>
+        </tr>
         @endforeach
     </tbody>
 </table>
