@@ -130,7 +130,6 @@ $contact=1;
 </section>
   </section><!-- End Hero -->
 
-  <main id="main">
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -139,17 +138,14 @@ $contact=1;
         <div class="section-title">
           <h2>Über mich</h2>
           <p>{{$gutachters['Text']}}
-
-
-
           </p>
         </div>
 
         <div class="row">
-          <div class="col-lg-6" data-aos="fade-right">
+          <div class="col-lg-4" data-aos="fade-right">
             <img src="/img/{{$gutachters['Photo']}}" class="img-fluid" alt="">
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <h3>Unternehmer &amp; Bausachverständiger</h3>
             <p class="fst-italic">
               Telefon: {{$gutachters['Phone']}}
