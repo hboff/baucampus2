@@ -34,7 +34,7 @@ $routes = [
     'research',
     'show',
     'impressum',
-    '_sidebar',
+    'bausachverstaendiger',
 ];
 
 $domains = [
