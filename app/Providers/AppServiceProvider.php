@@ -9,6 +9,7 @@ use App\Models\Orteat;
 use App\Models\Gutachter;
 use App\Models\Certificate;
 use App\Models\Vita;
+use App\Models\Experience;
 
 class AppServiceProvider extends ServiceProvider
 {
