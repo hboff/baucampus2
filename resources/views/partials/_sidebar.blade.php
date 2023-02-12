@@ -34,7 +34,6 @@ object-position: center;">
     <h1 class="text-light mb-3"><a href="index.html">Hauptstelle Baucampus</a></h1>
     <p class="text-light text-center mb-0">Telefon: 05722 913800</p>
     <p class="text-light text-center">kontakt@baucampus.de</p>
-    {{$ortsname}}
   </div>
 </div>
 </header><!-- End Header -->
