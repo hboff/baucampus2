@@ -20,7 +20,7 @@
 <p>E-mail: oskar_lohse@baucampus.de</p>
 <p>Internet: www.baucampus.de</p>
 <p>General Manager Oskar Lohse</p>
-
+<br/>
 <h3>Kontaktadresse in Deutschland:</h3>
 <p>Casimir Arlabosse</p>
 <p>Waltherstraße 15</p>
@@ -28,9 +28,8 @@
 <p>Telefon:</p>
 <p>E-mail: arlabosse@baucampus.de</p>
 <p>Internet: www.baucampus.de</p>
-
+<br/>
 <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
-
 <p>Casimir Arlabosse</p>
 <p>Waltherstraße 15</p>
 <p>80337 München</p>
