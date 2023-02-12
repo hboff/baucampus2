@@ -17,9 +17,7 @@ object-position: center;">
     <p class="text-light text-center mb-0">2</p>
     <p class="text-light text-center">3</p>
   </div>
-@else
-@endif
-@endforeach
+
   <div class="profile">
     <img src="/img/logo.png" alt="" class="mt-2" style="    vertical-align: middle;
 width: 120px;
