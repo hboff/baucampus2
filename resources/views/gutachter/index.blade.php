@@ -1,8 +1,6 @@
 @extends('layout')
 @section('content')
-@php
-$contact=1;
-@endphp
+
 <!-- Photoswipe library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.5/umd/photoswipe.umd.min.js" integrity="sha512-BGx0nICmNXjHxPsFbwYviMAT08lytG9dR8vnTEfxLNtCkdeALgC6nDbrhrG0DcnDufmNGFiCXgXIuPPXoo4zPA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.5/umd/photoswipe-lightbox.umd.min.js" integrity="sha512-CpBwN19ws59x5RFIMhBV+IYMhqtp4HTzVgfW1PCxkg36bwXu4tlWs47RiSUCj+EUhaeRMxj4w7CUG5v9w+7h1Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -127,8 +125,6 @@ $contact=1;
 }
 
 </style>
-
-
 
 @foreach ($gutachter as $gutachters)
 @if ($name == $gutachters['UrlName'])
@@ -271,7 +267,7 @@ $contact=1;
     </section><!-- End Resume Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
+    <section  class="services">
       <div class="container">
 
         <div class="section-title">
@@ -324,6 +320,7 @@ $contact=1;
 
       </div>
     </section><!-- End Services Section -->
+    <br>
     @else
 @endif
 @endforeach
