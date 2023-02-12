@@ -81,7 +81,7 @@ Route::domain($domain)->group(function () use ($routes, $domainData) {
 //The result of the join is a single table that includes all columns from both the orteat and gutachter tables. The columns from the orteat table will have the same values for each row, while the name column from the gutachter table will have different values for each row, depending on the matching breitengrad value.
 
         // Hier wird der Join der Datenbanktabellen orteat + gutachter ausgeführt und die Datenbankabfrage wird ausgeführt
-        $expert = $data = DB::table('orteat')
+        $expert = DB::table('orteat')
            ->join('gutachter', function($join) {
                $join->on('orteat.laengengrad', '>=', 'gutachter.Lon')
                     ->on('orteat.laengengrad', '<=', 'gutachter.Lon2');
