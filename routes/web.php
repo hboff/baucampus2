@@ -61,17 +61,10 @@ $domains = [
 
 
 foreach ($domains as $domain => $domainData) {
-    Route::domain($domain)->group(function () use ($routes, $domainData) {
-        Route::get('/', [OrteatController::class, 'index']);
-        Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show']);
-        Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'])->with([
-                        'expert' => DB::table('orteat')
-                ->join('gutachter', function($join) {
-                    $join->on('orteat.laengengrad', '>=', 'gutachter.Lon')
-                         ->on('orteat.laengengrad', '<=', 'gutachter.Lon2');
-                })
-                ->get(),
-        ]);
+Route::domain($domain)->group(function () use ($routes, $domainData) {
+    Route::get('/', [OrteatController::class, 'index']);
+    Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){});
+    Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){});
     Route::get('contact-us', [ContactController::class, 'index']);
     Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
 foreach ($routes as $route) {
@@ -100,7 +93,7 @@ $expert = $data = DB::table('orteat')
 
 
            
-           return view($route, ['data' => $data, 'expert' => $expert]);
+return view($route, ['data' => $data, 'expert' => $expert])->with('expert', $expert)->nest('sidebar', 'partials._sidebar');
 });
 }
 });
