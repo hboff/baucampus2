@@ -227,7 +227,6 @@ $contact=1;
               <p><em>{{$vita['Description']}}</em></p>
             </div>
 @endif
-@else
 @endforeach
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
