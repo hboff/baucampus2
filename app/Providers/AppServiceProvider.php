@@ -36,5 +36,6 @@ class AppServiceProvider extends ServiceProvider
         View::share('gutachter', Gutachter::all());
         View::share('gutachter_certificates', Certificate::all());
         View::share('vitas', Vita::all());
+        View::share('professional_experience', Experience::all());
     }
 }
