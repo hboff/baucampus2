@@ -217,7 +217,7 @@ $contact=1;
       <p>Ich bin <span class="typed" data-typed-items="Gutachter, Unternehmer, Bausachverständiger"></span>
       </p>
     </div>
-    <section id="section01" class="demo">
+    <section id="section03" class="demo">
   <a href="#about"><span></span>Scroll</a>
 </section>
   </section><!-- End Hero -->
