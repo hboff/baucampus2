@@ -73,10 +73,20 @@ $data = DB::table('orteat')
 ->whereBetween('laengengrad', $domainData['laengengrad'])
 ->whereBetween('breitengrad', $domainData['breitengrad'])
 ->get();
-$expert = DB::table('gutachter')
-->whereBetween('HomeCityLat', $domainData['breitengrad'])
-->whereBetween('HomeCityLon', $domainData['laengengrad'])
-->get();
+    $expert = DB::table('orteat')
+      ->join('gutachter', function ($join) use ($domainData) {
+        $join->on('orteat.id', '=', 'gutachter.orteat_id')
+             ->whereBetween('orteat.laengengrad', $domainData['laengengrad'])
+             ->whereBetween('orteat.breitengrad', $domainData['breitengrad'])
+             ->whereBetween('gutachter.Lon', '<=', 'orteat.laengengrad')
+             ->whereBetween('gutachter.Lon2', '>=', 'orteat.laengengrad');
+      })
+      ->get();
+
+//$expert = DB::table('gutachter')
+//->whereBetween('HomeCityLat', $domainData['breitengrad'])
+//->whereBetween('HomeCityLon', $domainData['laengengrad'])
+//->get();
 return view($route, ['data' => $data, 'expert' => $expert]);
 });
 }

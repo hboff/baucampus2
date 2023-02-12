@@ -22,14 +22,22 @@
         <div class="section-title">
           <h2>Hauskaufberatung</h2>
         </div>
-        @foreach ($expert as $datum)
-    <tr>
-        <td>{{ $datum->LastName }}</td>
-        <td>{{ $datum->Lat }}</td>
-        <td>{{ $datum->Lat2 }}</td>
-
-    </tr>
-    @endforeach
+<table>
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Expert</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($data as $index => $value)
+            <tr>
+                <td>{{ $value }}</td>
+                <td>{{ $expert[$index] }}</td>
+            </tr>
+        @endforeach
+    </tbody>
+</table>
         <div class="row">
           <div class="col-lg-6" data-aos="fade-right">
           <p>Beim <b>Kauf eines Hauses</b> oder einer Eigentumswohnung stellen sich viele Fragen. Mit einer professionellen und unabhängigen <b>Hauskaufberatung</b> durch unsere Bausachverständigen gehen Sie den richtigen Schritt, um ein Haus oder eine Eigentumswohnung auf der Basis klarer <b>Fakten</b> zu erwerben.</p>
