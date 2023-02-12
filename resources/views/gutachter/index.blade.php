@@ -124,6 +124,10 @@ $contact=1;
       <p>Ich bin <span class="typed" data-typed-items="Gutachter, Unternehmer, Bausachverständiger"></span>
       </p>
     </div>
+    <section id="section03" class="demo">
+<h1>Scroll Down Button #3</h1>
+<a href="#section04"><span></span>Scroll</a>
+</section>
   </section><!-- End Hero -->
 
   <main id="main">
