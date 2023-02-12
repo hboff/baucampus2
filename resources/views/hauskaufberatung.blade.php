@@ -26,19 +26,17 @@
     <thead>
         <tr>
             <th>First Name</th>
-            <th>Last Name</th>
-            <th>Phone</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
             <th>Gutachter Name</th>
         </tr>
     </thead>
     <tbody>
         @foreach($expert as $row)
         <tr>
-            <td>{{ $row->LastName }}</td>
-            <td>{{ $row->LastName }}</td>
-            <td>{{ $row->Phone }}</td>
-            <td>{{ $row->ort }}</td>
+            <td>{{ $row->FirstName }}</td>
 
+            <td>{{ $row->LastName }}</td>
         </tr>
         @endforeach
     </tbody>
