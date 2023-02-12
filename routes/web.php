@@ -75,7 +75,7 @@ foreach ($domains as $domain => $domainData) {
                 ->whereBetween('orteat.breitengrad', $domainData['breitengrad'])
                 ->get();
          //Daten aus der Abfrage werden als Parameter an die View übergeben      
-        return view('ort.bausachverstaendiger', ['expert' => $expert]);
+        return view('unterseiten.bausachverstaendiger', ['expert' => $expert]);
     });
     // foreach loop für die einzelnen Domains
     Route::get('contact-us', [ContactController::class, 'index']);
