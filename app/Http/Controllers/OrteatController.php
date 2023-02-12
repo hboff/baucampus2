@@ -13,7 +13,7 @@ class OrteatController extends Controller
     // Show single lisitng
     public function show($ortat) {
         $status='at';
-        return view('bausachverstaendiger', [
+        return view('unterseiten.bausachverstaendiger', [
             'ortsname'=> $ortat,
             ]);    }         
     public function index() {
