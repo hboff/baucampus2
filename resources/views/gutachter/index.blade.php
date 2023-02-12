@@ -147,11 +147,6 @@ $contact=1;
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <h3>Unternehmer &amp; Bausachverständiger</h3>
-            <p class="fst-italic">
-              Telefon: {{$gutachters['Phone']}}
-
-              Email: {{$gutachters['Email']}}
-            </p>
             <div class="row">
               <div class="col-lg-6">
                 <ul>
@@ -332,7 +327,7 @@ object-position: center;" class="description">
           
       </div>
     </section><!-- End Footer Section -->
-  </main><!-- End #main -->
+
 
 
 
