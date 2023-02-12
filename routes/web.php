@@ -92,8 +92,9 @@ Route::domain($domain)->group(function () use ($routes, $domainData) {
             ->get();
      //Daten aus der Abfrage werden als Parameter an die View übergeben      
     return view($route, ['data' => $data, 'expert' => $expert]);
-    Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request) use($expert){});
+    
 });
+Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request) use($expert){});
 }
 });
 
