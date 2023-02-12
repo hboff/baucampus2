@@ -25,9 +25,9 @@
 <table>
     <thead>
         <tr>
-            <th>City Name</th>
-            <th>Latitude</th>
-            <th>Longitude</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone</th>
             <th>Gutachter Name</th>
         </tr>
     </thead>
@@ -35,6 +35,10 @@
         @foreach($expert as $row)
         <tr>
             <td>{{ $row->LastName }}</td>
+            <td>{{ $row->LastName }}</td>
+            <td>{{ $row->Phone }}</td>
+            <td>{{ $row->ort }}</td>
+
         </tr>
         @endforeach
     </tbody>
