@@ -8,13 +8,6 @@ $contact=1;
  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <style>
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
-* {
-  margin: 0;
-  padding: 0;
-}
-html, body {
-  height: 100%;
-}
 section {
   position: relative;
   width: 100%;
@@ -43,51 +36,6 @@ section h1 {
   white-space: nowrap;
 }
 
-#section01 { background: url(https://picsum.photos/1200/800?image=575) center center / cover no-repeat;}
-#section02 { background: url(https://picsum.photos/1200/800?image=1016) center center / cover no-repeat;}
-#section03 { background: url(https://picsum.photos/1200/800?image=869) center center / cover no-repeat;}
-#section04 { background: url(https://picsum.photos/1200/800?image=506) center center / cover no-repeat;}
-#section05 { background: url(https://picsum.photos/1200/800?image=1037) center center / cover no-repeat;}
-#section06 { background: url(https://picsum.photos/1200/800?image=901) center center / cover no-repeat;}
-#section07 { background: url(https://picsum.photos/1200/800?image=675) center center / cover no-repeat;}
-#section08 { background: url(https://picsum.photos/1200/800?image=1050) center center / cover no-repeat;}
-#section09 { background: url(https://picsum.photos/1200/800?image=902) center center / cover no-repeat;}
-#section10 { background: url(https://picsum.photos/1200/800?image=516) center center / cover no-repeat;}
-
-#thanks {
-  background-color: #fff;
-}
-#thanks::after {
-  content: none;
-}
-#thanks div {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-#thanks h2 {
-  margin-bottom: 60px;
-  color: #333;
-  font : normal 300 64px/1 'Josefin Sans', sans-serif;
-  text-align: center;
-  white-space: nowrap;
-}
-#thanks p {
-  color: #333;
-  font : normal 400 20px/1 'Josefin Sans', sans-serif;
-}
-#thanks p a {
-  color: #333;
-  text-decoration: none;
-  transition: color .3s;
-}
-#thanks p a:hover {
-  color: #888;
-}
 .demo a {
   position: absolute;
   bottom: 20px;
