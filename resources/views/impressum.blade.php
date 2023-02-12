@@ -25,7 +25,7 @@
 <p>Casimir Arlabosse</p>
 <p>Waltherstraße 15</p>
 <p>80337 München</p>
-<p>Telefon:</p>
+<p>Telefon: 057222890636</p>
 <p>E-mail: arlabosse@baucampus.de</p>
 <p>Internet: www.baucampus.de</p>
 <br/>
