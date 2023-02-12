@@ -1,3 +1,4 @@
+@isset($expert)
 <header id="header">
 
 <!-- ======= Header ======= -->
@@ -33,3 +34,4 @@ object-position: center;">
   </div>
 </div>
 </header><!-- End Header -->
+@endisset
