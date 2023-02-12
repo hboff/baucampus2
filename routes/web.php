@@ -78,8 +78,7 @@ $data = DB::table('orteat')
         $join->on('orteat.id', '=', 'gutachter.orteat_id')
              ->whereBetween('orteat.laengengrad', $domainData['laengengrad'])
              ->whereBetween('orteat.breitengrad', $domainData['breitengrad'])
-             ->whereBetween('gutachter.Lon', '<=', 'orteat.laengengrad')
-             ->whereBetween('gutachter.Lon2', '>=', 'orteat.laengengrad');
+             ->whereBetween('orteat.laengengrad', 'gutachter.Lon', 'gutachter.Lon2');    
       })
       ->get();
 
