@@ -2,7 +2,7 @@
 @section('content')
 
 <title>Schimmelpilzberatung mit Bausachverständigem</title>
-<meta name="Description" content="Die Baubegleitung als Arbeitsbereich des Bausachverständigen kurz erklärt.">
+<meta name="Description" content="Beratung eines Bausachverständigen bei Schimmelpilzproblemen.">
 
 
 <body class="w3-light-grey">

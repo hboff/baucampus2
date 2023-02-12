@@ -2,7 +2,7 @@
 @section('content')
 
 <title>Immobilienbewertung mit Bausachverständigem</title>
-<meta name="Description" content="Die Baubegleitung als Arbeitsbereich des Bausachverständigen kurz erklärt.">
+<meta name="Description" content="Eine professionelle Immobilienbewertung mit einem Bausachversändigen von Baucampus.">
 
 
 <body class="w3-light-grey">

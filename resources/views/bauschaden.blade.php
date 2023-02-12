@@ -2,7 +2,7 @@
 @section('content')
 
 <title>Ortstermin mit Bausachverständigem</title>
-<meta name="Description" content="Die Baubegleitung als Arbeitsbereich des Bausachverständigen kurz erklärt.">
+<meta name="Description" content="Der Ortstermin mit einem Bausachverständigen kurz erklärt.">
 
 
 <body class="w3-light-grey">

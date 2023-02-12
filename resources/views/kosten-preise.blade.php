@@ -20,8 +20,8 @@ th, td {
 
 </style>
 
-<title>Schimmelpilzberatung mit Bausachverständigem</title>
-<meta name="Description" content="Die Baubegleitung als Arbeitsbereich des Bausachverständigen kurz erklärt.">
+<title>Kosten und Preise</title>
+<meta name="Description" content="Die Kosten und Preise von Baucampus.">
 
 
 <body class="w3-light-grey">

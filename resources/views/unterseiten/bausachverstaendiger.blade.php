@@ -2,7 +2,7 @@
 @section('content')
 
 <title>Bausachverstädiger {{$ortsname}}</title>
-<meta name="Description" content="Die Baubegleitung als Arbeitsbereich des Bausachverständigen kurz erklärt.">
+<meta name="Description" content="Unsere Leistungen in {{$ortsname}}.">
 
 @include('partials._sidebar')
 <main id="main">

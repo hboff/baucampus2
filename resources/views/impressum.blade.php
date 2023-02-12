@@ -1,5 +1,7 @@
 @extends('layout')
-@section('content')    
+@section('content')   
+<title>Impressum Baucampus</title>
+<meta name="Description" content="Impressum Baucampus"> 
 <div id="about" class="about pt-5 mt-5">
       <div class="container pt-5">
 

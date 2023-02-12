@@ -2,7 +2,7 @@
 @section('content')
 
 <title>Hauskaufberatung mit Bausachverständigem</title>
-<meta name="Description" content="Die Baubegleitung als Arbeitsbereich des Bausachverständigen kurz erklärt.">
+<meta name="Description" content="Überblick über den Aublauf einer Hauskaufberatung mit einem Bausachverständigen.">
 
 
 <body class="w3-light-grey">

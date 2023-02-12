@@ -1,8 +1,8 @@
 @extends('layout')
 @section('content')
 
-<title>Schimmelpilzberatung mit Bausachverständigem</title>
-<meta name="Description" content="Die Baubegleitung als Arbeitsbereich des Bausachverständigen kurz erklärt.">
+<title>Marktberichte Baucampus</title>
+<meta name="Description" content="Alle Marktberichte von Baucampus.">
 
 
 <body class="w3-light-grey">
