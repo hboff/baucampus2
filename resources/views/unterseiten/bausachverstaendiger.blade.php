@@ -4,7 +4,7 @@
 <title>Bausachverstädiger {{$ortsname}}</title>
 <meta name="Description" content="Die Baubegleitung als Arbeitsbereich des Bausachverständigen kurz erklärt.">
 
-@include('partials._sidebar')
+@include('partials._sidebar', ['expert' => $expert])
 <main id="main">
 </br>
 </br>
