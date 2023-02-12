@@ -35,6 +35,7 @@ $routes = [
     'show',
     'impressum',
     'bausachverstaendiger',
+    '_sidebar',
 ];
 
 $domains = [
