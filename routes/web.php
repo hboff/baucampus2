@@ -80,6 +80,8 @@ $data = DB::table('orteat')
 //In the example I provided, the orteat and gutachter tables are joined on the breitengrad column in the orteat table and the Lon and Lon2 columns in the gutachter table. The join is performed using the on method in Laravel's Eloquent ORM, and the conditions are specified as orteat.breitengrad >= gutachter.Lon and orteat.breitengrad <= gutachter.Lon2. This means that only the rows from the orteat table where the breitengrad value falls between the Lon and Lon2 values in the gutachter table will be included in the result set.
 //
 //The result of the join is a single table that includes all columns from both the orteat and gutachter tables. The columns from the orteat table will have the same values for each row, while the name column from the gutachter table will have different values for each row, depending on the matching breitengrad value.
+
+//HIER DIE WHEREBETWEEEN VON $data in $expert einfügen --> denke ich
 $expert = $data = DB::table('orteat')
            ->join('gutachter', function($join) {
                $join->on('orteat.laengengrad', '>=', 'gutachter.Lon')
