@@ -1,13 +1,11 @@
-@php
-$contact=2;
-@endphp
-
-
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+@php
+$contact=2;
+@endphp
   @yield('head')
   <style>
   .osk-custom {
