@@ -25,11 +25,11 @@
 
         <div class="row">
           <div class="col-lg-6" data-aos="fade-right">
-          <p>Die <b>baubegleitende Qualitätssicherung</b> durch einen Bausachverständigen ermöglicht dem Bauherren eine neutrale Qualitätskontrolle für den Bau oder den Umbau ihrer Immobilie. Durch die steigende Konkurrenz und Kostendruck in der Baubranche leidet die Bauqualität. Hier kann ein Bausachverständiger helfend eingreifen und so Geld und Nerven sparen. Ein Baugutachter, der die <b>baubegleitende Qualitätssicherung</b> durchführt, stellt sicher, dass Baubeschreibung, Bauplanung und Bauausführung übereinstimmen.</p>
-          <p>Die Ursachen von Baumängeln und Bauschäden sind, ohne kompetente und <b>fachliche Hilfe</b> durch einen Bausachverständigen nur schwer zu ermitteln. Ein Haus ist, im Vergleich mit der Serienfertigung, immer als ein <b>handwerkliches Einzelstück</b> zu sehen, dass durch die Vielzahl der Gewerke und Materialien, Planänderungen oder Planungsfehlern nicht fehlerfrei erstellt werden kann.</p>
+          <<p>Die Ursachen von Baumängeln und Bauschäden sind, ohne kompetente und <b>fachliche Hilfe</b> durch einen Bausachverständigen nur schwer zu ermitteln. Ein Haus ist, im Vergleich mit der Serienfertigung, immer als ein <b>handwerkliches Einzelstück</b> zu sehen, dass durch die Vielzahl der Gewerke und Materialien, Planänderungen oder Planungsfehlern nicht fehlerfrei erstellt werden kann.</p>
 <p>So entstehen Baumängel, das heißt das Gebäude wurde nicht wie im Kaufvertrag oder Bauvertrag vereinbart hergestellt. Diese Baumängel führen oft zu Bauschäden, die nicht nur optische oder <b>funktionelle Beeinträchtigungen</b>, sondern sie können auch die Bausubstanz schädigen. Hierbei ist es einerlei, ob diese Bauschäden bei einem Neubau oder durch die Modernisierung einer Bestandsimmobilie entstanden sind.</p>
 <p>Als Bauherr und Kunde wollen Sie diese Mängel nicht hinnehmen. Ein Bausachverständiger ist hier der <b>kompetente Ansprechpartner</b>. Der Bausachverständige kann eine neutrale Ursachenermittlung für en Baumangel bzw. Bauschaden vornehmen und helfen, das Ausmaß des Schadens durch fachlich qualifizierte Erstmaßnahmen zu begrenzen. Das einschalten eines Gutachters und dessen <b>fachliche Erläuterungen</b> bzw. dessen Gutachten gibt ihnen als Bauherr die notwendige Sicherheit mit den Handwerkern und Bauunternehmern auf Augenhöhe zu verhandeln.</p>
  
+
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
             <img src="/img/baucampus-bauschaden.jpg" class="img-fluid" alt="">
