@@ -1,8 +1,25 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://baucampus.ch/w3.css">
+<link rel="stylesheet" type="text/css" href="https://baucampus.ch/style.css">
+  <link rel="stylesheet" href="https://baucampus.ch/ideen-style.css">
+<link rel="stylesheet" type="text/css" href="https://baucampus.ch/kontakt-style.css">
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<link href="/style.css" rel="stylesheet">
+
+
+<link href="/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
 @php
 $contact=2;
 @endphp
@@ -277,26 +294,7 @@ function toggleFunction() {
 }
 </script>
 
-<!DOCTYPE html>
-<html lang="de">
-<meta charset="UTF-8">
-<title>Baucampus</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://baucampus.ch/w3.css">
-<link rel="stylesheet" type="text/css" href="https://baucampus.ch/style.css">
-  <link rel="stylesheet" href="https://baucampus.ch/ideen-style.css">
-<link rel="stylesheet" type="text/css" href="https://baucampus.ch/kontakt-style.css">
-<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-<link href="/style.css" rel="stylesheet">
 
-
-<link href="/vendor/aos/aos.css" rel="stylesheet">
-  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   @yield('content')
   
