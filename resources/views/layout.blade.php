@@ -306,7 +306,7 @@ function toggleFunction() {
 
         <div class="row">
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <h4 class="title">Baucampus</h4>
+            <h3 class="title">Baucampus</h3>
             <img src="/img/logo.png" alt="" style="    vertical-align: middle;
     width: 150;
     height: 150px;
@@ -315,11 +315,11 @@ function toggleFunction() {
 object-position: center;" class="description">
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 class="title">Themen</h4>
+            <h3 class="title">Themen</h3>
             <p class="description">@include('partials._orte')</p>
         </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <h4 class="title">Allgemeines</h4>
+            <h3 class="title">Allgemeines</h3>
             <a class="description link-dark" href="/impressum">Impressum</a>
             <a class="description link-dark" href="/datenschutzerklaerung">Datenschutzerklärung</a> 
           </div>
