@@ -8,6 +8,7 @@
 @if ($region->Country == Austria)
     <a class="link-dark" href="/{{$region->region}}/bausachverstaendiger">Baugutachter {{$region->region}}</a>
     @endif
+    @endif
     @endforeach
 
 
