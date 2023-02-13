@@ -25,12 +25,6 @@
         @foreach ($expert as $row)
 
   <div class="profile">
-    <img src="/img/{{$row['Photo']}}" alt="" class="mt-4" style="    vertical-align: middle;
-width: 180px;
-height: 180px;
-border-radius: 50%;
-object-fit: cover;
-object-position: center;">
 
     <h1 class="text-light mb-3"><a href="/gutachter/{{$row->LastName}}">{{$row['FirstName']}} {{$row['LastName']}}</a></h1>
     <p class="text-light text-center mb-0">{{$row['Phone']}}</p>
