@@ -72,9 +72,11 @@ class OrteatController extends Controller
             ORDER BY distance
             LIMIT 0 , 20
         "), [$breitengrad, $laengengrad, $breitengrad]);
+
+        $nearestCitiesArray = $nearestCities->toArray();
       
         return view('unterseiten.bausachverstaendiger', [
-            'nearestCities' => $nearestCities,
+            'nearestCities' => $nearestCitiesArray,
             'expert' => $expert,
             'data' => $data,
             'ortsname'=> $ortat,
