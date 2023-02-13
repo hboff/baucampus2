@@ -360,7 +360,7 @@ object-position: center;" class="description">
                 <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="title">Themen</h3>
                     <p class="description">
-                        @switch($status)
+@switch($footer)
 @case('1')
 @include('partials._1')
 @break
