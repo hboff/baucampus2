@@ -11,9 +11,33 @@ use Illuminate\Support\Facades\DB;
 class OrteatController extends Controller
 {
     // Show single lisitng
-    public function show($ortat, $domainData) {
+    public function show($ortat) {
         $status='at';
+        $domains = [
+            'immobilienbewertung-bielefeld.com' => [
+                'laengengrad' => [1.0, 12.0],
+                'breitengrad' => [10.0, 52.0],
+            ],
+            'immobilienbewertung-wuppertal.eu' => [
+                'laengengrad' => [1.0, 12.0],
+                'breitengrad' => [10.0, 52.0],
+            ],
+            'baucampus.at' => [
+                'laengengrad' => [1.0, 12.0],
+                'breitengrad' => [10.0, 52.0],
+            ],
+            'baucampus.be' => [
+                'laengengrad' => [1.0, 12.0],
+                'breitengrad' => [10.0, 52.0],
+            ],
+            'baucampus.nl' => [
+                'laengengrad' => [52.0, 53.0],
+                'breitengrad' => [10.0, 52.0],
+            ],
+        ];
         
+        
+        foreach ($domains as $domain => $domainData) {
      
         $data = DB::table('orteat')
         ->whereBetween('laengengrad', $domainData['laengengrad'])
@@ -27,8 +51,12 @@ class OrteatController extends Controller
                  })
                  ->get();
       
-        return view('unterseiten.bausachverstaendiger', ['data' => $data, 'expert' => $expert,'ortsname'=> $ortat]);
-    }     
+        return view('unterseiten.bausachverstaendiger', [
+            'expert' => $expert,
+            'data' => $data,
+            'ortsname'=> $ortat,
+            ]);    }  
+        }       
     public function index() {
         $status='at';
         return view ('index', compact('status'));
