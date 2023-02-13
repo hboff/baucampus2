@@ -242,7 +242,7 @@ $contact=1;
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Geburtstag:</strong> <span> {{$gutachters['BirthDate']}} </span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Geburtstag:</strong> <span> {{ date('d.m.Y', strtotime($gutachters['BirthDate'])) }} </span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong>
                     <span>{{$gutachters['Website']}}</span>
                   </li>
