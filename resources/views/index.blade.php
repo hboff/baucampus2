@@ -3,8 +3,6 @@
 <title>Baucampus</title>
 <meta name="Description" content="Baucampus">
 <section id="hero1" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">      
-    </div>
     <section id="section03" class="demo">
   <a href="1"><span></span>Scroll</a>
 </section>
