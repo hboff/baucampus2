@@ -65,7 +65,7 @@ foreach ($domains as $domain => $domainData) {
 Route::domain($domain)->group(function () use ($routes, $domainData) {
     Route::get('/', [OrteatController::class, 'index']);
     Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){});
-    Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){
+    Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request) use($domainData){
         $data = DB::table('orteat')
         ->whereBetween('laengengrad', $domainData['laengengrad'])
         ->whereBetween('breitengrad', $domainData['breitengrad'])
@@ -77,7 +77,6 @@ Route::domain($domain)->group(function () use ($routes, $domainData) {
                           ->on('orteat.laengengrad', '<=', 'gutachter.Lon2');
                  })
                  ->get();
-
       
         return view($route, ['data' => $data, 'expert' => $expert]);
       });
