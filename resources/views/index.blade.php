@@ -2,7 +2,7 @@
 @section('content')
 <title>Baucampus</title>
 <meta name="Description" content="Baucampus">
-<section id="hero1" class="d-flex flex-column justify-content-center align-items-center">
+<section id="hero1" class="d-flex flex-column justify-content-center align-items-center mt-0 pt-0">
     <div class="hero-container" data-aos="fade-in">
       <h1>Baucampus </h1>
       <p>Ich bin <span class="typed" data-typed-items="Gutachter, Unternehmer, Bausachverständiger"></span>
