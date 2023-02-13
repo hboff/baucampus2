@@ -4,7 +4,7 @@
 <title>Bausachverstädiger {{$ortsname}}</title>
 <meta name="Description" content="Unsere Leistungen in {{$ortsname}}.">
 @isset($expert)
-@include('partials._sidebar', ['expert' => $expert])
+@include('partials._sidebar')
 @endisset
 <main id="main">
 </br>
