@@ -411,7 +411,7 @@ $contact=1;
 
         <div class="row">
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <h4 class="title"><a href="">Baucampus</a></h4>
+            <h4 class="title">Baucampus</h4>
             <img src="/img/logo.png" alt="" style="    vertical-align: middle;
     width: 150;
     height: 150px;
@@ -420,13 +420,14 @@ $contact=1;
 object-position: center;" class="description">
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 class="title"><a href="">Themen</a></h4>
+            <h4 class="title">Themen</h4>
             <p class="description">@include('partials._orte')</p>
         </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <h4 class="title"><a href="">Allgemeines</a></h4>
-            <a class="description link-dark" href="#"><u>Datenschutzerklärung</u></a>
-            <a class="description link-dark" href="#"><u>Impressum</u></a>
+            <h4 class="title">Allgemeines</h4>
+            <a class="description link-dark" href="Impressum"><u>Impressum</u></a>
+            <a class="description link-dark" href="/datenschutzerklaerung#"><u>Datenschutzerklärung</u></a>
+            
           </div>
           
       </div>

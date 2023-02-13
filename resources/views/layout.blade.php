@@ -222,8 +222,8 @@ object-position: center;" class="description">
         </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
             <h4 class="title">Allgemeines</h4>
-            <a class="description link-dark" href="https://baucampus.de/impressum">Impressum</a>
-            <a class="description link-dark" href="https://baucampus.de/datenschutzerklaerung">Datenschutzerklärung</a> 
+            <a class="description link-dark" href="/impressum">Impressum</a>
+            <a class="description link-dark" href="/datenschutzerklaerung">Datenschutzerklärung</a> 
           </div>
           
       </div>
