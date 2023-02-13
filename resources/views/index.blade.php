@@ -13,7 +13,7 @@
 </section>
   </section>
 
-<section id="1">
+<section id="1" class="about">
 </div>
 
 <div class="w3-row-padding" style="margin:10vh; background-color:#fff;"> 
