@@ -1,8 +1,8 @@
 @extends('layout')
-@section('head')
+
 <title>Kontakt Baucampus/title>
 <meta name="Description" content="Die Baubegleitung als Arbeitsbereich des Bausachverständigen kurz erklärt.">
-@endsection
+
 @section('content')
 <body class="w3-light-grey">
 <!-- Grid -->
