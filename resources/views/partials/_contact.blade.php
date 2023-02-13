@@ -18,19 +18,19 @@
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
-                <h3>Ort:</h3>
+                <h4>Ort:</h4>
                 <p>{{$gutachters['Adress']}}, {{$gutachters['PostalCode']}} {{$gutachters['City']}}</p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
-                <h3>Email:</h3>
+                <h4>Email:</h4>
                 <p>{{$gutachters['Email']}}</p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
-                <h3>Telefon:</h3>
+                <h4>Telefon:</h4>
                 <p>{{$gutachters['Phone']}}</p>
               </div>
               <iframe
@@ -131,8 +131,7 @@
                              @endif
                          </div>  
                      </div>
-                 </div> 
-                 <label for="checkbox">Zustimmung:</label>   
+                 </div>    
                   <p><input type="checkbox"  name="checkbox" value="Checkbox"> 
                               @if ($errors->has('checkbox'))
                                  <span class="text-danger">{{ $errors->first('checkbox') }}</span>
@@ -174,19 +173,19 @@
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
-                <h3>Ort:</h3>
+                <h4>Ort:</h4>
                 <p>Hardenbergstraße 10, 32427 Minden</p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
-                <h3>Email:</h3>
+                <h4>Email:</h4>
                 <p>freda-lohse@baucampus.de</p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
-                <h3>Telefon:</h3>
+                <h4>Telefon:</h4>
                 <p>05722 913800</p>
               </div>
               <iframe
