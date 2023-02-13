@@ -4,7 +4,7 @@
 <!-- ======= Header ======= -->
 <div class="d-flex flex-column" id="sidebarprofile">
   <!-- ======= profile1 ======= -->
-@isset($ortsname)
+
 @isset($expert)
 @foreach ($expert as $row)
 
