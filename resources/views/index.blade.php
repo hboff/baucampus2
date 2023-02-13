@@ -7,7 +7,7 @@
 <img sizes="(max-width: 1400px) 100vw, 1400px"  src="/img/baucampus.jpg" alt="Baucampus" style="width:100%;min-height:350px;max-height:100vh; object-fit: cover; object-position:center;">
   
   <div id="section03" class="demo">
-  <a href="1"><span></span>Scroll</a>
+  <a href="#1"><span></span>Scroll</a>
 </div>
 
 </div>
