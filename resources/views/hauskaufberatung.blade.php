@@ -22,36 +22,7 @@
         <div class="section-title">
           <h2>Hauskaufberatung</h2>
         </div>
-        @foreach ($expert as $row)
-
-  <div class="profile">
-
-    <h1 class="text-light mb-3"><a href="/gutachter/{{$row->LastName}}">{{$row->FirstName}} {{$row->LastName}}</a></h1>
-    <p class="text-light text-center mb-0">{{$row->Phone}}</p>
-    <p class="text-light text-center">{{$row->Email}}</p>
-  </div>
-
-@endforeach
-<table>
-    <thead>
-        <tr>
-            <th>City</th>
-            <th>FirstName</th>
-            <th>LastName</th>
-            <th>Phone</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach($expert as $row)
-        <tr>
-            <td>{{ $row->ort }}</td>
-            <td>{{ $row->FirstName }}</td>
-            <td>{{ $row->LastName }}</td>
-            <td>{{ $row->Phone }}</td>
-        </tr>
-        @endforeach
-    </tbody>
-</table>
+        
         <div class="row">
           <div class="col-lg-6" data-aos="fade-right">
           <p>Beim <b>Kauf eines Hauses</b> oder einer Eigentumswohnung stellen sich viele Fragen. Mit einer professionellen und unabhängigen <b>Hauskaufberatung</b> durch unsere Bausachverständigen gehen Sie den richtigen Schritt, um ein Haus oder eine Eigentumswohnung auf der Basis klarer <b>Fakten</b> zu erwerben.</p>
