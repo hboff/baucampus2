@@ -13,7 +13,7 @@ class OrteatController extends Controller
     // Show single lisitng
     public function show($ortat) {
         $status='at';
-        $nearestCities = DB::select(DB::orteat("
+        $nearestCities = DB::select(DB::raw("
         SELECT ort, (
             3959 * acos (
                 cos ( radians(?) )
