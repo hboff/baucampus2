@@ -11,8 +11,9 @@ use Illuminate\Support\Facades\DB;
 class OrteatController extends Controller
 {
     // Show single lisitng
-    public function show($ortat) {
+    public function show($ortat, $domainData) {
         $status='at';
+        
      
         $data = DB::table('orteat')
         ->whereBetween('laengengrad', $domainData['laengengrad'])
