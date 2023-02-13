@@ -78,7 +78,7 @@ Route::domain($domain)->group(function () use ($routes, $domainData) {
                  })
                  ->get();
       
-        return view($route, ['data' => $data, 'expert' => $expert]);
+        return view('unterseiten.bausachverstaendiger', ['data' => $data, 'expert' => $expert]);
       });
     Route::get('contact-us', [ContactController::class, 'index']);
     Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
