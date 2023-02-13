@@ -13,10 +13,10 @@
 </section>
   </section>
 
-  
+<section id="1">
 </div>
 
-<div id="1" class="w3-row-padding" style="margin:10vh; background-color:#fff;"> 
+<div class="w3-row-padding" style="margin:10vh; background-color:#fff;"> 
 		<h2 class="heading-separator w3-center">Baucampus</h2>
                 <p class="subheading-text w3-center">Das Sachverständigennetzwerk</p>
 </div>
@@ -72,5 +72,6 @@
 </div>
 <br/>
 </div>
+</section>
 @endsection
 
