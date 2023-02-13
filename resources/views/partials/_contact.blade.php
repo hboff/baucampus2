@@ -209,7 +209,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-
+                                        <label for="firstname">Vorname:</label>
                                         <input type="text" name="firstname" class="form-control" placeholder="Vorname" value="{{ old('firstname') }}">
                                         @if ($errors->has('firstname'))
                                             <span class="text-danger">{{ $errors->first('firstname') }}</span>
@@ -218,6 +218,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
+                                        <label for="lastname">Nachname:</label>
                                         <input type="text" name="lastname" class="form-control" placeholder="Nachname" value="{{ old('lastname') }}">
                                         @if ($errors->has('lastname'))
                                             <span class="text-danger">{{ $errors->first('lastname') }}</span>
@@ -228,7 +229,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-
+                                        <label for="phone">Telefonnummer:</label>
                                         <input type="text" name="phone" class="form-control" placeholder="Telefonnummer" value="{{ old('phone') }}">
                                         @if ($errors->has('phone'))
                                             <span class="text-danger">{{ $errors->first('phone') }}</span>
@@ -237,7 +238,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
+                                        <label for="email">E-mail:</label>
+                                        <input type="text" name="email" class="form-control" placeholder="E-mail" value="{{ old('email') }}">
                                         @if ($errors->has('email'))
                                             <span class="text-danger">{{ $errors->first('email') }}</span>
                                         @endif
@@ -247,6 +249,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
+                                        <label for="city">Stadt:</label>
                                         <input type="text" name="city" class="form-control" placeholder="Stadt" value="{{ old('city') }}">
                                         @if ($errors->has('city'))
                                             <span class="text-danger">{{ $errors->first('city') }}</span>
