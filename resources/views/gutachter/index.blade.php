@@ -425,8 +425,8 @@ object-position: center;" class="description">
         </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
             <h4 class="title">Allgemeines</h4>
-            <a class="description link-dark" href="Impressum"><u>Impressum</u></a>
-            <a class="description link-dark" href="/datenschutzerklaerung#"><u>Datenschutzerklärung</u></a>
+            <a class="description link-dark" href="/impressum"><u>Impressum</u></a>
+            <a class="description link-dark" href="/datenschutzerklaerung"><u>Datenschutzerklärung</u></a>
             
           </div>
           
