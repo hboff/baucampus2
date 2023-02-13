@@ -9,7 +9,7 @@
       <div class="container pt-5">
         
         <div class="section-title">
-          <h2>Datenschutzerklärung</h2>
+          <h1>Datenschutzerklärung</h1>
         </div>
 
 

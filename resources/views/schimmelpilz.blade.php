@@ -20,7 +20,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Schimmelpilz</h2>
+          <h1>Schimmelpilz</h1>
         </div>
 
         <div class="row">

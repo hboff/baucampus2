@@ -39,7 +39,7 @@ th, td {
       <div class="container"> 
     
       <div class="section-title">
-		  <h2>Preisliste Baucampus 2023<h2>
+		  <h1>Preisliste Baucampus 2023<h1>
       
 
 

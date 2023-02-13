@@ -9,7 +9,7 @@
       <div class="container pt-5">
 
 <div class="section-title">
-          <h2>Impressum</h2>
+          <h1>Impressum</h1>
         </div>
 <h3>Betreiber der Website:</h3> 
 <p>Der Betreiber FEOS - FZCO ist ein Unternehmen in Dubai und der Hauptsitz des Unternehmens befindet sich in Dubai.</p>      

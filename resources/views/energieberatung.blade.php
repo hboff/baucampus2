@@ -20,7 +20,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Energieberatung</h2>
+          <h1>Energieberatung</h1>
         </div>
 
         <div class="row">

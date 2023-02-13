@@ -20,7 +20,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Bauschaden</h2>
+          <h1>Bauschaden</h1>
         </div>
 
         <div class="row">

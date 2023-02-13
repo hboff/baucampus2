@@ -19,7 +19,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Marktberichte</h2>
+          <h1>Marktberichte</h1>
         </div>
 
 

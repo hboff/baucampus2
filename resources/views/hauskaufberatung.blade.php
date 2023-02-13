@@ -20,7 +20,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Hauskaufberatung</h2>
+          <h1>Hauskaufberatung</h1>
         </div>
         
         <div class="row">

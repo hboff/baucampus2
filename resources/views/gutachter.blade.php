@@ -124,7 +124,7 @@ p + p {
       <div class="container pt-5">
 
         <div class="section-title">
-          <h2>Gutachter</h2>
+          <h1>Gutachter</h1>
                 <p class="subheading-text w3-center">Unsere Bausachverständigen</p>
         </div>
 
