@@ -3,6 +3,7 @@
 
 <title>Bausachverstädiger {{$ortsname}}</title>
 <meta name="Description" content="Unsere Leistungen in {{$ortsname}}.">
+
 @include('partials._sidebar', ['expert' => $expert])
 <main id="main">
 </br>
