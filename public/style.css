@@ -302,6 +302,14 @@ section {
     padding-bottom: 30px;
 }
 
+.section-title h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #173b6c;
+}
 .section-title h2 {
     font-size: 32px;
     font-weight: bold;
