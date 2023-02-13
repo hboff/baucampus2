@@ -2,7 +2,7 @@
 @section('content')
 
 <title>Bausachverstädiger </title>
-<meta name="Description" content="Unsere Leistungen in {{$ortsname}}.">
+<meta name="Description" content="Unsere Leistungen in.">
 
 @include('partials._sidebar')
 
