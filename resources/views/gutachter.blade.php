@@ -139,7 +139,7 @@ p + p {
   @foreach($gutachter as $gutachters)
   
   <tr>
-    <td><a  href="/gutachter/{{$gutachters['UrlName']}}" class="link-dark" target="_blank"><img src="/img/{{$gutachters['Photo']}}" class="mr-3 pr-3" style="vertical-align: middle; width: 100px; height: 100px; border-radius: 50%; object-fit: cover; object-position: center;"> {{$gutachters['FirstName']}} {{$gutachters['LastName']}}</a></td>
+    <td><a  href="/gutachter/{{$gutachters['UrlName']}}" class="link-dark ml-5 pl-5" target="_blank"><img src="/img/{{$gutachters['Photo']}}" style="vertical-align: middle; width: 100px; height: 100px; border-radius: 50%; object-fit: cover; object-position: center;">{{$gutachters['FirstName']}} {{$gutachters['LastName']}}</a></td>
     <td>{{$gutachters['Adress']}}<br/>{{$gutachters['PostalCode']}} {{$gutachters['City']}}</td>
     <td>{{$gutachters['Phone']}} <br/>{{$gutachters['Email']}}<br/><a  href="{{$gutachters['Website']}}" target="_blank">{{$gutachters['Website']}}</a></td>
 
