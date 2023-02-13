@@ -23,7 +23,7 @@
           <h2>Hauskaufberatung</h2>
         </div>
         @foreach ($expert as $row)
-@if ($ortsname == $row['ort'])
+
   <div class="profile">
     <img src="/img/{{$row['Photo']}}" alt="" class="mt-4" style="    vertical-align: middle;
 width: 180px;
@@ -38,7 +38,7 @@ object-position: center;">
   </div>
 @else
 @endif
-@endforeach
+
 <table>
     <thead>
         <tr>
