@@ -4,7 +4,7 @@
 <!-- ======= Header ======= -->
 <div class="d-flex flex-column" id="sidebarprofile">
   <!-- ======= profile1 ======= -->
-  
+@isset($ortsname)
 @isset($expert)
 @foreach ($expert as $row)
 @if ($ortsname == $row->ort)
@@ -24,7 +24,7 @@ object-position: center;">
 @endif
 @endforeach
 @endisset
-
+@endisset
   <div class="profile">
     <img src="/img/logo.png" alt="" class="mt-2" style="    vertical-align: middle;
 width: 120px;
