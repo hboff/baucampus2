@@ -8,7 +8,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h3>Kontakt</h3>
+          <h2>Kontakt</h2>
           <p>Die Abgabe einer Anfrage ist für Sie unverbindlich und kostenlos!</p>
         </div>
 
@@ -163,7 +163,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h3>Kontakt</h3>
+          <h2>Kontakt</h2>
           <p>Die Abgabe einer Anfrage ist für Sie unverbindlich und kostenlos!</p>
         </div>
 
