@@ -244,7 +244,7 @@ $contact=1;
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Geburtstag:</strong> <span> {{ date('d.m.Y', strtotime($gutachters['BirthDate'])) }} </span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong>
-                    <span>{{$gutachters['Website']}}</span>
+                   <a herf="{{$gutachters['Website']}}"> <span>{{$gutachters['Website']}}</span></a>
                   </li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Telefon:</strong> <span> {{$gutachters['Phone']}}</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Stadt:</strong> <span> {{$gutachters['Adress']}}, {{$gutachters['PostalCode']}} {{$gutachters['City']}}</span></li>
