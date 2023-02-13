@@ -64,7 +64,22 @@ $domains = [
 foreach ($domains as $domain => $domainData) {
 Route::domain($domain)->group(function () use ($routes, $domainData) {
     Route::get('/', [OrteatController::class, 'index']);
-    Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){});
+    Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){
+        $data = DB::table('orteat')
+        ->whereBetween('laengengrad', $domainData['laengengrad'])
+        ->whereBetween('breitengrad', $domainData['breitengrad'])
+        ->get();
+      
+        $expert = DB::table('orteat')
+                 ->join('gutachter', function($join) {
+                     $join->on('orteat.laengengrad', '>=', 'gutachter.Lon')
+                          ->on('orteat.laengengrad', '<=', 'gutachter.Lon2');
+                 })
+                 ->get();
+      
+        return view($route, ['data' => $data, 'expert' => $expert, 'date' => $date]);
+      });
+      
     Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function (Request $request){});
     Route::get('contact-us', [ContactController::class, 'index']);
     Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
@@ -94,7 +109,7 @@ $expert = $data = DB::table('orteat')
 
 
            
-return view($route, ['data' => $data, 'expert' => $expert])->with('expert', $expert)->nest('sidebar', 'partials._sidebar');
+return view($route, ['data' => $data, 'expert' => $expert]);
 });
 }
 });
