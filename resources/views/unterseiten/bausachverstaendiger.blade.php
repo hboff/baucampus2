@@ -150,6 +150,5 @@ $footer=1;
 
 <!-- END GRID -->
 </div><br>
-@include('partials._1')
 @endsection
 
