@@ -13,25 +13,7 @@ class OrteatController extends Controller
     // Show single lisitng
     public function show($ortat) {
         $status='at';
-        $cityData = DB::table('orteat')->select('laengengrad', 'breitengrad')->where('ort', $ort)->first();
-        $laengengrad = $cityData->laengengrad;
-        $breitengrad = $cityData->breitengrad;
-
-        $nearestCities = DB::select(DB::raw("
-            SELECT city, (
-                3959 * acos (
-                    cos ( radians(?) )
-                    * cos( radians( breitengrad ) )
-                    * cos( radians( laengengrad ) - radians(?) )
-                    + sin ( radians(?) )
-                    * sin( radians( breitengrad ) )
-                )
-            ) AS distance
-            FROM orteat
-            HAVING distance < 25
-            ORDER BY distance
-            LIMIT 0 , 20
-        "), [$breitengrad, $laengengrad, $breitengrad]);
+        
 
         $domains = [
             'immobilienbewertung-bielefeld.com' => [
@@ -70,6 +52,26 @@ class OrteatController extends Controller
                           ->on('orteat.laengengrad', '<=', 'gutachter.Lon2');
                  })
                  ->get();
+        
+        $cityData = DB::table('orteat')->select('laengengrad', 'breitengrad')->where('ortat', $ortat)->first();
+        $laengengrad = $cityData->laengengrad;
+        $breitengrad = $cityData->breitengrad;
+
+        $nearestCities = DB::select(DB::raw("
+            SELECT city, (
+                3959 * acos (
+                    cos ( radians(?) )
+                    * cos( radians( breitengrad ) )
+                    * cos( radians( laengengrad ) - radians(?) )
+                    + sin ( radians(?) )
+                    * sin( radians( breitengrad ) )
+                )
+            ) AS distance
+            FROM orteat
+            HAVING distance < 25
+            ORDER BY distance
+            LIMIT 0 , 20
+        "), [$breitengrad, $laengengrad, $breitengrad]);
       
         return view('unterseiten.bausachverstaendiger', [
             'nearestCities' => $nearestCities,
