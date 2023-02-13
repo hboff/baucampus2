@@ -1,11 +1,11 @@
 @extends('layout')
-@section('content')
 
+@section('head')
 <title>Baubegleitung mit Bausachverständigem</title>
 <meta name="Description" content="Die Baubegleitung als Arbeitsbereich des Bausachverständigen kurz erklärt.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
+@endsection
+@section('content')
 <body class="w3-light-grey">
 <!-- Grid -->
 <div class="w3-row">

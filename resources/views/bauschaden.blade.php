@@ -1,10 +1,10 @@
 @extends('layout')
-@section('content')
 
+@section('head')
 <title>Ortstermin mit Bausachverständigem</title>
 <meta name="Description" content="Der Ortstermin mit einem Bausachverständigen kurz erklärt.">
-
-
+@endsection
+@section('content')
 <body class="w3-light-grey">
 <!-- Grid -->
 <div class="w3-row">

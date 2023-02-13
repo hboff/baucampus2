@@ -1,10 +1,10 @@
 @extends('layout')
-@section('content')
 
+@section('head')
 <title>Baucampus Team</title>
 <meta name="Description" content="Team Baucampus">
-
-
+@endsection
+@section('content')
 <body class="w3-light-grey">
 <img src="/img/baubegleitung.jpg" alt="Baubegleitung" title="Baubegleitung" style="width:100%; height:500px; object-fit: cover; object-position:center;">
 

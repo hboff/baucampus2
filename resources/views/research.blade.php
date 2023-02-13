@@ -1,10 +1,10 @@
 @extends('layout')
-@section('content')
 
+@section('head')
 <title>Marktberichte Baucampus</title>
 <meta name="Description" content="Alle Marktberichte von Baucampus.">
-
-
+@endsection
+@section('content')
 <body class="w3-light-grey">
 <!-- Grid -->
 <div class="w3-row">

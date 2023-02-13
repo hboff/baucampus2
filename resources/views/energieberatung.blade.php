@@ -1,10 +1,10 @@
 @extends('layout')
-@section('content')
 
+@section('head')
 <title>Energieberatung mit Bausachverständigem</title>
 <meta name="Description" content="Die Energiebratung als Arbeitsbereich des Bausachverständigen im Überblick.">
-
-
+@endsection
+@section('content')
 <body class="w3-light-grey">
 <!-- Grid -->
 <div class="w3-row">

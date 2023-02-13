@@ -1,10 +1,10 @@
 @extends('layout')
-@section('content')
 
+@section('head')
 <title>Hauskaufberatung mit Bausachverständigem</title>
 <meta name="Description" content="Überblick über den Aublauf einer Hauskaufberatung mit einem Bausachverständigen.">
-
-
+@endsection
+@section('content')
 <body class="w3-light-grey">
 <!-- Grid -->
 <div class="w3-row">

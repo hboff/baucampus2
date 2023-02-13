@@ -1,7 +1,10 @@
 @extends('layout')
-@section('content')    
+ 
+@section('head')  
 <title>Datenschutzerklärung Baucampus</title>
 <meta name="Description" content="Datenschutzerklärung Baucampus">
+@endsection
+@section('content') 
 <div id="about" class="about pt-5 mt-5">
       <div class="container pt-5">
         

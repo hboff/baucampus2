@@ -1,10 +1,10 @@
 @extends('layout')
-@section('content')
 
+@section('head')
 <title>Immobilienbewertung mit Bausachverständigem</title>
 <meta name="Description" content="Eine professionelle Immobilienbewertung mit einem Bausachversändigen von Baucampus.">
-
-
+@endsection
+@section('content')
 <body class="w3-light-grey">
 <!-- Grid -->
 <div class="w3-row">

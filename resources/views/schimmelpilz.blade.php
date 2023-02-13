@@ -1,10 +1,10 @@
 @extends('layout')
-@section('content')
 
+@section('head')
 <title>Schimmelpilzberatung mit Bausachverständigem</title>
 <meta name="Description" content="Beratung eines Bausachverständigen bei Schimmelpilzproblemen.">
-
-
+@endsection
+@section('content')
 <body class="w3-light-grey">
 <!-- Grid -->
 <div class="w3-row">

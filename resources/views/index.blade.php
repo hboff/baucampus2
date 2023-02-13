@@ -1,8 +1,9 @@
 @extends('layout')
-@section('content')
+@section('head')
 <title>Baucampus</title>
 <meta name="Description" content="Baucampus">
-
+@endsection
+@section('content')
 <div class="w3-display-container w3-animate-opacity w3-center">
 <img sizes="(max-width: 1400px) 100vw, 1400px"  src="/img/baucampus.jpg" alt="Baucampus" style="width:100%;min-height:350px;max-height:100vh; object-fit: cover; object-position:center;">
   
