@@ -58,7 +58,7 @@ class OrteatController extends Controller
         $breitengrad = $cityData->breitengrad;
 
         $nearestCities = DB::select(DB::raw("
-            SELECT city, (
+            SELECT ort, (
                 3959 * acos (
                     cos ( radians(?) )
                     * cos( radians( breitengrad ) )
