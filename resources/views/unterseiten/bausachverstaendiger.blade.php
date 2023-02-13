@@ -1,5 +1,6 @@
 @extends('layout')
 @section('content')
+<DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
