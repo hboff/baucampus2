@@ -1,7 +1,15 @@
 @php
 $contact=2;
 @endphp
-<style>
+
+
+<DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  @yield('head')
+  <style>
   .osk-custom {
     background-color: #6d767e;
   }
@@ -190,7 +198,7 @@ p + p {
 }
 
 </style>
-
+</head>
 <body>
   
 <div class="w3-top w3-text-white w3-osk-customs" >
