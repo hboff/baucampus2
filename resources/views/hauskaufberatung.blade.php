@@ -26,9 +26,9 @@
 
   <div class="profile">
 
-    <h1 class="text-light mb-3"><a href="/gutachter/{{$row->LastName}}">{{$row['FirstName']}} {{$row['LastName']}}</a></h1>
-    <p class="text-light text-center mb-0">{{$row['Phone']}}</p>
-    <p class="text-light text-center">{{$row['Email']}}</p>
+    <h1 class="text-light mb-3"><a href="/gutachter/{{$row->LastName}}">{{$row->FirstName}} {{$row->LastName}}</a></h1>
+    <p class="text-light text-center mb-0">{{$row->Phone}}</p>
+    <p class="text-light text-center">{{$row->Email}}</p>
   </div>
 
 @endforeach
