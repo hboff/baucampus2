@@ -3,6 +3,6 @@
 
 <a href="/{{$city->city}}/bausachverstaendiger">Baugutachter {{$city->city}}</a>
 
-@endforeach}}
+@endforeach
 @endisset
 
