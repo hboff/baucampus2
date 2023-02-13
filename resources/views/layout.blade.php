@@ -80,10 +80,6 @@ color: #26292c;
     background-color: #267df4;
 }
 /* Section: Features */
-.section-features h1 {
-    padding-bottom: 40px;
-    font-size: 30px;
-}
 .section-features h2 {
     padding-bottom: 40px;
     font-size: 30px;
