@@ -79,7 +79,7 @@ Route::domain($domain)->group(function () use ($routes, $domainData) {
                  ->get();
 
       
-        return view($route, ['data' => $data, 'expert' => $expert, 'date' => $date]);
+        return view($route, ['data' => $data, 'expert' => $expert, 'date' => $date]) ->with('expert', $expert)->nest('sidebar', 'partials._sidebar');;
       });
     Route::get('contact-us', [ContactController::class, 'index']);
     Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
