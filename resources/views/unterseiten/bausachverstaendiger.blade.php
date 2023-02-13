@@ -1,9 +1,13 @@
 @extends('layout')
 @section('content')
+<html lang="de">
+<head>
+<meta charset="UTF-8">
 
 <title>Bausachverstädiger {{$ortsname}}</title>
 <meta name="Description" content="Unsere Leistungen in {{$ortsname}}.">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 @include('partials._sidebar')
 
 <main id="main">

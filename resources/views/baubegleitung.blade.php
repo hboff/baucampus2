@@ -3,6 +3,7 @@
 
 <title>Baubegleitung mit Bausachverständigem</title>
 <meta name="Description" content="Die Baubegleitung als Arbeitsbereich des Bausachverständigen kurz erklärt.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 <body class="w3-light-grey">
