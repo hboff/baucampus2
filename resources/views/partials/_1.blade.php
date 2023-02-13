@@ -1,7 +1,11 @@
 @isset ($nearestCities)
-@foreach ($nearestCities as $city)
+@php
+$nearestCitiesArray = $nearestCities->toArray();
+@endphp
+{{@foreach ($nearestCitiesArray as $city)
 
-{{$city}}
-@endforeach
+<a href="/{{$city->city}}/bausachverstaendiger">Baugutachter {{$city->city}}</a>
+
+@endforeach}}
 @endisset
 
