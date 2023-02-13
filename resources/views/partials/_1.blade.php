@@ -1,7 +1,7 @@
 @isset ($nearestCities)
-{{@foreach ($nearestCities as $city)
+@foreach ($nearestCities as $city)
 
 {{$city}}
-@endforeach}}
+@endforeach
 @endisset
 
