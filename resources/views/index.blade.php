@@ -4,7 +4,7 @@
 <meta name="Description" content="Baucampus">
 <section id="hero1" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
-      <h1> {{$gutachters['FirstName']}} {{$gutachters['LastName']}} </h1>
+      <h1>Baucampus </h1>
       <p>Ich bin <span class="typed" data-typed-items="Gutachter, Unternehmer, Bausachverständiger"></span>
       </p>
     </div>
