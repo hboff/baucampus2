@@ -36,9 +36,8 @@ object-position: center;">
     <p class="text-light text-center mb-0">{{$row['Phone']}}</p>
     <p class="text-light text-center">{{$row['Email']}}</p>
   </div>
-@else
-@endif
 
+@endforeach
 <table>
     <thead>
         <tr>
