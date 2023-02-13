@@ -1,5 +1,4 @@
 @extends('layout')
-
 @section('head')
 <title>Kontakt Baucampus/title>
 <meta name="Description" content="Die Baubegleitung als Arbeitsbereich des Bausachverständigen kurz erklärt.">
@@ -13,11 +12,6 @@
 </div><br>
 <br>
 <br>
-
-
-
-
-
 
 @endsection
 @include('partials._themen')
