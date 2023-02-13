@@ -3,11 +3,18 @@
 <title>Baucampus</title>
 <meta name="Description" content="Baucampus">
 <section id="hero1" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1> {{$gutachters['FirstName']}} {{$gutachters['LastName']}} </h1>
+      <p>Ich bin <span class="typed" data-typed-items="Gutachter, Unternehmer, Bausachverständiger"></span>
+      </p>
+    </div>
     <section id="section03" class="demo">
   <a href="1"><span></span>Scroll</a>
 </section>
   </section>
 
+  
+</div>
 
 <div id="1" class="w3-row-padding" style="margin:10vh; background-color:#fff;"> 
 		<h2 class="heading-separator w3-center">Baucampus</h2>
