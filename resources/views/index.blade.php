@@ -2,16 +2,16 @@
 @section('content')
 <title>Baucampus</title>
 <meta name="Description" content="Baucampus">
-<section>
+
 <div class="w3-display-container w3-animate-opacity w3-center">
 <img sizes="(max-width: 1400px) 100vw, 1400px"  src="/img/baucampus.jpg" alt="Baucampus" style="width:100%;min-height:350px;max-height:100vh; object-fit: cover; object-position:center;">
   
-  <section id="section03" class="demo">
+  <div id="section03" class="demo">
   <a href="#about"><span></span>Scroll</a>
-</section>
+</div>
 
 </div>
-</section>
+
 <section id="1">
 <div class="w3-row-padding" style="margin:10vh; background-color:#fff;"> 
 		<h2 class="heading-separator w3-center">Baucampus</h2>
