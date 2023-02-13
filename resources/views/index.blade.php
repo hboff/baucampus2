@@ -14,7 +14,7 @@
 
 
 <div id="1" class="w3-row-padding" style="margin:10vh; background-color:#fff;"> 
-		<h2 class="heading-separator w3-center">Baucampus</h2>
+		<h2 class="heading-separator w3-center mt-5">Baucampus</h2>
                 <p class="subheading-text w3-center">Das Sachverständigennetzwerk</p>
 </div>
 
