@@ -292,6 +292,7 @@
                                     </div>  
                                 </div>
                             </div>    
+                            <label for="checkbox">Zustimmung:</label>
                              <p><input type="checkbox"  name="checkbox" value="Checkbox"> 
                                          @if ($errors->has('checkbox'))
                                             <span class="text-danger">{{ $errors->first('checkbox') }}</span>
