@@ -21,7 +21,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Baubegleitung</h2>
+          <h1>Baubegleitung</h1>
         </div>
 
         <div class="row">
