@@ -68,7 +68,7 @@ class OrteatController extends Controller
                 )
             ) AS distance
             FROM orteat
-            HAVING distance < 50
+            HAVING distance < 40
             ORDER BY distance
             LIMIT 0 , 20
         "), [$breitengrad, $laengengrad, $breitengrad]);
