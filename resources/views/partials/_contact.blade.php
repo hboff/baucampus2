@@ -258,7 +258,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-  <select name="objecttype" id="cars" class="form-control">
+                                 <label for="immobilienart">Art der Immobilie:</label>
+  <select name="objecttype" name="immobilienart" class="form-control">
 <option value="" selected="selected">- Art der Immobilie (optional) -</option>
  <option value="Einfamilienhaus">Einfamilienhaus</option>
   <option value="Zweifamilienhaus">Zweifamilienhaus</option>
@@ -283,6 +284,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
+                                        <label for="message">Ihre Anfrage:</label>
                                         <textarea name="message" placeholder="Ihre Anfrage" rows="3" class="form-control">{{ old('message') }}</textarea>
                                         @if ($errors->has('message'))
                                             <span class="text-danger">{{ $errors->first('message') }}</span>
