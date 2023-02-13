@@ -1,5 +1,7 @@
 @extends('layout')
-
+@php
+$footer=1;
+@endphp
 @section('head')
 <title>Bausachverstädiger {{$ortsname}}</title>
 <meta name="Description" content="Unsere Leistungen in {{$ortsname}}.">
