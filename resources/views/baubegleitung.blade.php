@@ -1,5 +1,7 @@
 @extends('layout')
-
+@php
+$footer=2;
+@endphp
 @section('head')
 <title>Baubegleitung mit Bausachverständigem</title>
 <meta name="Description" content="Die Baubegleitung als Arbeitsbereich des Bausachverständigen kurz erklärt.">

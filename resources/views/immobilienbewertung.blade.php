@@ -1,5 +1,7 @@
 @extends('layout')
-
+@php
+$footer=2;
+@endphp
 @section('head')
 <title>Immobilienbewertung mit Bausachverständigem</title>
 <meta name="Description" content="Eine professionelle Immobilienbewertung mit einem Bausachversändigen von Baucampus.">

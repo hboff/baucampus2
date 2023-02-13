@@ -364,9 +364,10 @@ object-position: center;" class="description">
 @case('1')
 @include('partials._1')
 @break
-@default
+@case('2')
 @include('partials._orte')
 @break
+@default
 @endswitch</p>
                 </div>
                 <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">

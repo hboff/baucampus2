@@ -1,5 +1,7 @@
 @extends('layout')
-
+@php
+$footer=2;
+@endphp
 @section('head')
 <title>Impressum Baucampus</title>
 <meta name="Description" content="Impressum Baucampus">

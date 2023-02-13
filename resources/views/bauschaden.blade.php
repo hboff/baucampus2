@@ -1,5 +1,7 @@
 @extends('layout')
-
+@php
+$footer=2;
+@endphp
 @section('head')
 <title>Ortstermin mit Bausachverständigem</title>
 <meta name="Description" content="Der Ortstermin mit einem Bausachverständigen kurz erklärt.">

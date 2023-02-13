@@ -1,4 +1,8 @@
-@extends('layout') <style>table {
+@extends('layout')
+@php
+$footer=2;
+@endphp
+<style>table {
 border-collapse: collapse;
 border-spacing: 0;
 width: 100%;

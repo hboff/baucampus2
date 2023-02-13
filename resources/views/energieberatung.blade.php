@@ -1,5 +1,7 @@
 @extends('layout')
-
+@php
+$footer=2;
+@endphp
 @section('head')
 <title>Energieberatung mit Bausachverständigem</title>
 <meta name="Description" content="Die Energiebratung als Arbeitsbereich des Bausachverständigen im Überblick.">

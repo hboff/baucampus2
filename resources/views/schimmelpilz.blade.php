@@ -1,5 +1,7 @@
 @extends('layout')
-
+@php
+$footer=2;
+@endphp
 @section('head')
 <title>Schimmelpilzberatung mit Bausachverständigem</title>
 <meta name="Description" content="Beratung eines Bausachverständigen bei Schimmelpilzproblemen.">

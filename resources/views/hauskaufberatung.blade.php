@@ -1,5 +1,7 @@
 @extends('layout')
-
+@php
+$footer=2;
+@endphp
 @section('head')
 <title>Hauskaufberatung mit Bausachverständigem</title>
 <meta name="Description" content="Überblick über den Aublauf einer Hauskaufberatung mit einem Bausachverständigen.">
