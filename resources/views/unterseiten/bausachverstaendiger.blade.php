@@ -148,21 +148,5 @@
 <!-- END GRID -->
 </div><br>
 
-
-
-
-
-
 @endsection
-@section('ortsname')
-@php
-$x=$ort[0];
-$breitemin = $x['breitengrad']-1;
-$breitemax = $x['breitengrad']+1
-@endphp
-@foreach($ort as $orte)
-@if($orte->breitengrad >= $breitemin && $orte->breitengrad <= $breitemax)
-<a href="/">Bausachverständiger</a><br>
-@endif
-@endforeach
-@endsection
+
