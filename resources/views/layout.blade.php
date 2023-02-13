@@ -366,7 +366,8 @@ object-position: center;" class="description">
 @break
 @default
 @include('partials._orte')
-@break</p>
+@break
+@endswitch</p>
                 </div>
                 <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="title">Allgemeines</h3>
