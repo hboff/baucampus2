@@ -13,6 +13,22 @@ class OrteatController extends Controller
     // Show single lisitng
     public function show($ortat) {
         $status='at';
+        $nearestCities = DB::select(DB::orteat("
+        SELECT ort, (
+            3959 * acos (
+                cos ( radians(?) )
+                * cos( radians( latitude ) )
+                * cos( radians( longitude ) - radians(?) )
+                + sin ( radians(?) )
+                * sin( radians( latitude ) )
+            )
+        ) AS distance
+        FROM orteat
+        HAVING distance < 25
+        ORDER BY distance
+        LIMIT 0 , 20
+    "), [$latitude, $longitude, $latitude]);
+
         $domains = [
             'immobilienbewertung-bielefeld.com' => [
                 'laengengrad' => [1.0, 12.0],
@@ -52,6 +68,7 @@ class OrteatController extends Controller
                  ->get();
       
         return view('unterseiten.bausachverstaendiger', [
+            'nearestCities' => $nearestCities,
             'expert' => $expert,
             'data' => $data,
             'ortsname'=> $ortat,

@@ -100,6 +100,8 @@ return view($route, ['data' => $data, 'expert' => $expert]);
 });
 }
 
+
+
 //Route::get('/kontakt', function () {
 //    return view('kontakt');
 //});
