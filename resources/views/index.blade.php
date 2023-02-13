@@ -2,21 +2,17 @@
 @section('content')
 <title>Baucampus</title>
 <meta name="Description" content="Baucampus">
-
-<div class="w3-display-container w3-animate-opacity w3-center">
-<img sizes="(max-width: 1400px) 100vw, 1400px"  src="/img/baucampus.jpg" alt="Baucampus" style="width:100%;min-height:350px;max-height:100vh; object-fit: cover; object-position:center;">
-  <div class="w3-container w3-display-middle w3-margin-bottom">  
-  	<div>  
-		<h1 style="color:white;">Baucampus<h1>
- 
- 	</div>
-  </div>
-</div>
-<section id="section03" class="demo">
+<section id="hero1" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">      
+    </div>
+    <section id="section03" class="demo">
   <a href="1"><span></span>Scroll</a>
 </section>
-<div class="w3-row-padding" style="margin:10vh; background-color:#fff;"> 
-		<h2 id="1" class="heading-separator w3-center">Baucampus</h2>
+  </section>
+
+
+<div id="1" class="w3-row-padding" style="margin:10vh; background-color:#fff;"> 
+		<h2 class="heading-separator w3-center">Baucampus</h2>
                 <p class="subheading-text w3-center">Das Sachverständigennetzwerk</p>
 </div>
 
