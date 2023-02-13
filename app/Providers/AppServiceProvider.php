@@ -10,7 +10,7 @@ use App\Models\Gutachter;
 use App\Models\Certificate;
 use App\Models\Vita;
 use App\Models\Experience;
-
+use App\Models\Region;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -38,5 +38,6 @@ class AppServiceProvider extends ServiceProvider
         View::share('gutachter_certificates', Certificate::all());
         View::share('vitas', Vita::all());
         View::share('professional_experience', Experience::all());
+        View::share('regions', Region::all());
     }
 }

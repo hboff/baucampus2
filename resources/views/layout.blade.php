@@ -348,8 +348,8 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-                    <h3 class="title">Baucampus</h3>
+                <div class="col-lg-3 col-md-6 icon-box" data-aos="fade-up">
+                    
                     <img src="/img/logo.png" alt="" style="    vertical-align: middle;
     width: 150;
     height: 150px;
@@ -357,8 +357,13 @@
     object-fit: cover;
 object-position: center;" class="description">
                 </div>
-                <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="title">Themen</h3>
+                <div class="col-lg-3 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                    
+                    @include('partials_bundeslaender')
+                    
+                </div>
+                <div class="col-lg-3 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                    
                     <p class="description">
 @switch($footer)
 @case('1')
@@ -370,7 +375,8 @@ object-position: center;" class="description">
 @default
 @endswitch</p>
                 </div>
-                <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                
+                <div class="col-lg-3 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="title">Allgemeines</h3>
                     <a class="description link-dark" href="/impressum">Impressum</a>
                     <a class="description link-dark" href="/datenschutzerklaerung">Datenschutzerklärung</a>
