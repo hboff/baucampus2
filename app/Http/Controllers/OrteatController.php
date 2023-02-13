@@ -13,9 +13,21 @@ class OrteatController extends Controller
     // Show single lisitng
     public function show($ortat) {
         $status='at';
-        return view('unterseiten.bausachverstaendiger', [
-            'ortsname'=> $ortat,
-            ]);    }         
+     
+        $data = DB::table('orteat')
+        ->whereBetween('laengengrad', $domainData['laengengrad'])
+        ->whereBetween('breitengrad', $domainData['breitengrad'])
+        ->get();
+      
+        $expert = DB::table('orteat')
+                 ->join('gutachter', function($join) {
+                     $join->on('orteat.laengengrad', '>=', 'gutachter.Lon')
+                          ->on('orteat.laengengrad', '<=', 'gutachter.Lon2');
+                 })
+                 ->get();
+      
+        return view('unterseiten.bausachverstaendiger', ['data' => $data, 'expert' => $expert,'ortsname'=> $ortat]);
+    }     
     public function index() {
         $status='at';
         return view ('index', compact('status'));

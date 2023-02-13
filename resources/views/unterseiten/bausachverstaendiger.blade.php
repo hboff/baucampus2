@@ -1,8 +1,8 @@
 @extends('layout')
 @section('content')
 
-<title>Bausachverstädiger </title>
-<meta name="Description" content="Unsere Leistungen in.">
+<title>Bausachverstädiger {{$ortsname}}</title>
+<meta name="Description" content="Unsere Leistungen in {{$ortsname}}.">
 
 @include('partials._sidebar')
 
@@ -14,7 +14,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Hauskaufberatung </h2>
+          <h2>Hauskaufberatung {{$ortsname}}</h2>
         </div>
 
         <div class="row">
@@ -42,7 +42,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Baubegleitung </h2>
+          <h2>Baubegleitung {{$ortsname}}</h2>
         </div>
 
         <div class="row">
@@ -71,7 +71,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Energieberatung </h2>
+          <h2>Energieberatung {{$ortsname}}</h2>
         </div>
 
         <div class="row">
@@ -99,7 +99,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Schimmelpilz</h2>
+          <h2>Schimmelpilz {{$ortsname}}</h2>
         </div>
 
         <div class="row">
@@ -124,7 +124,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Bauschaden</h2>
+          <h2>Bauschaden {{$ortsname}}</h2>
         </div>
 
         <div class="row">
