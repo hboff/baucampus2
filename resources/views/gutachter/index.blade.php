@@ -252,7 +252,7 @@ $contact=1;
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Alter:</strong> <span>{{$gutachters['Age']}}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Alter:</strong> <span>{{ floor((time() - strtotime($gutachters['BirthDate'])) / (60 * 60 * 24 * 365)) }}</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>{{$gutachters['Degree']}}</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>{{$gutachters['Email']}}</span>
                   </li>
