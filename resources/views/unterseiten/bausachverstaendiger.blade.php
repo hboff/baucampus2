@@ -148,6 +148,6 @@
 
 <!-- END GRID -->
 </div><br>
-@include('partials._nearestcities')
+@include('partials._1')
 @endsection
 
