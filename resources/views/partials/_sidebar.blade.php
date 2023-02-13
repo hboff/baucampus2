@@ -23,7 +23,7 @@ object-position: center;">
 
 @endforeach
 @endisset
-@endisset
+
   <div class="profile">
     <img src="/img/logo.png" alt="" class="mt-2" style="    vertical-align: middle;
 width: 120px;
