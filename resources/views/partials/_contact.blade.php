@@ -18,7 +18,7 @@
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
-                <h3>Ort:</h3>
+                <h4>Ort:</h4>
                 <p>{{$gutachters['Adress']}}, {{$gutachters['PostalCode']}} {{$gutachters['City']}}</p>
               </div>
 
@@ -30,7 +30,7 @@
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
-                <h3>Telefon:</h3>
+                <h4>Telefon:</h4>
                 <p>{{$gutachters['Phone']}}</p>
               </div>
               <iframe
@@ -173,7 +173,7 @@
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
-                <h3>Ort:</h3>
+                <h3 style="font-size:100%;">Ort:</h3>
                 <p>Hardenbergstraße 10, 32427 Minden</p>
               </div>
 
