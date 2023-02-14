@@ -346,6 +346,7 @@
     @include('partials._contact')
     @foreach($ortat as $ort)
     @if(str_contains(url()->current(), "{{$ort->ort}}"))
+    @endforeach
     <div id="services" class="services">
         <div class="container">
 
