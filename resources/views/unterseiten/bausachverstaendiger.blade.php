@@ -151,7 +151,7 @@ $footer=1;
 <!-- END GRID -->
 </div><br>
 @else
-<main id="main">
+
 </br>
 </br>
 
