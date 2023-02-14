@@ -43,114 +43,120 @@
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch mb-0">
 
-<div class="card-body">
-             @if(Session::has('success'))
-                 <div class="alert alert-success">
-                     {{Session::get('success')}}
-                 </div>
-             @endif
-             <form method="POST" action="{{ route('contact.us.store') }}" id="contactUSForm" class="php-email-form-osk">
-                 {{ csrf_field() }}
-                 <div class="row">
-                     <div class="col-md-6">
-                         <div class="form-group">
-
-                             <input type="text" name="firstname" class="form-control" placeholder="Vorname" value="{{ old('firstname') }}">
-                             @if ($errors->has('firstname'))
-                                 <span class="text-danger">{{ $errors->first('firstname') }}</span>
-                             @endif
-                         </div>
-                     </div>
-                     <div class="col-md-6">
-                         <div class="form-group">
-                             <input type="text" name="lastname" class="form-control" placeholder="Nachname" value="{{ old('lastname') }}">
-                             @if ($errors->has('lastname'))
-                                 <span class="text-danger">{{ $errors->first('lastname') }}</span>
-                             @endif
-                         </div>
-                     </div>
-                 </div>
-                 <div class="row">
-                     <div class="col-md-6">
-                         <div class="form-group">
-
-                             <input type="text" name="phone" class="form-control" placeholder="Telefonnummer" value="{{ old('phone') }}">
-                             @if ($errors->has('phone'))
-                                 <span class="text-danger">{{ $errors->first('phone') }}</span>
-                             @endif
-                         </div>
-                     </div>
-                     <div class="col-md-6">
-                         <div class="form-group">
-                             <input type="text" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
-                             @if ($errors->has('email'))
-                                 <span class="text-danger">{{ $errors->first('email') }}</span>
-                             @endif
-                         </div>
-                     </div>
-                 </div>
-                 <div class="row">
-                     <div class="col-md-6">
-                         <div class="form-group">
-                             <input type="text" name="city" class="form-control" placeholder="Stadt" value="{{ old('city') }}">
-                             @if ($errors->has('city'))
-                                 <span class="text-danger">{{ $errors->first('city') }}</span>
-                             @endif
-                         </div>
-                     </div>
-                     <div class="col-md-6">
-                         <div class="form-group">
-<select name="objecttype" id="cars" class="form-control">
+          <div class="card-body">
+                        @if(Session::has('success'))
+                            <div class="alert alert-success">
+                                {{Session::get('success')}}
+                            </div>
+                        @endif
+                        <form method="POST" action="{{ route('contact.us.store') }}" id="contactUSForm" class="php-email-form-osk">
+                            {{ csrf_field() }}
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="firstname" style="font-size:200%">Vorname:</label>
+                                        <input type="text" name="firstname" class="form-control" placeholder="Vorname" value="{{ old('firstname') }}">
+                                        @if ($errors->has('firstname'))
+                                            <span class="text-danger">{{ $errors->first('firstname') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="lastname" style="font-size:200%">Nachname:</label>
+                                        <input type="text" name="lastname" class="form-control" placeholder="Nachname" value="{{ old('lastname') }}">
+                                        @if ($errors->has('lastname'))
+                                            <span class="text-danger">{{ $errors->first('lastname') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone" style="font-size:200%">Telefonnummer:</label>
+                                        <input type="text" name="phone" class="form-control" placeholder="Telefonnummer" value="{{ old('phone') }}">
+                                        @if ($errors->has('phone'))
+                                            <span class="text-danger">{{ $errors->first('phone') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email" style="font-size:200%">E-mail:</label>
+                                        <input type="text" name="email" class="form-control" placeholder="E-mail" value="{{ old('email') }}">
+                                        @if ($errors->has('email'))
+                                            <span class="text-danger">{{ $errors->first('email') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="city" style="font-size:200%">Stadt:</label>
+                                        <input type="text" name="city" class="form-control" placeholder="Stadt" value="{{ old('city') }}">
+                                        @if ($errors->has('city'))
+                                            <span class="text-danger">{{ $errors->first('city') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                 <label for="immobilienart" style="font-size:200%">Art der Immobilie:</label>
+  <select name="objecttype" name="immobilienart" class="form-control">
 <option value="" selected="selected">- Art der Immobilie (optional) -</option>
-<option value="Einfamilienhaus">Einfamilienhaus</option>
-<option value="Zweifamilienhaus">Zweifamilienhaus</option>
-<option value="Doppelhaushälfte">Doppelhaushälfte</option>
-<option value="Reihenhaus">Reihenhaus</option>
-<option value="Mehrfamilienhaus">Mehrfamilienhaus</option>
-<option value="Eigentumswohnung">Eigentumswohnung</option>
-<option value="Wohnhaus mit Mischnutzung">Wohnhaus mit Mischnutzung</option>
- <option value="Bürogebäude">Bürogebäude</option>
-      <option value="Alten-/Pflegeheim">Alten-/Pflegeheim</option>
-       <option value="Hotel/Beherbergungsstätte">Hotel/Beherbergungsstätte</option>
-         <option value="Verbrauchermarkt">Verbrauchermarkt</option>
-           <option value="Garage/Hochgarage/Tiefgarage">Garage/Hochgarage/Tiefgarage</option>
-             <option value="Produktionsgebäude">Produktionsgebäude</option>
-              <option value="Lagergebäude">Lagergebäude</option>
-               <option value="Landwirtschaftliche Gebäude">Landwirtschaftliche Gebäude</option>
-                <option value="Sonstige Gebäude">Sonstige Gebäude</option>
-                </select>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="row">
-                     <div class="col-md-12">
-                         <div class="form-group">
-                             <textarea name="message" placeholder="Ihre Anfrage" rows="3" class="form-control">{{ old('message') }}</textarea>
-                             @if ($errors->has('message'))
-                                 <span class="text-danger">{{ $errors->first('message') }}</span>
-                             @endif
-                         </div>  
-                     </div>
-                 </div>    
-                  <p><input type="checkbox"  name="checkbox" value="Checkbox"> 
-                              @if ($errors->has('checkbox'))
-                                 <span class="text-danger">{{ $errors->first('checkbox') }}</span>
-                             @endif   
-                             
-                   Ich stimme zu, dass meine Angaben aus dem Kontaktformular zur Bearbeitung meiner Anfrage erhoben und verarbeitet werden. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer <a href="/datenschutzerklaerung">Datenschutzerklärung</a>.</p>
-                 <div class="form-group text-center mb-5">
-                                 <div class="text-center"><button class="submit" style="    background-color: #149ddd; border: none; color: white; padding: 16px 32px; text-decoration: none; margin: 4px 2px; cursor: pointer; font-size: 16px; border-radius: 5px;">Senden</button></div>
+ <option value="Einfamilienhaus">Einfamilienhaus</option>
+  <option value="Zweifamilienhaus">Zweifamilienhaus</option>
+    <option value="Doppelhaushälfte">Doppelhaushälfte</option>
+     <option value="Reihenhaus">Reihenhaus</option>
+       <option value="Mehrfamilienhaus">Mehrfamilienhaus</option>
+        <option value="Eigentumswohnung">Eigentumswohnung</option>
+         <option value="Wohnhaus mit Mischnutzung">Wohnhaus mit Mischnutzung</option>
+            <option value="Bürogebäude">Bürogebäude</option>
+                 <option value="Alten-/Pflegeheim">Alten-/Pflegeheim</option>
+                  <option value="Hotel/Beherbergungsstätte">Hotel/Beherbergungsstätte</option>
+                    <option value="Verbrauchermarkt">Verbrauchermarkt</option>
+                      <option value="Garage/Hochgarage/Tiefgarage">Garage/Hochgarage/Tiefgarage</option>
+                        <option value="Produktionsgebäude">Produktionsgebäude</option>
+                         <option value="Lagergebäude">Lagergebäude</option>
+                          <option value="Landwirtschaftliche Gebäude">Landwirtschaftliche Gebäude</option>
+                           <option value="Sonstige Gebäude">Sonstige Gebäude</option>
+                           </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="message" style="font-size:200%">Ihre Anfrage:</label>
+                                        <textarea name="message" placeholder="Ihre Anfrage" rows="3" class="form-control">{{ old('message') }}</textarea>
+                                        @if ($errors->has('message'))
+                                            <span class="text-danger">{{ $errors->first('message') }}</span>
+                                        @endif
+                                    </div>  
+                                </div>
+                            </div>    
+                            <label for="checkbox" style="font-size:200%">Zustimmung:</label>
+                             <p><input type="checkbox"  name="checkbox" value="Checkbox"> 
+                                         @if ($errors->has('checkbox'))
+                                            <span class="text-danger">{{ $errors->first('checkbox') }}</span>
+                                        @endif   
+                                        
+                              Ich stimme zu, dass meine Angaben aus dem Kontaktformular zur Bearbeitung meiner Anfrage erhoben und verarbeitet werden. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer <a href="/datenschutzerklaerung">Datenschutzerklärung</a>.</p>
+                            <div class="form-group text-center mb-5">
+                                            <div class="text-center"><button class="submit" style="    background-color: #149ddd; border: none; color: white; padding: 16px 32px; text-decoration: none; margin: 4px 2px; cursor: pointer; font-size: 16px; border-radius: 5px;">Senden</button></div>
 
-                     
-                 </div>
-             </form>
-         </div>
-</div>
+                                
+                            </div>
+                        </form>
+                    </div>
+          </div>
 
-</div>
+        </div>
 
-</div>
       </div>
+</div>
     </section>
  @endif
  @endforeach
@@ -218,7 +224,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="lastname">Nachname:</label>
+                                        <label for="lastname" style="font-size:200%">Nachname:</label>
                                         <input type="text" name="lastname" class="form-control" placeholder="Nachname" value="{{ old('lastname') }}">
                                         @if ($errors->has('lastname'))
                                             <span class="text-danger">{{ $errors->first('lastname') }}</span>
@@ -229,7 +235,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="phone">Telefonnummer:</label>
+                                        <label for="phone" style="font-size:200%">Telefonnummer:</label>
                                         <input type="text" name="phone" class="form-control" placeholder="Telefonnummer" value="{{ old('phone') }}">
                                         @if ($errors->has('phone'))
                                             <span class="text-danger">{{ $errors->first('phone') }}</span>
@@ -238,7 +244,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="email">E-mail:</label>
+                                        <label for="email" style="font-size:200%">E-mail:</label>
                                         <input type="text" name="email" class="form-control" placeholder="E-mail" value="{{ old('email') }}">
                                         @if ($errors->has('email'))
                                             <span class="text-danger">{{ $errors->first('email') }}</span>
@@ -249,7 +255,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="city">Stadt:</label>
+                                        <label for="city" style="font-size:200%">Stadt:</label>
                                         <input type="text" name="city" class="form-control" placeholder="Stadt" value="{{ old('city') }}">
                                         @if ($errors->has('city'))
                                             <span class="text-danger">{{ $errors->first('city') }}</span>
@@ -258,7 +264,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                 <label for="immobilienart">Art der Immobilie:</label>
+                                 <label for="immobilienart" style="font-size:200%">Art der Immobilie:</label>
   <select name="objecttype" name="immobilienart" class="form-control">
 <option value="" selected="selected">- Art der Immobilie (optional) -</option>
  <option value="Einfamilienhaus">Einfamilienhaus</option>
@@ -284,7 +290,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="message">Ihre Anfrage:</label>
+                                        <label for="message" style="font-size:200%">Ihre Anfrage:</label>
                                         <textarea name="message" placeholder="Ihre Anfrage" rows="3" class="form-control">{{ old('message') }}</textarea>
                                         @if ($errors->has('message'))
                                             <span class="text-danger">{{ $errors->first('message') }}</span>
@@ -292,7 +298,7 @@
                                     </div>  
                                 </div>
                             </div>    
-                            <label for="checkbox">Zustimmung:</label>
+                            <label for="checkbox" style="font-size:200%">Zustimmung:</label>
                              <p><input type="checkbox"  name="checkbox" value="Checkbox"> 
                                          @if ($errors->has('checkbox'))
                                             <span class="text-danger">{{ $errors->first('checkbox') }}</span>
