@@ -345,11 +345,12 @@
     @include('partials._contact')
     @if(str_contains(url()->current(), "bausachverstaendiger"))
     @include('partials._footer1')
-@endif
+@else
 @if(str_contains(url()->current(), "baugutachter"))
 @include('partials._footer2')
 @else
 @include('partials._footer3')
+@endif
 @endif
 <!-- End Footer Section -->
         </main><!-- End #main -->
