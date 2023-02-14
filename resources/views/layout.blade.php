@@ -344,7 +344,8 @@
     @yield('content')
     
     @include('partials._contact')
-    @if(str_contains(url()->current(), "bausachverstaendiger"))
+    @foreach($ortat as $ort)
+    @if(str_contains(url()->current(), "{{$ort->ort}}"))
     <div id="services" class="services">
         <div class="container">
 
