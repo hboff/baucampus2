@@ -28,7 +28,7 @@ $footer=2;
 
     <div class="w3-third">
         <div class="w3-card-4 w3-display-container zooma" style="margin-bottom:16px;">
-            <a href="/baubegleitung"><img src="https://baucampus.ch/bilder/baubegleitung.jpg" alt="Baubegleitung"
+            <a href="/baubegleitung"><img src="/img/baubegleitung.jpg" alt="Baubegleitung"
                     style="height:50vh; width: 100% !important; object-fit: cover; object-position:center;"></a>
             <div class="w3-xlarge w3-display-bottomleft w3-padding"
                 style="background: rgba(255, 255, 255, 0.65); width:100%;">Baubegleitung</div>
@@ -37,7 +37,7 @@ $footer=2;
 
     <div class="w3-third">
         <div class="w3-card-4 w3-display-container zooma" style="margin-bottom:16px;">
-            <a href="/bauschaden"><img src="https://baucampus.ch/bilder2/bauschaden.jpeg" alt="Kultur"
+            <a href="/bauschaden"><img src="/img/bauschaden.jpeg" alt="Kultur"
                     style="height:50vh; width: 100% !important; object-fit: cover; object-position:center;"></a>
             <div class="w3-xlarge w3-display-bottomleft w3-padding"
                 style="background: rgba(255, 255, 255, 0.65); width:100%;">Bauschaden</div>
@@ -46,7 +46,7 @@ $footer=2;
 
     <div class="w3-third">
         <div class="w3-display-container w3-text-black zooma" style="margin-bottom:16px;">
-            <a href="/energieberatung"><img src="https://baucampus.ch/bilder/energieberatung-baucampus-main.png"
+            <a href="/energieberatung"><img src="/img/energieberatung-baucampus-main.png"
                     alt="Fassaden Design"
                     style="height:50vh; width: 100% !important; object-fit: cover; object-position:center;"></a>
             <div class="w3-xlarge w3-display-bottomleft w3-padding"
@@ -60,7 +60,7 @@ $footer=2;
 
     <div class="w3-third">
         <div class="w3-card-4 w3-display-container zooma" style="margin-bottom:16px;">
-            <a href="/hauskaufberatung"><img src="https://baucampus.ch//bilder2/hauskaufberatung.jpeg"
+            <a href="/hauskaufberatung"><img src="/img/hauskaufberatung.jpeg"
                     alt="Öffentliche Verkehrsmittel"
                     style="height:50vh; width: 100% !important; object-fit: cover; object-position:bottom;"></a>
 
@@ -71,7 +71,7 @@ $footer=2;
 
     <div class="w3-third">
         <div class="w3-card-4 w3-display-container zooma" style="margin-bottom:16px;">
-            <a href="/immobilienbewertung"><img src="https://baucampus.ch/bilder/immobilienbewertung.jpg"
+            <a href="/immobilienbewertung"><img src="/img/immobilienbewertung.jpg"
                     alt="Bürogebäude"
                     style="height:50vh; width: 100% !important; object-fit: cover; object-position:center;"></a>
             <div class="w3-xlarge w3-display-bottomleft w3-padding"
@@ -81,7 +81,7 @@ $footer=2;
 
     <div class="w3-third">
         <div class="w3-card-4 w3-display-container zooma" style="margin-bottom:16px;">
-            <a href="/schimmelpilz"><img src="https://baucampus.ch/bilder/schimmelpilz2.jpg" alt="Flughafen"
+            <a href="/schimmelpilz"><img src="/img/schimmelpilz2.jpg" alt="Flughafen"
                     style="height:50vh; width: 100% !important; object-fit: cover; object-position:center;"></a>
             <div class="w3-xlarge w3-display-bottomleft w3-padding"
                 style="background: rgba(255, 255, 255, 0.65); width:100%;">Schimmelpilz</div>
