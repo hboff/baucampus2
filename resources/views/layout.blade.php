@@ -393,7 +393,7 @@ object-position: center;" class="description"><br>
                     
                     
 @else
-@if(str_contains(url()->current(), "bausachverstaendiger/"))
+@if(str_contains(url()->current(), "baugutachter"))
 
 <div id="services" class="services">
         <div class="container">
