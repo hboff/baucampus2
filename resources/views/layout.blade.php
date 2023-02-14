@@ -342,13 +342,9 @@
 
 
     @yield('content')
-    @php
-    $p=0;
-    @endphp
     @include('partials._contact')
-    @foreach($ortat as $orte)
-    @if(str_contains(url()->current(), "{{$orte->ort}}"))
-    @if ($p++ < 1)
+    @if(str_contains(url()->current(), "bausachverstaendiger"))
+    
     <div id="services" class="services">
         <div class="container">
 
@@ -387,10 +383,10 @@ object-position: center;" class="description"><br>
         </div>
         <div class="container"><a class="description link-secondary mb-5" href="/impressum">Impressum</a>
                     <a class="description link-secondary mb-5" href="/datenschutzerklaerung">Datenschutzerklärung</a>
-                    @endif
+                    
                     
 @else
-@if ($p++ < 1)
+
 
 <div id="services" class="services">
         <div class="container">
@@ -424,9 +420,8 @@ object-position: center;" class="description"><br>
         </div>
 <div class="container"><a class="description link-secondary mb-5" href="/impressum">Impressum</a>
                     <a class="description link-secondary mb-5" href="/datenschutzerklaerung">Datenschutzerklärung</a>
-                    @endif
+  
 @endif
-@endforeach
 <!-- End Footer Section -->
         </main><!-- End #main -->
 
