@@ -381,7 +381,7 @@ object-position: center;" class="description"><br>
 
             </div>
         </div>
-        <div class="container"><a class="description link-secondary" href="/impressum">Impressum</a>
+        <div class="container mb-5"><a class="description link-secondary" href="/impressum">Impressum</a>
                     <a class="description link-secondary" href="/datenschutzerklaerung">Datenschutzerklärung</a>
 @else
 <div id="services" class="services">
@@ -414,7 +414,7 @@ object-position: center;" class="description"><br>
 
             </div>
         </div>
-<div class="container"><a class="description link-secondary" href="/impressum">Impressum</a>
+<div class="container mb-5"><a class="description link-secondary" href="/impressum">Impressum</a>
                     <a class="description link-secondary" href="/datenschutzerklaerung">Datenschutzerklärung</a>
 @endif
 <!-- End Footer Section -->
