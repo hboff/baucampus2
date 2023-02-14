@@ -34,7 +34,7 @@ object-position: center;">
 @endisset
 @endisset
 
-  <div class="profile mt-2">
+  <div class="profile mt-4">
     <img src="/img/logo.png" alt="" class="mt-2" style="    vertical-align: middle;
 width: 120px;
 height: 120px;
