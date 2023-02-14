@@ -31,19 +31,7 @@ object-position: center;" class="description"><br>
                 <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
                     
                     <p class="description">
-@foreach($regions as $region)
-@isset($ortsname)
-@if ($region->Region == $ortsname)
 {{$ortsname}}
-    @foreach ($ortat as $orte)
-        @if ($orte->bundesland == $region->RegionShort)
-        {{$orte->bundesland}}
-            <a class="link-dark" href="/{{$orte->ort}}/bausachverstaendiger">Baugutachter {{$orte->ort}}</a><br>
-        @endif
-    @endforeach
-@endif
-@endisset
-@endforeach  
     </p>
 </p>
                 </div>
