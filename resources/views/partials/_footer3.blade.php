@@ -35,7 +35,7 @@ object-position: center;" class="description"><br>
 @if ($region->Region == $ortsname)
 @foreach ($ortat as $orte)
 @if ($orte->bundesland == $region->RegionShort)
-<a class="link-dark" href="/{{$orte->ort}}/bausachverstaendiger">Baugutachter {{$region->Region}}</a><br>
+<a class="link-dark" href="/{{$orte->ort}}/bausachverstaendiger">Baugutachter {{$orte->ort}}</a><br>
 @endif
 @endforeach
 @endif   

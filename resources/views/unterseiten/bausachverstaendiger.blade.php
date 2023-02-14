@@ -8,7 +8,13 @@ $footer=1;
 @endsection
 @section('content')
 @include('partials._sidebar')
-
+@if ($region->Region == $ortsname)
+    @foreach ($ortat as $orte)
+        @if ($orte->bundesland == $region->RegionShort)
+            <a class="link-dark" href="/{{$orte->ort}}/bausachverstaendiger">Baugutachter {{$orte->ort}}</a><br>
+        @endif
+    @endforeach
+@endif
 <main id="main">
 </br>
 </br>
