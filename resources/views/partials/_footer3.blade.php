@@ -31,12 +31,14 @@ object-position: center;" class="description"><br>
                 <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
                     
                     <p class="description">
+
+@if ($region->Region == $ortsname)
 @foreach ($ortat as $orte)
-@if ($orte->bundesland == $region->RegionShort == $ortsname)
+@if ($orte->bundesland == $region->RegionShort)
 <a class="link-dark" href="/{{$orte->ort}}/bausachverstaendiger">Baugutachter {{$region->Region}}</a><br>
 @endif
 @endforeach
-   
+@endif   
     </p>
 </p>
                 </div>
