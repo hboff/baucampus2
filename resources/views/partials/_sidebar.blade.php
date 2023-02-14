@@ -21,7 +21,7 @@ object-position: center;">
     <p class="text-light text-center">{{$row->Email}}</p>
   </div>
 @else
-<div class='mt-5 pt-5 mb-5 pb-5'> <br> </div>
+<div class='mt-5'></div>
 @endif
 @endforeach
 @endisset
