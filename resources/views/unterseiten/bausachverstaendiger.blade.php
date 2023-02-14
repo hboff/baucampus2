@@ -8,6 +8,7 @@ $footer=1;
 @endsection
 @section('content')
 @include('partials._sidebar')
+@foreach($regions as $region)
 @if ($region->Region == $ortsname)
     @foreach ($ortat as $orte)
         @if ($orte->bundesland == $region->RegionShort)
