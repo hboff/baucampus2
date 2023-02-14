@@ -15,12 +15,12 @@ object-position: center;" class="description"><br>
                 <div class="col-lg-3 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
                 <p class="description">
 @foreach($regions as $region)
-    @if(str_contains(url()->current(), "baucampus.de"))
+    @if(str_contains(url()->current(), "baucampus.be"))
     @if ($region->Country == 'Germany')
     <a class="link-dark" href="/baugutachter/{{$region->Region}}">Baugutachter {{$region->Region}}</a><br>
     @endif
 @endif
-@if(str_contains(url()->current(), "baucampus.be"))
+@if(str_contains(url()->current(), "baucampus.at"))
 @if ($region->Country == 'Austria')
     <a class="link-dark" href="/baugutachter/{{$region->Region}}">Baugutachter {{$region->Region}}</a><br>
     @endif
