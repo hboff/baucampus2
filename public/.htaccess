@@ -62,16 +62,5 @@
   ExpiresByType font/woff2                "access plus 1 month"
   ExpiresByType image/svg+xml             "access plus 1 month"
 </IfModule>
-<ifmodule mod_headers.c>
- <filesmatch "\\.(ico|jpe?g|png|gif|swf)$">
-  Header set Cache-Control "max-age=2592000, public"
- </filesmatch>
- <filesmatch "\\.(css)$">
-  Header set Cache-Control "max-age=604800, public"
- </filesmatch>
- <filesmatch "\\.(js)$">
-  Header set Cache-Control "max-age=216000, private"
- </filesmatch>
-</ifmodule>
 
 </IfModule>
