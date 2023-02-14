@@ -1,6 +1,6 @@
 
     @foreach($regions as $region)
-    @if(str_contains(url()->current(), "baucampus.de))
+    @if(str_contains(url()->current(), "baucampus.de"))
     @if ($region->Country == Germany)
     <a class="link-dark" href="/{{$region->Region}}/bausachverstaendiger">Baugutachter {{$region->Region}}</a>
     @endif
