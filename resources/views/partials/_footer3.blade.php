@@ -33,6 +33,7 @@ object-position: center;" class="description"><br>
                     <p class="description">
 @foreach($regions as $region)
 @if ($region->Region == $ortsname)
+{{$ortsname}}
     @foreach ($ortat as $orte)
         @if ($orte->bundesland == $region->RegionShort)
         {{$orte->bundesland}}
