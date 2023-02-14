@@ -26,7 +26,16 @@
     AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css text/javascript application/xml application/xhtml+xml application/rss+xml application/atom_xml application/javascript application/x-javascript application/x-shockwave-flash
 </IfModule>
 
-# Cache Control
+<IfModule mod_headers.c>
+    Header set Cache-Control "max-age=2592000, public" env=EXPIRES_BY_TYPE
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "max-age=604800, public"
+    </FilesMatch>
+    <FilesMatch "\.(html|gif|jpe?g|png|x-icon)$">
+        Header set Cache-Control "max-age=2592000, public"
+    </FilesMatch>
+</IfModule>
+
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresByType text/css "access plus 1 month"
@@ -37,6 +46,9 @@
     ExpiresByType image/jpeg "access plus 1 month"
     ExpiresByType image/png "access plus 1 month"
     ExpiresByType image/x-icon "access plus 1 month"
-    ExpiresByType application/font-woff2 "access plus 7 days"
+    SetEnvIf Request_URI "\.(css|js)$" EXPIRES_BY_TYPE
 </IfModule>
+
+Dieser Codeblock setzt einen Cache-Control-Header von "max-age=2592000, public" für alle Dateien, auf die die ExpiresByType-Einstellungen zutreffen
+
 </IfModule>
