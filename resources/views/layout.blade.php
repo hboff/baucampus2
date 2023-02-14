@@ -342,11 +342,14 @@
 
 
     @yield('content')
-    
+    @php
+    $p=0;
+    @endphp
     @include('partials._contact')
     @foreach($ortat as $ort)
     @if(str_contains(url()->current(), "{{$ort->ort}}"))
-    @if ($ortsname == $ort->ort)
+    @if($ortsname == $ort->ort)
+    @if ($p++ < 1)
     <div id="services" class="services">
         <div class="container">
 
@@ -386,8 +389,9 @@ object-position: center;" class="description"><br>
         <div class="container"><a class="description link-secondary mb-5" href="/impressum">Impressum</a>
                     <a class="description link-secondary mb-5" href="/datenschutzerklaerung">Datenschutzerklärung</a>
                     @endif
+                    @endif
 @else
-
+@if ($p++ < 1)
 
 <div id="services" class="services">
         <div class="container">
@@ -421,6 +425,7 @@ object-position: center;" class="description"><br>
         </div>
 <div class="container"><a class="description link-secondary mb-5" href="/impressum">Impressum</a>
                     <a class="description link-secondary mb-5" href="/datenschutzerklaerung">Datenschutzerklärung</a>
+                    @endif
 @endif
 @endforeach
 <!-- End Footer Section -->
