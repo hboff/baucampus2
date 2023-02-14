@@ -27,8 +27,7 @@ $footer=2;
         </p>
         <p>
 
-            Verantwortlicher für die Datenverarbeitung personenbezogener Daten bei Nutzung dieser Website ist Oskar
-            Lohse, Building A1, Dubai Silicon Oasis, Dubai. Tel 05722913800 Mail oskar_lohse@baucampus.de
+            Verantwortlicher für die Datenverarbeitung personenbezogener Daten bei Nutzung dieser Website ist Casimir Arlabosse Waltherstraße 15,80337 München, Telefon: 057222890636, E-mail: arlabosse@baucampus.de
             Erfassung Anonymisierte Daten beim Besuch unserer Website
             Bei der bloß informatorischen Nutzung unserer Website, also wenn Sie sich nicht registrieren oder uns
             anderweitig Informationen übermitteln, erheben wir nur solche Daten, die Ihr Browser an unseren Server
