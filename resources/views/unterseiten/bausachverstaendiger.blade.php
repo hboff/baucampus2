@@ -8,15 +8,7 @@ $footer=1;
 @endsection
 @section('content')
 @include('partials._sidebar')
-@foreach($regions as $region)
-@if ($region->Region == $ortsname)
-    @foreach ($ortat as $orte)
-        @if ($orte->bundesland == $region->RegionShort)
-            <a class="link-dark" href="/{{$orte->ort}}/bausachverstaendiger">Baugutachter {{$orte->ort}}</a><br>
-        @endif
-    @endforeach
-@endif
-@endforeach
+
 <main id="main">
 </br>
 </br>
@@ -27,7 +19,15 @@ $footer=1;
         <div class="section-title">
           <h2>Hauskaufberatung {{$ortsname}}</h2>
         </div>
-
+@foreach($regions as $region)
+@if ($region->Region == $ortsname)
+    @foreach ($ortat as $orte)
+        @if ($orte->bundesland == $region->RegionShort)
+            <a class="link-dark" href="/{{$orte->ort}}/bausachverstaendiger">Baugutachter {{$orte->ort}}</a><br>
+        @endif
+    @endforeach
+@endif
+@endforeach
         <div class="row">
           <div class="col-lg-6" data-aos="fade-right">
           <p>Beim <b>Kauf eines Hauses</b> oder einer Eigentumswohnung stellen sich viele Fragen. Mit einer professionellen und unabhängigen <b>Hauskaufberatung</b> durch unsere Bausachverständigen gehen Sie den richtigen Schritt, um ein Haus oder eine Eigentumswohnung auf der Basis klarer <b>Fakten</b> zu erwerben.</p>
