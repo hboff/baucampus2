@@ -51,6 +51,10 @@
  <filesmatch "\\.(ico|jpe?g|png|gif|swf)$">
   Header set Cache-Control "max-age=2592000, public"
  </filesmatch>
+         <FilesMatch "\.(woff2|css)$">
+            Header set Cache-Control "max-age=604800, public"
+            ExpiresDefault "access plus 7 days"
+        </FilesMatch>
  <filesmatch "\\.(css)$">
   Header set Cache-Control "max-age=604800, public"
  </filesmatch>
