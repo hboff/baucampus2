@@ -392,7 +392,7 @@ object-position: center;" class="description"><br>
                     <a class="description link-secondary mb-5" href="/datenschutzerklaerung">Datenschutzerklärung</a>
                     
                     
-@else
+@endif
 @if(str_contains(url()->current(), "baugutachter"))
 
 <div id="services" class="services">
@@ -427,7 +427,7 @@ object-position: center;" class="description"><br>
         </div>
 <div class="container"><a class="description link-secondary mb-5" href="/impressum">Impressum</a>
                     <a class="description link-secondary mb-5" href="/datenschutzerklaerung">Datenschutzerklärung</a>
-                    @else
+@endif
                     
 <div id="services" class="services">
         <div class="container">
