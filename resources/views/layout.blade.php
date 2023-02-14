@@ -357,8 +357,7 @@
     border-radius: 50%;
     object-fit: cover;
 object-position: center;" class="description"><br>
-<a class="description link-dark" href="/impressum">Impressum</a><br>
-                    <a class="description link-dark" href="/datenschutzerklaerung">Datenschutzerklärung</a>
+
                 </div>
                 <div class="col-lg-3 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
                 <p class="description">
@@ -382,6 +381,8 @@ object-position: center;" class="description"><br>
 
             </div>
         </div>
+        <div class="container"><a class="description link-dark" href="/impressum">Impressum</a><br>
+                    <a class="description link-dark" href="/datenschutzerklaerung">Datenschutzerklärung</a></div>
 @else
 <div id="services" class="services">
         <div class="container">
@@ -395,8 +396,7 @@ object-position: center;" class="description"><br>
     border-radius: 50%;
     object-fit: cover;
 object-position: center;" class="description"><br>
-<a class="description link-dark" href="/impressum">Impressum</a><br>
-                    <a class="description link-dark" href="/datenschutzerklaerung">Datenschutzerklärung</a>
+
                 </div>
                 <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
                 <p class="description">
