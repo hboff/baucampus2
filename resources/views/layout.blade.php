@@ -368,7 +368,14 @@ object-position: center;" class="description"><br>
                     
                     <p class="description">
 
-                    @include('partials._orte')
+                    @case('1')
+@include('partials._1')
+@break
+@case('2')
+@include('partials._orte')
+@break
+@default
+@endswitch
 
 </p>
                 </div>
