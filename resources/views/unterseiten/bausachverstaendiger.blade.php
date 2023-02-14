@@ -16,6 +16,7 @@ $footer=1;
         @endif
     @endforeach
 @endif
+@endforeach
 <main id="main">
 </br>
 </br>
