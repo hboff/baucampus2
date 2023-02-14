@@ -69,8 +69,7 @@ Route::domain($domain)->group(function () use ($routes, $domainData) {
     Route::get('/baugutachter/{region}', function($region){
         return view ('unterseiten.bausachverstaendiger', ['ortsname' => $region]);
 });
-    Route::get('contact-us', [ContactController::class, 'index']);
-    Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
+
 foreach ($routes as $route) {
 Route::get($route, function () use ($route, $domainData) {
 $data = DB::table('orteat')
@@ -78,7 +77,8 @@ $data = DB::table('orteat')
 ->whereBetween('breitengrad', $domainData['breitengrad'])
 ->get();
 
-
+    Route::get('contact-us', [ContactController::class, 'index']);
+    Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
 //In a SQL join, the two tables being joined are combined based on the values in a specified column or columns. The ON clause in a join specifies the conditions for combining the rows from the two tables.
 //
 //In the example I provided, the orteat and gutachter tables are joined on the breitengrad column in the orteat table and the Lon and Lon2 columns in the gutachter table. The join is performed using the on method in Laravel's Eloquent ORM, and the conditions are specified as orteat.breitengrad >= gutachter.Lon and orteat.breitengrad <= gutachter.Lon2. This means that only the rows from the orteat table where the breitengrad value falls between the Lon and Lon2 values in the gutachter table will be included in the result set.
