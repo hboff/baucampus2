@@ -358,9 +358,9 @@
 object-position: center;" class="description">
                 </div>
                 <div class="col-lg-3 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                    
+                <p class="description">
                     @include('partials._bundeslaender')
-                    
+                    </p>
                 </div>
                 <div class="col-lg-3 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
                     
