@@ -4,12 +4,14 @@
 <!-- ======= Header ======= -->
 <div class="d-flex flex-column" id="sidebarprofile">
   <!-- ======= profile1 ======= -->
-@isset($ortsname)
-@isset($expert)
 @php
 $p = 0;
 @endphp
+@isset($ortsname)
+@isset($expert)
+
 @foreach ($expert as $row)
+
 @if ($p++ < 2)
 @if ($ortsname == $row->ort)
   <div class="profile">
