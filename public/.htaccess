@@ -47,15 +47,20 @@
  ExpiresByType image/png "access plus 1 month"
  ExpiresByType image/x-icon "access plus 1 month"
 </IfModule>
-<ifmodule mod_headers.c>
- <filesmatch "\\.(ico|jpe?g|png|gif|swf)$">
-  Header set Cache-Control "max-age=2592000, public"
- </filesmatch>
- <filesmatch "\\.(css)$">
-  Header set Cache-Control "max-age=604800, public"
- </filesmatch>
- <filesmatch "\\.(js)$">
-  Header set Cache-Control "max-age=216000, private"
- </filesmatch>
+ # Cache fonts and CSS for 7 days
+<FilesMatch "\.(js)$">
+    Header set Cache-Control "max-age=604800, public"
+    ExpiresDefault "access plus 7 days"
+</FilesMatch>
+# Cache fonts and CSS for 7 days
+<FilesMatch "\.(woff2|css)$">
+    Header set Cache-Control "max-age=604800, public"
+    ExpiresDefault "access plus 7 days"
+</FilesMatch>
 
+# Cache images for 30 days
+<FilesMatch "\.(jpg|jpeg|png)$">
+    Header set Cache-Control "max-age=2592000, public"
+    ExpiresDefault "access plus 30 days"
+</FilesMatch>
 </IfModule>
