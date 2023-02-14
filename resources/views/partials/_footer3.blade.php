@@ -32,6 +32,7 @@ object-position: center;" class="description"><br>
                     
                     <p class="description">
 @foreach($regions as $region)
+@isset($ortsname)
 @if ($region->Region == $ortsname)
 {{$ortsname}}
     @foreach ($ortat as $orte)
@@ -41,6 +42,7 @@ object-position: center;" class="description"><br>
         @endif
     @endforeach
 @endif
+@endisset
 @endforeach  
     </p>
 </p>
