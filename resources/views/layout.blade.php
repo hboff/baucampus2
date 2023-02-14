@@ -373,7 +373,7 @@ object-position: center;" class="description"><br>
                     
                     <p class="description">
 
-@include('partials._1')
+@include('partials._orte')
 
 </p>
                 </div>
