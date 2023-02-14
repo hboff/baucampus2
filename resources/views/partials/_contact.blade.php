@@ -209,7 +209,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="firstname">Vorname:</label>
+                                        <label for="firstname" style="font-size:200%">Vorname:</label>
                                         <input type="text" name="firstname" class="form-control" placeholder="Vorname" value="{{ old('firstname') }}">
                                         @if ($errors->has('firstname'))
                                             <span class="text-danger">{{ $errors->first('firstname') }}</span>
