@@ -119,40 +119,21 @@ p+p {
 }
 
 </style>
-@section('head') <title>Gutachter Baucampus</title><meta name="Description"content="Gutachter Baucampus">@endsection @section('content') <body class="w3-light-grey">< !-- Grid --><div class="w3-row">< !-- Blog entries --><div>< !-- Blog entry -->< !--=======About Section=======--><div id="about"class="about pt-5 mt-5"><div class="container pt-5"><div class="section-title"><h1>Gutachter</h1><p class="subheading-text w3-center">Unsere Bausachverständigen</p></div><table><tr><th>Gutachter</th><th></th><th>Anschrift</th><th>Kontakt</th></tr>@foreach($gutachter as $gutachters) <tr><td><a href="/gutachter/{{ $gutachters['UrlName'] }}"
+@section('head') <title>Gutachter Baucampus</title>
+<meta name="Description"content="Gutachter Baucampus">
+@endsection 
+@section('content') 
+<body class="w3-light-grey">< !-- Grid --><div class="w3-row">< !-- Blog entries --><div>< !-- Blog entry -->< !--=======About Section=======--><div id="about"class="about pt-5 mt-5"><div class="container pt-5"><div class="section-title"><h1>Gutachter</h1><p class="subheading-text w3-center">Unsere Bausachverständigen</p></div><table><tr><th>Gutachter</th><th></th><th>Anschrift</th><th>Kontakt</th></tr>@foreach($gutachter as $gutachters) <tr><td><a href="/gutachter/{{ $gutachters['UrlName'] }}"
 class="link-dark"target="_blank"><img src="/img/{{ $gutachters['Photo'] }}"
 style="vertical-align: middle; width: 100px; height: 100px; border-radius: 50%; object-fit: cover; object-position: center;"></a></td><td><a href="/gutachter/{{ $gutachters['UrlName'] }}"
 class="link-dark" target="_blank"> {{$gutachters['FirstName']}} {{$gutachters['LastName'] }}</a></td>
 <td> {{$gutachters['Adress']}}
-<br /> {{$gutachters['PostalCode']}}
-
-    {
-        {
-        $gutachters['City']
-    }
-}
-
-</td><td> {
-        {
-        $gutachters['Phone']
-    }
-}
-
-<br /> {
-        {
-        $gutachters['Email']
-    }
-}
-
-<br /><a href="{{ $gutachters['Website'] }}"
-
-target="_blank"> {
-        {
-        $gutachters['Website']
-    }
-}
-
-</a></td></tr>@endforeach </table></div><br>< !-- End About Section -->< !-- END BLOG ENTRIES --></div><div id="map"style="width:100%; height:400px;"class="mt-5"></div>< !-- END GRID --></div><br><script>var map=L.map('map').setView([51.165691, 10.451526], 5);
+<br /> {{$gutachters['PostalCode']}} {{$gutachters['City']}}</td>
+<td> {{ $gutachters['Phone']}}<br /> 
+     {{ $gutachters['Email']}}<br />
+     <a href="{{ $gutachters['Website'] }}" target="_blank"> {{$gutachters['Website']}}</a></td>
+     </tr>@endforeach 
+</table></div><br>< !-- End About Section -->< !-- END BLOG ENTRIES --></div><div id="map"style="width:100%; height:400px;"class="mt-5"></div>< !-- END GRID --></div><br><script>var map=L.map('map').setView([51.165691, 10.451526], 5);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -180,4 +161,6 @@ for (var i=0; i < locations.length; i++) {
     var marker=L.marker(locations[i]).addTo(map);
 }
 
-</script>@endsection
+</script>
+
+@endsection
