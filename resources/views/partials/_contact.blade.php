@@ -18,13 +18,13 @@
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
-                <h4>Ort:</h4>
+                <h3>Ort:</h3>
                 <p>{{$gutachters['Adress']}}, {{$gutachters['PostalCode']}} {{$gutachters['City']}}</p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
+                <h3>Email:</h3>
                 <p>{{$gutachters['Email']}}</p>
               </div>
 
