@@ -347,9 +347,9 @@
     @include('partials._footer1')
 @endif
 @if(str_contains(url()->current(), "baugutachter"))
-@include(_partials._footer2)
+@include('partials._footer2')
 @else
-@include(_partials._footer3)
+@include('partials._footer3')
 @endif
 <!-- End Footer Section -->
         </main><!-- End #main -->
