@@ -30,7 +30,7 @@
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
-                <h4>Telefon:</h4>
+                <h3>Telefon:</h3>
                 <p>{{$gutachters['Phone']}}</p>
               </div>
               <iframe
@@ -173,19 +173,19 @@
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
-                <h4>Ort:</h4>
+                <h3>Ort:</h3>
                 <p>Hardenbergstraße 10, 32427 Minden</p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
+                <h3>Email:</h3>
                 <p>freda-lohse@baucampus.de</p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
-                <h4>Telefon:</h4>
+                <h3>Telefon:</h3>
                 <p>05722 913800</p>
               </div>
               <iframe
