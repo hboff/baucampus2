@@ -22,6 +22,7 @@ object-position: center;">
   </div>
 @else
 <br>
+<br>
 @endif
 @endforeach
 @endisset
