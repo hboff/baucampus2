@@ -347,7 +347,7 @@
     @endphp
     @include('partials._contact')
     @foreach($ortat as $orte)
-    @if(str_contains(url()->current(), "{{$ortat->ort}}"))
+    @if(str_contains(url()->current(), "{{$orte->ort}}"))
     @if ($p++ < 1)
     <div id="services" class="services">
         <div class="container">
