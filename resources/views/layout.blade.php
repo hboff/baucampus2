@@ -461,9 +461,7 @@ object-position: center;" class="description"><br>
         </div>
 <div class="container"><a class="description link-secondary mb-5" href="/impressum">Impressum</a>
                     <a class="description link-secondary mb-5" href="/datenschutzerklaerung">Datenschutzerklärung</a>
-  @endif
-
-@endif
+  
 <!-- End Footer Section -->
         </main><!-- End #main -->
 
