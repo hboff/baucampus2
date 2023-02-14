@@ -172,8 +172,8 @@
           <div class="col-lg-5 d-flex align-items-stretch">
             <div class="info">
               <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h3 style="font-size:400%;" class="ml-2 pl-2">Ort:</h3>
+                <i class="bi bi-geo-alt mr-3 pr-3"></i>
+                <h3 style="font-size:300%;">Ort:</h3>
                 <p>Hardenbergstraße 10, 32427 Minden</p>
               </div>
 
