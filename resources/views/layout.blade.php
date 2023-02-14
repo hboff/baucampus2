@@ -344,7 +344,7 @@
     @yield('content')
     
     @include('partials._contact')
-    @if(str_contains(url()->current(), "{{$ort->ort}}"))
+    @if(str_contains(url()->current(), "{{$ortsname}}"))
     <div id="services" class="services">
         <div class="container">
 
