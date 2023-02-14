@@ -6,7 +6,11 @@
   <!-- ======= profile1 ======= -->
 @isset($ortsname)
 @isset($expert)
+@php
+$p = 0;
+@php
 @foreach ($expert as $row)
+@if ($p++ < 2)
 @if ($ortsname == $row->ort)
   <div class="profile">
     <img src="/img/{{$row->Photo}}" alt="" class="mt-4" style="    vertical-align: middle;
@@ -22,6 +26,7 @@ object-position: center;">
   </div>
 @else
 <div class='mt-1'></div>
+@endif
 @endif
 @endforeach
 @endisset
