@@ -414,6 +414,8 @@ object-position: center;" class="description"><br>
 
             </div>
         </div>
+<div class="container"><a class="description link-dark" href="/impressum">Impressum</a><br>
+                    <a class="description link-dark" href="/datenschutzerklaerung">Datenschutzerklärung</a></div>
 @endif
 <!-- End Footer Section -->
         </main><!-- End #main -->
