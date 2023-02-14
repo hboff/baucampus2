@@ -344,77 +344,13 @@
     @yield('content')
     @include('partials._contact')
     @if(str_contains(url()->current(), "bausachverstaendiger"))
-    @include('partials._test')
+    @include('partials._footer1')
 @endif
 @if(str_contains(url()->current(), "baugutachter"))
-
-<div id="services" class="services">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-                    
-                    <img src="/img/logo.png" alt="" style="    vertical-align: middle;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-object-position: center;" class="description"><br>
-
-                </div>
-                <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                <p class="description">
-                    @include('partials._bundeslaender')
-                    </p>
-                </div>
-                <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                    
-                    <p class="description">
-
-@include('partials._orte')
-</p>
-                </div>
-                
-
-            </div>
-        </div>
-<div class="container"><a class="description link-secondary mb-5" href="/impressum">Impressum</a>
-                    <a class="description link-secondary mb-5" href="/datenschutzerklaerung">Datenschutzerklärung</a>
+@include(_partials._footer2)
+@else
+@include(_partials._footer3)
 @endif
-                    
-<div id="services" class="services">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-                    
-                    <img src="/img/logo.png" alt="" style="    vertical-align: middle;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-object-position: center;" class="description"><br>
-
-                </div>
-                <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                <p class="description">
-                    @include('partials._bundeslaender')
-                    </p>
-                </div>
-                <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                    
-                    <p class="description">
-
-@include('partials._orte')
-</p>
-                </div>
-                
-
-            </div>
-        </div>
-<div class="container"><a class="description link-secondary mb-5" href="/impressum">Impressum</a>
-                    <a class="description link-secondary mb-5" href="/datenschutzerklaerung">Datenschutzerklärung</a>
-  
 <!-- End Footer Section -->
         </main><!-- End #main -->
 
