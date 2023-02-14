@@ -8,7 +8,7 @@
 @isset($expert)
 @php
 $p = 0;
-@php
+@endphp
 @foreach ($expert as $row)
 @if ($p++ < 2)
 @if ($ortsname == $row->ort)
