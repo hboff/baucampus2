@@ -66,6 +66,9 @@ Route::domain($domain)->group(function () use ($routes, $domainData) {
     Route::get('/', [OrteatController::class, 'index']);
     Route::get('/gutachter/{gutachter}', [GutachterController::class, 'show'], function (Request $request){});
     Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function () use ($domainData) {});
+    Route::get('/{region}/bausachverstaendiger', function($region){
+        return view ('unterseiten.bausachverstaendiger', ['ortsname' => $region]);
+});
     Route::get('contact-us', [ContactController::class, 'index']);
     Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
 foreach ($routes as $route) {
