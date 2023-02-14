@@ -1,3 +1,4 @@
+@isset($domain)
     @foreach($regions as $region)
     @if ($domain == immobilienbewertung-bielefeld.com)
     @if ($region->Country == Germany)
@@ -10,6 +11,6 @@
     @endif
     @endif
     @endforeach
-
+@endisset
 
 
