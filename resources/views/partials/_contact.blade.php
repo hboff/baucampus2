@@ -24,7 +24,7 @@
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
-                <h3>Email:</h3>
+                <h4>Email:</h4>
                 <p>{{$gutachters['Email']}}</p>
               </div>
 
