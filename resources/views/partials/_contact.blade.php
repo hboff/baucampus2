@@ -172,20 +172,20 @@
           <div class="col-lg-5 d-flex align-items-stretch">
             <div class="info">
               <div class="address">
-                <i class="bi bi-geo-alt mr-3 pr-3"></i>
-                <h3 style="font-size:300%;">Ort:</h3>
+                <i class="bi bi-geo-alt"></i>
+                <h4>Ort:</h4>
                 <p>Hardenbergstraße 10, 32427 Minden</p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
-                <h3>Email:</h3>
+                <h4>Email:</h4>
                 <p>freda-lohse@baucampus.de</p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
-                <h3>Telefon:</h3>
+                <h4>Telefon:</h4>
                 <p>05722 913800</p>
               </div>
               <iframe
