@@ -346,7 +346,7 @@
     @include('partials._contact')
     @foreach($ortat as $ort)
     @if(str_contains(url()->current(), "{{$ort->ort}}"))
-    @endforeach
+    
     <div id="services" class="services">
         <div class="container">
 
@@ -419,6 +419,7 @@ object-position: center;" class="description"><br>
 <div class="container"><a class="description link-secondary mb-5" href="/impressum">Impressum</a>
                     <a class="description link-secondary mb-5" href="/datenschutzerklaerung">Datenschutzerklärung</a>
 @endif
+@endforeach
 <!-- End Footer Section -->
         </main><!-- End #main -->
 
