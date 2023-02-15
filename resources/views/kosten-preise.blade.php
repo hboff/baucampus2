@@ -40,14 +40,14 @@ min-width: 100px;
                     <img src="/img/immobilienbewertung.jpg" alt="Preise" class="pb-5"
                             style="width:100%;min-height:350px;max-height:65vh; object-fit: cover; object-position:center;">
                         <div id="about" class="about">
+
                             <div class="container">
                                 <div class="section-title">
                                     <h1>Preisliste Baucampus 2023<h1>
-                                    div id="about" class="about">
+                                    
                
-                    </div>
+                                </div>
 
-                    <div class="row">
                                             <div class="contaier-fluid price ">
                                                 <div style="overflow-x:auto;">
                                                     <table>
@@ -228,5 +228,16 @@ min-width: 100px;
                                                     </table>
                                                     <p>* inkl. MwSt.</p><br />
                                                 </div>
+                                           
+
+
+
+
                                             </div>
+                                        </div>
+                                     </div>
+                                     </div>
+                                     </div>
+                                </div>
+
 @endsection 
