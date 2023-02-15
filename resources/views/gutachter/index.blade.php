@@ -406,32 +406,7 @@ $contact=1;
 @endif
 @endforeach
     @include('partials._contact')
-    <section id="services" class="services">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <h4 class="title">Baucampus</h4>
-            <img src="/img/logo.png" alt="" style="    vertical-align: middle;
-    width: 150;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-object-position: center;" class="description">
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 class="title">Themen</h4>
-            <p class="description">@include('partials._orte')</p>
-        </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <h4 class="title">Allgemeines</h4>
-            <a class="description link-dark" href="/impressum"><u>Impressum</u></a>
-            <a class="description link-dark" href="/datenschutzerklaerung"><u>Datenschutzerklärung</u></a>
-            
-          </div>
-          
-      </div>
-    </section><!-- End Footer Section -->
+    @include('partials._footer2')
 
 
 
