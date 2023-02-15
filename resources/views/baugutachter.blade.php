@@ -12,7 +12,7 @@
 
     <div><div id="about"class="about pt-5 mt-5"><div class="container pt-5">
                     <div class="section-title">
-                        <h1>$ortsname</h1>
+                        <h1>{{$ortsname}}</h1>
                     </div>
 
                     <div class="row">
@@ -22,7 +22,7 @@
     @foreach($ortat as $orte)
  
         @if ($orte->bundesland == $region->RegionShort)
-            <a class="link-dark" href="/{{$orte->ort}}/bausachverstaendiger">Baugutachter {{$orte->ort}}</a><br>
+          <p>  <a class="link-dark" href="/{{$orte->ort}}/bausachverstaendiger">Baugutachter {{$orte->ort}}</a><p><br>
        
         @endif
     @endforeach
