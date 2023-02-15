@@ -19,7 +19,7 @@
 
                     <div class="row">
                         <div class="col-lg-6" data-aos="fade-right">
-    foreach($regions as $region)
+    @foreach($regions as $region)
 @if($region->Region == $ortsname)
     @foreach($ortat as $orte)
  
