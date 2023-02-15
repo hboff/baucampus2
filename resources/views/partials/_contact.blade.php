@@ -1,9 +1,9 @@
 <style>
-    input[type="checkbox"] {
+    .checkbox input[type="checkbox"] {
         display: inline-block;
         vertical-align: middle;
     }
-    p {
+    .checkbox p {
         display: inline-block;
         vertical-align: middle;
         margin: 0;
@@ -309,9 +309,9 @@
                                     </div>  
                                 </div>
                             </div>   
-                            <div class="row"> 
+                             <div class="checkbox">
                             <label for="checkbox" style="font-size:200%">Zustimmung:</label>
-                             <p><input type="checkbox"  name="checkbox" value="Checkbox" class="m-0 p-0"> 
+                             <p><input type="checkbox"  name="checkbox" value="Checkbox"> 
                                          @if ($errors->has('checkbox'))
                                             <span class="text-danger">{{ $errors->first('checkbox') }}</span>
                                         @endif   
