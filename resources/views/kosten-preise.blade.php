@@ -4,19 +4,20 @@ $footer=2;
 @endphp
 @section('head')
 <style>
-.price table {
+table {
 border-collapse: collapse;
 border-spacing: 0;
 width: 100%;
 border: 1px solid #ddd;
 }
 
-.price th {
+th {
 background-color: #435761;
 color: #fff;
 }
 
-.price th, td {
+th,
+td {
 text-align: left;
 padding: 8px;
 min-width: 100px;
@@ -42,7 +43,11 @@ min-width: 100px;
                             <div class="container">
                                 <div class="section-title">
                                     <h1>Preisliste Baucampus 2023<h1>
-</div>
+                                    div id="about" class="about">
+               
+                    </div>
+
+                    <div class="row">
                                             <div class="contaier-fluid price ">
                                                 <div style="overflow-x:auto;">
                                                     <table>
