@@ -133,34 +133,21 @@ class="link-dark" target="_blank"> {{$gutachters['FirstName']}} {{$gutachters['L
      {{ $gutachters['Email']}}<br />
      <a href="{{ $gutachters['Website'] }}" target="_blank"> {{$gutachters['Website']}}</a></td>
      </tr>@endforeach 
-</table></div><br>< !-- End About Section -->< !-- END BLOG ENTRIES --></div><div id="map"style="width:100%; height:400px;"class="mt-5"></div>< !-- END GRID --></div><br><script>var map=L.map('map').setView([51.165691, 10.451526], 5);
+</table></div><br>< !-- End About Section -->< !-- END BLOG ENTRIES --></div><div id="map"style="width:100%; height:400px;"class="mt-5"></div>< !-- END GRID --></div><br>
+<script>
+        var map = L.map('map').setView([51.165691, 10.451526], 5);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
 
-).addTo(map);
+        var locations = [            @foreach($gutachter as $gutachters)                [{!! $gutachters['HomeCityLat'] !!}, {!! $gutachters['HomeCityLon'] !!}],
+            @endforeach
+        ];
 
-var locations=[ < blade foreach | (% 24 gutachter % 20 as % 20 % 24 gutachters) % 0 D>[ {
-        {
-        % 24 gutachters % 5 B % 26 % 2339 % 3 BHomeCityLat % 26 % 2339 % 3 B % 5 D
-    }
-}
-
-,
-    {
-        {
-        % 24 gutachters % 5 B % 26 % 2339 % 3 BHomeCityLon % 26 % 2339 % 3 B % 5 D
-    }
-}
-
-],
-< /blade endforeach|%0D>];
-
-for (var i=0; i < locations.length; i++) {
-    var marker=L.marker(locations[i]).addTo(map);
-}
-
-</script>
+        for (var i = 0; i < locations.length; i++) {
+            var marker = L.marker(locations[i]).addTo(map);
+        }
+    </script>
 
 @endsection
