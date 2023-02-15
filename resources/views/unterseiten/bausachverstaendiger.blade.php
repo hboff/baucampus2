@@ -3,7 +3,7 @@
 $footer=1;
 @endphp
 @section('head')
-<title>Bausachverstädiger {{$ortsname}}</title>
+<title>Bausachverständiger {{$ortsname}}</title>
 <meta name="Description" content="Unsere Leistungen in {{$ortsname}}.">
 @endsection
 @section('content')
