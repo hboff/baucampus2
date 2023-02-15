@@ -10,9 +10,7 @@
     <!-- Grid -->
     <div class="w3-row">
 
-    <div id="about" class="about">
-                <div class="container">
-
+    <div><div id="about"class="about pt-5 mt-5"><div class="container pt-5">
                     <div class="section-title">
                         <h1>$ortsname</h1>
                     </div>
