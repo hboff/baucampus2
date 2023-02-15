@@ -14,10 +14,12 @@ border: 1px solid #ddd;
 th {
 background-color: #435761;
 color: #fff;
+font-size: 100%;
 }
 
 th,
 td {
+font-size: 100%;
 text-align: left;
 padding: 8px;
 min-width: 100px;
