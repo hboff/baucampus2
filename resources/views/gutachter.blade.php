@@ -134,7 +134,7 @@ class="link-dark" target="_blank"> {{$gutachters['FirstName']}} {{$gutachters['L
      {{ $gutachters['Email']}}<br />
      <a href="{{ $gutachters['Website'] }}" target="_blank"> {{$gutachters['Website']}}</a></td>
      </tr>@endforeach 
-</table></div><br></div><div id="map"style="width:100%; height:400px;"class="mt-5"></div>< !-- END GRID --></div><br>
+</table></div><br></div><div id="map"style="width:100%; height:400px;"class="mt-5"></div></div><br>
 <script>
         var map = L.map('map').setView([51.165691, 10.451526], 5);
 
