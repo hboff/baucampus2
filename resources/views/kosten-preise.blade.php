@@ -2,6 +2,7 @@
 @php
 $footer=2;
 @endphp
+@section('head')
 <style>
 .price table {
 border-collapse: collapse;
@@ -23,7 +24,7 @@ min-width: 100px;
 
 </style>
 
-@section('head')
+
  <title>Kosten und Preise</title>
 <meta name="Description" content="Die Kosten und Preise von Baucampus.">
 @endsection 
