@@ -14,12 +14,10 @@ border: 1px solid #ddd;
 th {
 background-color: #435761;
 color: #fff;
-font-size: 100%;
 }
 
 th,
 td {
-font-size: 100%;
 text-align: left;
 padding: 8px;
 min-width: 100px;
@@ -50,7 +48,7 @@ min-width: 100px;
                
                                 </div>
 
-                                            <div class="contaier-fluid">
+                                            <div class="contaier-fluid" style="font-size:100%;">
                                                 <div style="overflow-x:auto;">
                                                     <table>
                                                         <tr>
