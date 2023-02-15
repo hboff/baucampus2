@@ -31,21 +31,15 @@ object-position: center;" class="description"><br>
                 <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
                     
                     <p class="description">
-    @php
-    $r=0;
+                    @php
+    $i=0;
     @endphp
-@foreach($regions as $region)
-@if($region->Region == $ortsname)
     @foreach($ortat as $orte)
-    @if ($r++ < 16)
-        @if ($orte->bundesland == $region->RegionShort)
-            <a class="link-dark" href="/{{$orte->ort}}/bausachverstaendiger">Baugutachter {{$orte->ort}}</a><br>
-        @endif
+    @if ($i++ < 16)
+    <a class="link-dark" href="/{{$orte->ort}}/bausachverstaendiger">Baugutachter {{$orte['ort']}}</a>
     @else
-        @endif
+    @endif
     @endforeach
-@endif
-@endforeach  
     </p>
 </p>
                 </div>
