@@ -2,40 +2,46 @@
 @php
 $footer=2;
 @endphp
-<style>table {
+<style>
+.price table {
 border-collapse: collapse;
 border-spacing: 0;
 width: 100%;
 border: 1px solid #ddd;
 }
 
-th {
+.price th {
 background-color: #435761;
 color: #fff;
 }
 
-th,
-td {
+.price th, td {
 text-align: left;
 padding: 8px;
 min-width: 100px;
 }
 
-</style>@section('head') <title>Kosten und Preise</title>
-<meta name="Description" content="Die Kosten und Preise von Baucampus.">@endsection @section('content')
+</style>
+
+@section('head')
+ <title>Kosten und Preise</title>
+<meta name="Description" content="Die Kosten und Preise von Baucampus.">
+@endsection 
+@section('content')
 
 <body class="w3-light-grey">
     < !-- Grid -->
         <div class="w3-row">
             < !-- Blog entries -->
                 <div>
-                    < !-- Blog entry --><img src="/img/immobilienbewertung.jpg" alt="Preise" class="pb-5"
+                    < !-- Blog entry -->
+                    <img src="/img/immobilienbewertung.jpg" alt="Preise" class="pb-5"
                             style="width:100%;min-height:350px;max-height:65vh; object-fit: cover; object-position:center;">
                         <div id="about" class="about">
                             <div class="container">
                                 <div class="section-title">
                                     <h1>Preisliste Baucampus 2023<h1>
-                                            <div class="contaier-fluid">
+                                            <div class="contaier-fluid price ">
                                                 <div style="overflow-x:auto;">
                                                     <table>
                                                         <tr>
@@ -215,4 +221,5 @@ min-width: 100px;
                                                     </table>
                                                     <p>* inkl. MwSt.</p><br />
                                                 </div>
-                                            </div>@endsection @include('partials._themen')
+                                            </div>
+@endsection 
