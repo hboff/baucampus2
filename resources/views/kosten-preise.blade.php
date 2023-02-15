@@ -42,6 +42,7 @@ min-width: 100px;
                             <div class="container">
                                 <div class="section-title">
                                     <h1>Preisliste Baucampus 2023<h1>
+</div>
                                             <div class="contaier-fluid price ">
                                                 <div style="overflow-x:auto;">
                                                     <table>
