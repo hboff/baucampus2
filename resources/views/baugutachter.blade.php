@@ -22,7 +22,7 @@
     @foreach($ortat as $orte)
  
         @if ($orte->bundesland == $region->RegionShort)
-          <p>  <a class="link-dark" href="/{{$orte->ort}}/bausachverstaendiger">Baugutachter {{$orte->ort}}</a><p><br>
+          <p>  <a class="link-dark" href="/{{$orte->ort}}/bausachverstaendiger">Baugutachter {{$orte->ort}}</a><p>
        
         @endif
     @endforeach
