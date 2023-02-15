@@ -5,6 +5,7 @@ $footer=2;
 @section('head')
 <style>
 table {
+font-size: 100%;
 border-collapse: collapse;
 border-spacing: 0;
 width: 100%;
@@ -48,7 +49,7 @@ min-width: 100px;
                
                                 </div>
 
-                                            <div class="contaier-fluid" style="font-size:100%;">
+                                            <div class="contaier-fluid">
                                                 <div style="overflow-x:auto;">
                                                     <table>
                                                         <tr>
