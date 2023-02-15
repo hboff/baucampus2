@@ -68,7 +68,7 @@ Route::domain($domain)->group(function () use ($routes, $domainData) {
     Route::get('/{ort}/bausachverstaendiger', [OrteatController::class, 'show'], function () use ($domainData) {})
             ->middleware('cache.headers:private;max_age=3600');
     Route::get('/baugutachter/{region}', function($region){
-        return view ('unterseiten.baugutachter', ['ortsname' => $region]);
+        return view ('baugutachter', ['ortsname' => $region]);
 });
     Route::get('contact-us', [ContactController::class, 'index']);
     Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
