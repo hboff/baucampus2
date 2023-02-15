@@ -1,3 +1,14 @@
+<style>
+    input[type="checkbox"] {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    p {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+    }
+</style>
 @switch($contact)
 @case('1')
 @foreach ($gutachter as $gutachters)
@@ -18,19 +29,19 @@
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
-                <h4>Ort:</h4>
+                <h4><b>Ort:</b></h4>
                 <p>{{$gutachters['Adress']}}, {{$gutachters['PostalCode']}} {{$gutachters['City']}}</p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
+                <h4><b>Email:</b></h4>
                 <p>{{$gutachters['Email']}}</p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
-                <h4>Telefon:</h4>
+                <h4><b>Telefon:</b></h4>
                 <p>{{$gutachters['Phone']}}</p>
               </div>
               <iframe
@@ -54,7 +65,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="firstname" style="font-size:200%">Vorname:</label>
+                                        <label for="firstname" style="font-size:100%">Vorname:</label>
                                         <input type="text" name="firstname" class="form-control" placeholder="Vorname" value="{{ old('firstname') }}">
                                         @if ($errors->has('firstname'))
                                             <span class="text-danger">{{ $errors->first('firstname') }}</span>
@@ -63,7 +74,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="lastname" style="font-size:200%">Nachname:</label>
+                                        <label for="lastname" style="font-size:100%">Nachname:</label>
                                         <input type="text" name="lastname" class="form-control" placeholder="Nachname" value="{{ old('lastname') }}">
                                         @if ($errors->has('lastname'))
                                             <span class="text-danger">{{ $errors->first('lastname') }}</span>
@@ -74,7 +85,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="phone" style="font-size:200%">Telefonnummer:</label>
+                                        <label for="phone" style="font-size:100%">Telefonnummer:</label>
                                         <input type="text" name="phone" class="form-control" placeholder="Telefonnummer" value="{{ old('phone') }}">
                                         @if ($errors->has('phone'))
                                             <span class="text-danger">{{ $errors->first('phone') }}</span>
@@ -83,7 +94,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="email" style="font-size:200%">E-mail:</label>
+                                        <label for="email" style="font-size:100%">E-mail:</label>
                                         <input type="text" name="email" class="form-control" placeholder="E-mail" value="{{ old('email') }}">
                                         @if ($errors->has('email'))
                                             <span class="text-danger">{{ $errors->first('email') }}</span>
@@ -94,7 +105,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="city" style="font-size:200%">Stadt:</label>
+                                        <label for="city" style="font-size:100%">Stadt:</label>
                                         <input type="text" name="city" class="form-control" placeholder="Stadt" value="{{ old('city') }}">
                                         @if ($errors->has('city'))
                                             <span class="text-danger">{{ $errors->first('city') }}</span>
@@ -103,7 +114,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                 <label for="immobilienart" style="font-size:200%">Art der Immobilie:</label>
+                                 <label for="immobilienart" style="font-size:100%">Art der Immobilie:</label>
   <select name="objecttype" name="immobilienart" class="form-control">
 <option value="" selected="selected">- Art der Immobilie (optional) -</option>
  <option value="Einfamilienhaus">Einfamilienhaus</option>
@@ -129,7 +140,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="message" style="font-size:200%">Ihre Anfrage:</label>
+                                        <label for="message" style="font-size:100%">Ihre Anfrage:</label>
                                         <textarea name="message" placeholder="Ihre Anfrage" rows="3" class="form-control">{{ old('message') }}</textarea>
                                         @if ($errors->has('message'))
                                             <span class="text-danger">{{ $errors->first('message') }}</span>
@@ -137,7 +148,7 @@
                                     </div>  
                                 </div>
                             </div>    
-                            <label for="checkbox" style="font-size:200%">Zustimmung:</label>
+                            <label for="checkbox" style="font-size:100%">Zustimmung:</label>
                              <p><input type="checkbox"  name="checkbox" value="Checkbox"> 
                                          @if ($errors->has('checkbox'))
                                             <span class="text-danger">{{ $errors->first('checkbox') }}</span>
