@@ -5,7 +5,7 @@ $footer=2;
 @section('head')
 <style>
 table {
-font-size: 150%;
+font-size: 170%;
 border-collapse: collapse;
 border-spacing: 0;
 width: 100%;
