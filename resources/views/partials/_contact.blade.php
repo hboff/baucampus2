@@ -310,12 +310,9 @@
                                     </div>  
                                 </div>
                             </div>   
-                            <input type="checkbox" name="checkbox" id="checkbox_id" value="value">
-<label for="checkbox_id">Text</label>
-
                              <div class="checkbox">
-                            <label for="checkbox" style="font-size:200%">Zustimmung:</label>
-                             <p><input type="checkbox"  name="checkbox" value="Checkbox"> 
+                            <label for="checkbox_id" style="font-size:200%">Zustimmung:</label>
+                             <p><input type="checkbox"  name="checkbox" id="checkbox_id" value="Checkbox"> 
                                          @if ($errors->has('checkbox'))
                                             <span class="text-danger">{{ $errors->first('checkbox') }}</span>
                                         @endif   
