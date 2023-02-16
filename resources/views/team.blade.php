@@ -29,7 +29,7 @@ $footer=2;
         <div class="row row-cols-1 row-cols-md-4 g-4">
             <div class="col">
                 <div class="card h-100 shadow-sm border-0 rounded">
-                    <img src="/img/oskar2.jpg" class="card-img-top" alt="Oskar Lohse" />
+                    <img src="/img/friedrich-lohse.jpg" class="card-img-top" alt="Oskar Lohse" />
                     <div class="card-body">
                         <p class="text-muted">Oskar Lohse</p>
                         <p class="card-text">
@@ -41,7 +41,7 @@ $footer=2;
             </div>
             <div class="col">
                 <div class="card h-100 shadow-sm border-0 rounded">
-                    <img src="/img/bausachverstaendiger_heller-2.jpg" class="card-img-top" alt="Barbara Heller" />
+                    <img src="/img/bausachverstaendiger-freda-lohse.jpg" class="card-img-top" alt="Barbara Heller" />
                     <div class="card-body">
                         <p class="text-muted">Barbara Heller</p>
                         <p class="card-text">
