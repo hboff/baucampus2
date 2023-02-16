@@ -170,7 +170,7 @@ $footer=1;
 
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <img src="/img/hauskaufberatung-brochure.jpg" class="img-fluid" alt="">
+            <img data-src="/img/hauskaufberatung-brochure.jpg" class="lazyload" alt="Alternative text">
           </div>
         </div>
 
