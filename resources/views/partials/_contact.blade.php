@@ -312,12 +312,12 @@
                             </div>   
                              <div class="checkbox">
                             <label for="checkbox" style="font-size:200%">Zustimmung:</label>
-                             <p><input type="checkbox"  name="checkbox" value="Checkbox"> 
+                            <input type="checkbox"  name="checkbox" value="Checkbox"> 
                                          @if ($errors->has('checkbox'))
                                             <span class="text-danger">{{ $errors->first('checkbox') }}</span>
                                         @endif   
                                         
-                              Ich stimme zu, dass meine Angaben aus dem Kontaktformular zur Bearbeitung meiner Anfrage erhoben und verarbeitet werden. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer <a href="/datenschutzerklaerung">Datenschutzerklärung</a>.</p>
+                              <p>Ich stimme zu, dass meine Angaben aus dem Kontaktformular zur Bearbeitung meiner Anfrage erhoben und verarbeitet werden. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer <a href="/datenschutzerklaerung">Datenschutzerklärung</a>.</p>
 </div>
                               <div class="form-group text-center mb-5 mt-5">
                                             <div class="text-center"><button class="submit" style="    background-color: #149ddd; border: none; color: white; padding: 16px 32px; text-decoration: none; margin: 4px 2px; cursor: pointer; font-size: 16px; border-radius: 5px;">Senden</button></div>
